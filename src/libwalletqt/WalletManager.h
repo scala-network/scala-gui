@@ -56,14 +56,14 @@ public:
     ~WalletManager();
 
     enum LogLevel {
-        LogLevel_Silent = Scala::WalletManagerFactory::LogLevel_Silent,
-        LogLevel_0 = Scala::WalletManagerFactory::LogLevel_0,
-        LogLevel_1 = Scala::WalletManagerFactory::LogLevel_1,
-        LogLevel_2 = Scala::WalletManagerFactory::LogLevel_2,
-        LogLevel_3 = Scala::WalletManagerFactory::LogLevel_3,
-        LogLevel_4 = Scala::WalletManagerFactory::LogLevel_4,
-        LogLevel_Min = Scala::WalletManagerFactory::LogLevel_Min,
-        LogLevel_Max = Scala::WalletManagerFactory::LogLevel_Max,
+        LogLevel_Silent = scala::WalletManagerFactory::LogLevel_Silent,
+        LogLevel_0 = scala::WalletManagerFactory::LogLevel_0,
+        LogLevel_1 = scala::WalletManagerFactory::LogLevel_1,
+        LogLevel_2 = scala::WalletManagerFactory::LogLevel_2,
+        LogLevel_3 = scala::WalletManagerFactory::LogLevel_3,
+        LogLevel_4 = scala::WalletManagerFactory::LogLevel_4,
+        LogLevel_Min = scala::WalletManagerFactory::LogLevel_Min,
+        LogLevel_Max = scala::WalletManagerFactory::LogLevel_Max,
     };
 
     // wizard: createWallet path;
@@ -221,7 +221,7 @@ private:
     bool isMining() const;
 
     static WalletManager * m_instance;
-    Scala::WalletManager * m_pimpl;
+    scala::WalletManager * m_pimpl;
     mutable QMutex m_mutex;
     QPointer<Wallet> m_currentWallet;
     PassphraseReceiver * m_passphraseReceiver;

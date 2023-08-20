@@ -29,7 +29,7 @@
 #include "SubaddressAccount.h"
 #include <QDebug>
 
-SubaddressAccount::SubaddressAccount(Scala::SubaddressAccount *subaddressAccountImpl, QObject *parent)
+SubaddressAccount::SubaddressAccount(scala::SubaddressAccount *subaddressAccountImpl, QObject *parent)
   : QObject(parent), m_subaddressAccountImpl(subaddressAccountImpl)
 {
     getAll();
@@ -50,7 +50,7 @@ void SubaddressAccount::getAll() const
     emit refreshFinished();
 }
 
-bool SubaddressAccount::getRow(int index, std::function<void (Scala::SubaddressAccountRow &)> callback) const
+bool SubaddressAccount::getRow(int index, std::function<void (scala::SubaddressAccountRow &)> callback) const
 {
     QReadLocker locker(&m_lock);
 

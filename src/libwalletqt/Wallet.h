@@ -38,7 +38,7 @@
 #include <QJSValue>
 #include <QtConcurrent/QtConcurrent>
 
-#include "wallet/api/wallet2_api.h" // we need to have an access to the Scala::Wallet::Status enum here;
+#include "wallet/api/wallet2_api.h" // we need to have an access to the scala::Wallet::Status enum here;
 #include "qt/FutureScheduler.h"
 #include "PendingTransaction.h" // we need to have an access to the PendingTransaction::Priority enum here;
 #include "UnsignedTransaction.h"
@@ -96,17 +96,17 @@ public:
 
 
     enum Status {
-        Status_Ok       = Scala::Wallet::Status_Ok,
-        Status_Error    = Scala::Wallet::Status_Error,
-        Status_Critical = Scala::Wallet::Status_Critical
+        Status_Ok       = scala::Wallet::Status_Ok,
+        Status_Error    = scala::Wallet::Status_Error,
+        Status_Critical = scala::Wallet::Status_Critical
     };
 
     Q_ENUM(Status)
 
     enum ConnectionStatus {
-        ConnectionStatus_Connected       = Scala::Wallet::ConnectionStatus_Connected,
-        ConnectionStatus_Disconnected    = Scala::Wallet::ConnectionStatus_Disconnected,
-        ConnectionStatus_WrongVersion    = Scala::Wallet::ConnectionStatus_WrongVersion,
+        ConnectionStatus_Connected       = scala::Wallet::ConnectionStatus_Connected,
+        ConnectionStatus_Disconnected    = scala::Wallet::ConnectionStatus_Disconnected,
+        ConnectionStatus_WrongVersion    = scala::Wallet::ConnectionStatus_WrongVersion,
         ConnectionStatus_Connecting
     };
 
@@ -394,7 +394,7 @@ signals:
 
 private:
     Wallet(QObject * parent = nullptr);
-    Wallet(Scala::Wallet *w, QObject * parent = 0);
+    Wallet(scala::Wallet *w, QObject * parent = 0);
     ~Wallet();
 
     //! returns current wallet's block height
@@ -436,7 +436,7 @@ private:
     friend class WalletManager;
     friend class WalletListenerImpl;
     //! libwallet's
-    Scala::Wallet * m_walletImpl;
+    scala::Wallet * m_walletImpl;
     // history lifetime managed by wallet;
     TransactionHistory * m_history;
     // Used for UI history view

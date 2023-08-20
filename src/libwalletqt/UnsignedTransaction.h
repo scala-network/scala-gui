@@ -48,9 +48,9 @@ class UnsignedTransaction : public QObject
 
 public:
     enum Status {
-        Status_Ok       = Scala::UnsignedTransaction::Status_Ok,
-        Status_Error    = Scala::UnsignedTransaction::Status_Error,
-        Status_Critical    = Scala::UnsignedTransaction::Status_Critical
+        Status_Ok       = scala::UnsignedTransaction::Status_Ok,
+        Status_Error    = scala::UnsignedTransaction::Status_Error,
+        Status_Critical    = scala::UnsignedTransaction::Status_Critical
     };
     Q_ENUM(Status)
 
@@ -68,13 +68,13 @@ public:
     Q_INVOKABLE void setFilename(const QString &fileName);
 
 private:
-    explicit UnsignedTransaction(Scala::UnsignedTransaction * pt, Scala::Wallet *walletImpl, QObject *parent = 0);
+    explicit UnsignedTransaction(scala::UnsignedTransaction * pt, scala::Wallet *walletImpl, QObject *parent = 0);
     ~UnsignedTransaction();
 private:
     friend class Wallet;
-    Scala::UnsignedTransaction * m_pimpl;
+    scala::UnsignedTransaction * m_pimpl;
     QString m_fileName;
-    Scala::Wallet * m_walletImpl;
+    scala::Wallet * m_walletImpl;
 };
 
 #endif // UNSIGNEDTRANSACTION_H
