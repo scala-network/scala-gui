@@ -37,9 +37,9 @@ class NetworkType : public QObject
 
 public:
     enum Type : uint8_t {
-        MAINNET = Scala::MAINNET,
-        TESTNET = Scala::TESTNET,
-        STAGENET = Scala::STAGENET
+        MAINNET = scala::MAINNET,
+        TESTNET = scala::TESTNET,
+        STAGENET = scala::STAGENET
     };
     Q_ENUM(Type)
 };

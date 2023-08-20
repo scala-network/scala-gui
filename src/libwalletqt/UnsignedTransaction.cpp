@@ -108,7 +108,7 @@ void UnsignedTransaction::setFilename(const QString &fileName)
     m_fileName = fileName;
 }
 
-UnsignedTransaction::UnsignedTransaction(Scala::UnsignedTransaction *pt, Scala::Wallet *walletImpl, QObject *parent)
+UnsignedTransaction::UnsignedTransaction(scala::UnsignedTransaction *pt, scala::Wallet *walletImpl, QObject *parent)
     : QObject(parent), m_pimpl(pt), m_walletImpl(walletImpl)
 {
 

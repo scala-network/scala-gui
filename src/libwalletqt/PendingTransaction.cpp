@@ -93,7 +93,7 @@ void PendingTransaction::setFilename(const QString &fileName)
     m_fileName = fileName;
 }
 
-PendingTransaction::PendingTransaction(Scala::PendingTransaction *pt, QObject *parent)
+PendingTransaction::PendingTransaction(scala::PendingTransaction *pt, QObject *parent)
     : QObject(parent), m_pimpl(pt)
 {
 

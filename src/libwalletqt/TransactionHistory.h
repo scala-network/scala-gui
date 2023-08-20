@@ -36,7 +36,7 @@
 #include <QReadWriteLock>
 #include <QDateTime>
 
-namespace Scala {
+namespace scala {
 struct TransactionHistory;
 }
 
@@ -72,12 +72,12 @@ public slots:
 
 
 private:
-    explicit TransactionHistory(Scala::TransactionHistory * pimpl, QObject *parent = 0);
+    explicit TransactionHistory(scala::TransactionHistory * pimpl, QObject *parent = 0);
 
 private:
     friend class Wallet;
     mutable QReadWriteLock m_lock;
-    Scala::TransactionHistory * m_pimpl;
+    scala::TransactionHistory * m_pimpl;
     mutable QList<TransactionInfo*> m_tinfo;
     mutable QDateTime   m_firstDateTime;
     mutable QDateTime   m_lastDateTime;

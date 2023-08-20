@@ -1,0 +1,1828 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 6.1.0-10-amd64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Vau4WD"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Vau4WD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Vau4WD
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_14fc9 && [1/2] /usr/bin/cc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o -c /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.2.0 (Debian 12.2.0-14) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_14fc9.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/12/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_14fc9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -fasynchronous-unwind-tables -o /tmp/ccmV2tja.s
+        GNU C17 (Debian 12.2.0-14) version 12.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.1-p1, MPC version 1.3.1, isl version isl-0.25-GMP
+        
+        warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/12/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        GNU C17 (Debian 12.2.0-14) version 12.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.1-p1, MPC version 1.3.1, isl version isl-0.25-GMP
+        
+        warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: cc72d2b9b5048fedc2be9051c917b40b
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_14fc9.dir/'
+         as -v --64 -o CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o /tmp/ccmV2tja.s
+        GNU assembler version 2.40 (x86_64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /usr/bin/cc  -v CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o -o cmTC_14fc9   && :
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.2.0 (Debian 12.2.0-14) 
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_14fc9' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_14fc9.'
+         /usr/lib/gcc/x86_64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEXeuvY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_14fc9 /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_14fc9' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_14fc9.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/12/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/12/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/12/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/12/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Vau4WD]
+        ignore line: []
+        ignore line: [Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_14fc9 && [1/2] /usr/bin/cc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o -c /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.2.0 (Debian 12.2.0-14) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_14fc9.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/12/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_14fc9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -fasynchronous-unwind-tables -o /tmp/ccmV2tja.s]
+        ignore line: [GNU C17 (Debian 12.2.0-14) version 12.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.1-p1  MPC version 1.3.1  isl version isl-0.25-GMP]
+        ignore line: []
+        ignore line: [warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (Debian 12.2.0-14) version 12.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.1-p1  MPC version 1.3.1  isl version isl-0.25-GMP]
+        ignore line: []
+        ignore line: [warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: cc72d2b9b5048fedc2be9051c917b40b]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_14fc9.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o /tmp/ccmV2tja.s]
+        ignore line: [GNU assembler version 2.40 (x86_64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /usr/bin/cc  -v CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o -o cmTC_14fc9   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.2.0 (Debian 12.2.0-14) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_14fc9' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_14fc9.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEXeuvY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_14fc9 /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccEXeuvY.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_14fc9] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../..]
+          arg [CMakeFiles/cmTC_14fc9.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12] ==> [/usr/lib/gcc/x86_64-linux-gnu/12]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/12;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HwppIW"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HwppIW"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HwppIW
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_0803d && [1/2] /usr/bin/c++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o -c /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.2.0 (Debian 12.2.0-14) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0803d.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/12/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0803d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -fasynchronous-unwind-tables -o /tmp/ccfgedgT.s
+        GNU C++17 (Debian 12.2.0-14) version 12.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.1-p1, MPC version 1.3.1, isl version isl-0.25-GMP
+        
+        warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/12"
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/include/c++/12
+         /usr/include/x86_64-linux-gnu/c++/12
+         /usr/include/c++/12/backward
+         /usr/lib/gcc/x86_64-linux-gnu/12/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        GNU C++17 (Debian 12.2.0-14) version 12.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.1-p1, MPC version 1.3.1, isl version isl-0.25-GMP
+        
+        warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 62b090dbbefa50644117a3c13d47369a
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0803d.dir/'
+         as -v --64 -o CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccfgedgT.s
+        GNU assembler version 2.40 (x86_64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /usr/bin/c++  -v CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0803d   && :
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.2.0 (Debian 12.2.0-14) 
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0803d' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0803d.'
+         /usr/lib/gcc/x86_64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJhYloF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0803d /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0803d' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0803d.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/include/c++/12]
+          add: [/usr/include/x86_64-linux-gnu/c++/12]
+          add: [/usr/include/c++/12/backward]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/12/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/include/c++/12] ==> [/usr/include/c++/12]
+        collapse include dir [/usr/include/x86_64-linux-gnu/c++/12] ==> [/usr/include/x86_64-linux-gnu/c++/12]
+        collapse include dir [/usr/include/c++/12/backward] ==> [/usr/include/c++/12/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/12/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/12/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/12;/usr/include/x86_64-linux-gnu/c++/12;/usr/include/c++/12/backward;/usr/lib/gcc/x86_64-linux-gnu/12/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HwppIW]
+        ignore line: []
+        ignore line: [Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_0803d && [1/2] /usr/bin/c++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o -c /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.2.0 (Debian 12.2.0-14) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0803d.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/12/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0803d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -fasynchronous-unwind-tables -o /tmp/ccfgedgT.s]
+        ignore line: [GNU C++17 (Debian 12.2.0-14) version 12.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.1-p1  MPC version 1.3.1  isl version isl-0.25-GMP]
+        ignore line: []
+        ignore line: [warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/12"]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/include/c++/12]
+        ignore line: [ /usr/include/x86_64-linux-gnu/c++/12]
+        ignore line: [ /usr/include/c++/12/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (Debian 12.2.0-14) version 12.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.1-p1  MPC version 1.3.1  isl version isl-0.25-GMP]
+        ignore line: []
+        ignore line: [warning: MPFR header version 4.1.1-p1 differs from library version 4.2.0.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 62b090dbbefa50644117a3c13d47369a]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0803d.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccfgedgT.s]
+        ignore line: [GNU assembler version 2.40 (x86_64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /usr/bin/c++  -v CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0803d   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-12-bTRWOB/gcc-12-12.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.2.0 (Debian 12.2.0-14) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0803d' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0803d.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJhYloF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0803d /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccJhYloF.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_0803d] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../..]
+          arg [CMakeFiles/cmTC_0803d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12] ==> [/usr/lib/gcc/x86_64-linux-gnu/12]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/12;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/cmake/FindCcache.cmake:56 (try_compile)"
+      - "scala/CMakeLists.txt:54 (include)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug//CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug//CMakeFiles/CMakeTmp/build"
+    buildResult:
+      variable: "RET"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug//CMakeFiles/CMakeTmp/build
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v && [1/2] "/usr/bin/ccache" /usr/bin/c++   -fdiagnostics-color=always -o CMakeFiles/main.dir/test.cpp.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp/test.cpp
+        [2/2] : && "/usr/bin/ccache" /usr/bin/c++   CMakeFiles/main.dir/test.cpp.o -o main   && :
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "scala/CMakeLists.txt:94 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      cc (Debian 12.2.0-14) 12.2.0
+      Copyright (C) 2022 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/cmake/CheckLinkerFlag.cmake:13 (try_compile)"
+      - "scala/CMakeLists.txt:140 (check_linker_flag)"
+      - "scala/CMakeLists.txt:210 (add_linker_flag_if_supported)"
+      - "scala/CMakeLists.txt:249 (forbid_undefined_symbols)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wl,--no-undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "-Wl_--no-undefined_ld"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_0465d && [1/2] /usr/bin/cc   -Wl,--no-undefined  -std=c11 -fdiagnostics-color=always   -Wl,--no-undefined -o CMakeFiles/cmTC_0465d.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+        [2/2] : && /usr/bin/cc -Wl,--no-undefined  CMakeFiles/cmTC_0465d.dir/CheckLinkerFlag.c.o -o cmTC_0465d   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/cmake/CheckLinkerFlag.cmake:13 (try_compile)"
+      - "scala/CMakeLists.txt:140 (check_linker_flag)"
+      - "scala/CMakeLists.txt:212 (add_linker_flag_if_supported)"
+      - "scala/CMakeLists.txt:249 (forbid_undefined_symbols)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wl,-undefined,error"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "-Wl_-undefined_error_ld"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_a5244 && [1/2] /usr/bin/cc   -Wl,-undefined,error  -std=c11 -fdiagnostics-color=always   -Wl,-undefined,error -o CMakeFiles/cmTC_a5244.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+        [2/2] : && /usr/bin/cc -Wl,-undefined,error  CMakeFiles/cmTC_a5244.dir/CheckLinkerFlag.c.o -o cmTC_a5244   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/CMakeLists.txt:236 (try_compile)"
+      - "scala/CMakeLists.txt:249 (forbid_undefined_symbols)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug//CMakeFiles/CMakeTmp/test_project"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug//CMakeFiles/CMakeTmp/test_project/build"
+    buildResult:
+      variable: "SUCCESS"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug//CMakeFiles/CMakeTmp/test_project/build
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v && [1/7] /usr/bin/c++   -fdiagnostics-color=always -o CMakeFiles/l2.dir/incorrect_source.cpp.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp/test_project/incorrect_source.cpp
+        [2/7] /usr/bin/c++   -fdiagnostics-color=always -o CMakeFiles/l3.dir/incorrect_source.cpp.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp/test_project/incorrect_source.cpp
+        [3/7] /usr/bin/c++ -Dl0_EXPORTS  -fPIC -fdiagnostics-color=always -o CMakeFiles/l0.dir/incorrect_source.cpp.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp/test_project/incorrect_source.cpp
+        [4/7] /usr/bin/c++ -Dl1_EXPORTS  -fPIC -fdiagnostics-color=always -o CMakeFiles/l1.dir/incorrect_source.cpp.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp/test_project/incorrect_source.cpp
+        [5/7] : && /usr/bin/c++ -fPIC   -Wl,--no-undefined -Wl,-undefined,error -shared -Wl,-soname,libl0.so -o libl0.so CMakeFiles/l0.dir/incorrect_source.cpp.o   && :
+        [6/7] : && /usr/bin/c++ -fPIC   -Wl,--no-undefined -Wl,-undefined,error -shared  -o libl1.so CMakeFiles/l1.dir/incorrect_source.cpp.o   && :
+        [7/7] : && /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/bin/cmake -E rm -f libl2.a && /usr/bin/ar qc libl2.a  CMakeFiles/l2.dir/incorrect_source.cpp.o && /usr/bin/ranlib libl2.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/CMakeLists.txt:236 (try_compile)"
+      - "scala/CMakeLists.txt:249 (forbid_undefined_symbols)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug//CMakeFiles/CMakeTmp/test_project"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug//CMakeFiles/CMakeTmp/test_project/build"
+    buildResult:
+      variable: "SUCCESS"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug//CMakeFiles/CMakeTmp/test_project/build
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v && [1/7] /usr/bin/c++ -Dl1_EXPORTS  -fPIC -fdiagnostics-color=always -o CMakeFiles/l1.dir/incorrect_source.cpp.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp/test_project/incorrect_source.cpp
+        [2/7] /usr/bin/c++   -fdiagnostics-color=always -o CMakeFiles/l3.dir/incorrect_source.cpp.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp/test_project/incorrect_source.cpp
+        [3/7] /usr/bin/c++ -Dl0_EXPORTS  -fPIC -fdiagnostics-color=always -o CMakeFiles/l0.dir/incorrect_source.cpp.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp/test_project/incorrect_source.cpp
+        [4/7] /usr/bin/c++   -fdiagnostics-color=always -o CMakeFiles/l2.dir/incorrect_source.cpp.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp/test_project/incorrect_source.cpp
+        [5/7] : && /usr/bin/c++ -fPIC   -Wl,--no-undefined -Wl,-undefined,error -shared -Wl,-soname,libl0.so -o libl0.so CMakeFiles/l0.dir/incorrect_source.cpp.o   && :
+        FAILED: libl0.so 
+        : && /usr/bin/c++ -fPIC   -Wl,--no-undefined -Wl,-undefined,error -shared -Wl,-soname,libl0.so -o libl0.so CMakeFiles/l0.dir/incorrect_source.cpp.o   && :
+        /usr/bin/ld: CMakeFiles/l0.dir/incorrect_source.cpp.o: in function `symbol()':
+        incorrect_source.cpp:(.text+0x5): undefined reference to `undefined_symbol()'
+        collect2: error: ld returned 1 exit status
+        [6/7] : && /usr/bin/c++ -fPIC   -Wl,--no-undefined -Wl,-undefined,error -shared  -o libl1.so CMakeFiles/l1.dir/incorrect_source.cpp.o   && :
+        FAILED: libl1.so 
+        : && /usr/bin/c++ -fPIC   -Wl,--no-undefined -Wl,-undefined,error -shared  -o libl1.so CMakeFiles/l1.dir/incorrect_source.cpp.o   && :
+        /usr/bin/ld: CMakeFiles/l1.dir/incorrect_source.cpp.o: in function `symbol()':
+        incorrect_source.cpp:(.text+0x5): undefined reference to `undefined_symbol()'
+        collect2: error: ld returned 1 exit status
+        [7/7] : && /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/bin/cmake -E rm -f libl2.a && /usr/bin/ar qc libl2.a  CMakeFiles/l2.dir/incorrect_source.cpp.o && /usr/bin/ranlib libl2.a && :
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "scala/CMakeLists.txt:567 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3Tcapa"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3Tcapa"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3Tcapa
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_f4781 && [1/2] /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -std=c11 -fdiagnostics-color=always -o CMakeFiles/cmTC_f4781.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3Tcapa/src.c
+        [2/2] : && /usr/bin/cc   CMakeFiles/cmTC_f4781.dir/src.c.o -o cmTC_f4781   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:122 (check_c_compiler_flag)"
+      - "scala/CMakeLists.txt:568 (add_c_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__pthread_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HxW33K"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HxW33K"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__pthread_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HxW33K
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_7d107 && [1/2] /usr/bin/cc -D_Werror__pthread_c  -std=c11 -fdiagnostics-color=always   -Werror -pthread -o CMakeFiles/cmTC_7d107.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HxW33K/src.c
+        [2/2] : && /usr/bin/cc   CMakeFiles/cmTC_7d107.dir/src.c.o -o cmTC_7d107   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:131 (check_cxx_compiler_flag)"
+      - "scala/CMakeLists.txt:569 (add_cxx_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__pthread_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5WItBB"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5WItBB"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__pthread_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5WItBB
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_d2cc8 && [1/2] /usr/bin/c++ -D_Werror__pthread_cxx  -std=c++14 -fdiagnostics-color=always   -Werror -pthread -o CMakeFiles/cmTC_d2cc8.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5WItBB/src.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_d2cc8.dir/src.cxx.o -o cmTC_d2cc8   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "scala/CMakeLists.txt:156 (check_library_exists)"
+      - "scala/CMakeLists.txt:602 (add_definition_if_library_exists)"
+    checks:
+      - "Looking for memset_s in c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p85uka"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p85uka"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "memset_s_library"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p85uka
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_6ed2a && [1/2] /usr/bin/cc   -pthread -DCHECK_FUNCTION_EXISTS=memset_s -std=c11 -fdiagnostics-color=always -o CMakeFiles/cmTC_6ed2a.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p85uka/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -pthread -DCHECK_FUNCTION_EXISTS=memset_s  CMakeFiles/cmTC_6ed2a.dir/CheckFunctionExists.c.o -o cmTC_6ed2a -L/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p85uka/string.h -Wl,-rpath,/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p85uka/string.h  -lc && :
+        FAILED: cmTC_6ed2a 
+        : && /usr/bin/cc -pthread -DCHECK_FUNCTION_EXISTS=memset_s  CMakeFiles/cmTC_6ed2a.dir/CheckFunctionExists.c.o -o cmTC_6ed2a -L/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p85uka/string.h -Wl,-rpath,/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p85uka/string.h  -lc && :
+        /usr/bin/ld: CMakeFiles/cmTC_6ed2a.dir/CheckFunctionExists.c.o: in function `main':
+        CheckFunctionExists.c:(.text+0x10): undefined reference to `memset_s'
+        collect2: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "scala/CMakeLists.txt:156 (check_library_exists)"
+      - "scala/CMakeLists.txt:603 (add_definition_if_library_exists)"
+    checks:
+      - "Looking for explicit_bzero in c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ZwMVKv"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ZwMVKv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "explicit_bzero_library"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ZwMVKv
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_c95a3 && [1/2] /usr/bin/cc   -pthread -DCHECK_FUNCTION_EXISTS=explicit_bzero -std=c11 -fdiagnostics-color=always -o CMakeFiles/cmTC_c95a3.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ZwMVKv/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -pthread -DCHECK_FUNCTION_EXISTS=explicit_bzero  CMakeFiles/cmTC_c95a3.dir/CheckFunctionExists.c.o -o cmTC_c95a3 -L/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ZwMVKv/strings.h -Wl,-rpath,/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ZwMVKv/strings.h  -lc && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "scala/CMakeLists.txt:148 (check_function_exists)"
+      - "scala/CMakeLists.txt:604 (add_definition_if_function_found)"
+    checks:
+      - "Looking for strptime"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-KaAXJZ"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-KaAXJZ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "strptime_function"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-KaAXJZ
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_7a6ae && [1/2] /usr/bin/cc   -pthread -DCHECK_FUNCTION_EXISTS=strptime -std=c11 -fdiagnostics-color=always -o CMakeFiles/cmTC_7a6ae.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-KaAXJZ/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -pthread -DCHECK_FUNCTION_EXISTS=strptime  CMakeFiles/cmTC_7a6ae.dir/CheckFunctionExists.c.o -o cmTC_7a6ae   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckSymbolExists.cmake:145 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckSymbolExists.cmake:71 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "scala/cmake/FindBacktrace.cmake:61 (check_symbol_exists)"
+      - "scala/external/easylogging++/CMakeLists.txt:41 (find_package)"
+    checks:
+      - "Looking for backtrace"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vH3Bkn"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vH3Bkn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Backtrace_SYM_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vH3Bkn
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_a6405 && [1/2] /usr/bin/cc   -pthread  -fdiagnostics-color=always -o CMakeFiles/cmTC_a6405.dir/CheckSymbolExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vH3Bkn/CheckSymbolExists.c
+        [2/2] : && /usr/bin/cc -pthread  CMakeFiles/cmTC_a6405.dir/CheckSymbolExists.c.o -o cmTC_a6405   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/external/randomx/CMakeLists.txt:94 (check_cxx_compiler_flag)"
+      - "scala/external/randomx/CMakeLists.txt:137 (add_flag)"
+    checks:
+      - "Performing Test _march=native_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-QlBtD7"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-QlBtD7"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_march=native_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-QlBtD7
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_5da47 && [1/2] /usr/bin/c++ -D_march=native_cxx  -pthread  -std=c++14 -fdiagnostics-color=always   -march=native -o CMakeFiles/cmTC_5da47.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-QlBtD7/src.cxx
+        [2/2] : && /usr/bin/c++ -pthread  CMakeFiles/cmTC_5da47.dir/src.cxx.o -o cmTC_5da47   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/external/randomx/CMakeLists.txt:100 (check_c_compiler_flag)"
+      - "scala/external/randomx/CMakeLists.txt:137 (add_flag)"
+    checks:
+      - "Performing Test _march=native_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-owa9Yp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-owa9Yp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_march=native_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-owa9Yp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_2d762 && [1/2] /usr/bin/cc -D_march=native_c  -pthread  -std=c11 -fdiagnostics-color=always   -march=native -o CMakeFiles/cmTC_2d762.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-owa9Yp/src.c
+        [2/2] : && /usr/bin/cc -pthread  CMakeFiles/cmTC_2d762.dir/src.c.o -o cmTC_2d762   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "scala/external/randomx/CMakeLists.txt:233 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test HAVE_CXX_ATOMICS"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-MUQTmE"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-MUQTmE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -march=native -DBLAKE3_NO_SSE2 -DBLAKE3_NO_SSE41 -DBLAKE3_NO_AVX2 -DBLAKE3_NO_AVX512"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "HAVE_CXX_ATOMICS"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-MUQTmE
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_ab356 && [1/2] /usr/bin/c++ -DHAVE_CXX_ATOMICS  -pthread -march=native -DBLAKE3_NO_SSE2 -DBLAKE3_NO_SSE41 -DBLAKE3_NO_AVX2 -DBLAKE3_NO_AVX512  -std=c++14 -fdiagnostics-color=always -o CMakeFiles/cmTC_ab356.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-MUQTmE/src.cxx
+        [2/2] : && /usr/bin/c++ -pthread -march=native -DBLAKE3_NO_SSE2 -DBLAKE3_NO_SSE41 -DBLAKE3_NO_AVX2 -DBLAKE3_NO_AVX512  CMakeFiles/cmTC_ab356.dir/src.cxx.o -o cmTC_ab356   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/cmake/CheckTrezor.cmake:99 (try_compile)"
+      - "scala/CMakeLists.txt:702 (include)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "Protobuf_COMPILE_TEST_PASSED"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_5f143 && [1/3] /usr/bin/c++  -I/home/hayzam/Projects/scala-gui/cmake-build-debug -pthread  -std=gnu++11 -fdiagnostics-color=always -o CMakeFiles/cmTC_5f143.dir/test-protobuf.cpp.o -c /home/hayzam/Projects/scala-gui/scala/cmake/test-protobuf.cpp
+        [2/3] /usr/bin/c++  -I/home/hayzam/Projects/scala-gui/cmake-build-debug -pthread  -std=gnu++11 -fdiagnostics-color=always -o CMakeFiles/cmTC_5f143.dir/test-protobuf.pb.cc.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/test-protobuf.pb.cc
+        [3/3] : && /usr/bin/c++ -pthread  CMakeFiles/cmTC_5f143.dir/test-protobuf.pb.cc.o CMakeFiles/cmTC_5f143.dir/test-protobuf.cpp.o -o cmTC_5f143  /usr/lib/x86_64-linux-gnu/libprotobuf.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:731 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test CC_SUPPORTS_MARCH_NATIVE"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YGoSAT"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YGoSAT"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "CC_SUPPORTS_MARCH_NATIVE"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YGoSAT
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_56398 && [1/2] /usr/bin/cc -DCC_SUPPORTS_MARCH_NATIVE  -pthread  -std=c11 -fdiagnostics-color=always   -march=native -o CMakeFiles/cmTC_56398.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YGoSAT/src.c
+        [2/2] : && /usr/bin/cc -pthread  CMakeFiles/cmTC_56398.dir/src.c.o -o cmTC_56398   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/CMakeLists.txt:800 (try_compile)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/scala/static-assert/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/scala/static-assert/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "STATIC_ASSERT_RES"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/scala/static-assert/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_5cc78 && [1/2] /usr/bin/cc   -pthread -maes -march=native  -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_5cc78.dir/test-static-assert.c.o -c /home/hayzam/Projects/scala-gui/scala/cmake/test-static-assert.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native  CMakeFiles/cmTC_5cc78.dir/test-static-assert.c.o -o cmTC_5cc78   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/CMakeLists.txt:807 (try_compile)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/scala/static-assert/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/scala/static-assert/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -maes -march=native"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "STATIC_ASSERT_CPP_RES"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/scala/static-assert/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_609b3 && [1/2] /usr/bin/c++   -pthread -maes -march=native  -std=gnu++11 -fdiagnostics-color=always -o CMakeFiles/cmTC_609b3.dir/test-static-assert.cpp.o -c /home/hayzam/Projects/scala-gui/scala/cmake/test-static-assert.cpp
+        [2/2] : && /usr/bin/c++ -pthread -maes -march=native  CMakeFiles/cmTC_609b3.dir/test-static-assert.cpp.o -o cmTC_609b3   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:122 (check_c_compiler_flag)"
+      - "scala/CMakeLists.txt:827 (add_c_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__Wformat_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WpkE9z"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WpkE9z"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__Wformat_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WpkE9z
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_affbc && [1/2] /usr/bin/cc -D_Werror__Wformat_c  -pthread -maes -march=native -fno-strict-aliasing  -std=c11 -fdiagnostics-color=always   -Werror -Wformat -o CMakeFiles/cmTC_affbc.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WpkE9z/src.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_affbc.dir/src.c.o -o cmTC_affbc   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:131 (check_cxx_compiler_flag)"
+      - "scala/CMakeLists.txt:828 (add_cxx_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__Wformat_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uTbWoa"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uTbWoa"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__Wformat_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uTbWoa
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_99654 && [1/2] /usr/bin/c++ -D_Werror__Wformat_cxx  -pthread -maes -march=native -fno-strict-aliasing  -std=c++14 -fdiagnostics-color=always   -Werror -Wformat -o CMakeFiles/cmTC_99654.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uTbWoa/src.cxx
+        [2/2] : && /usr/bin/c++ -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_99654.dir/src.cxx.o -o cmTC_99654   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:122 (check_c_compiler_flag)"
+      - "scala/CMakeLists.txt:829 (add_c_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__Wformat_security_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-S1KtFH"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-S1KtFH"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__Wformat_security_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-S1KtFH
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_d8d3f && [1/2] /usr/bin/cc -D_Werror__Wformat_security_c  -pthread -maes -march=native -fno-strict-aliasing  -std=c11 -fdiagnostics-color=always   -Werror -Wformat-security -o CMakeFiles/cmTC_d8d3f.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-S1KtFH/src.c
+        FAILED: CMakeFiles/cmTC_d8d3f.dir/src.c.o 
+        /usr/bin/cc -D_Werror__Wformat_security_c  -pthread -maes -march=native -fno-strict-aliasing  -std=c11 -fdiagnostics-color=always   -Werror -Wformat-security -o CMakeFiles/cmTC_d8d3f.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-S1KtFH/src.c
+        cc1: error: '-Wformat-security' ignored without '-Wformat' [-Werror=format-security]
+        cc1: all warnings being treated as errors
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:131 (check_cxx_compiler_flag)"
+      - "scala/CMakeLists.txt:830 (add_cxx_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__Wformat_security_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gzZSQE"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gzZSQE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__Wformat_security_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gzZSQE
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_5cce2 && [1/2] /usr/bin/c++ -D_Werror__Wformat_security_cxx  -pthread -maes -march=native -fno-strict-aliasing  -std=c++14 -fdiagnostics-color=always   -Werror -Wformat-security -o CMakeFiles/cmTC_5cce2.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gzZSQE/src.cxx
+        FAILED: CMakeFiles/cmTC_5cce2.dir/src.cxx.o 
+        /usr/bin/c++ -D_Werror__Wformat_security_cxx  -pthread -maes -march=native -fno-strict-aliasing  -std=c++14 -fdiagnostics-color=always   -Werror -Wformat-security -o CMakeFiles/cmTC_5cce2.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gzZSQE/src.cxx
+        cc1plus: error: '-Wformat-security' ignored without '-Wformat' [-Werror=format-security]
+        cc1plus: all warnings being treated as errors
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:122 (check_c_compiler_flag)"
+      - "scala/CMakeLists.txt:834 (add_c_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__fstack_protector_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5jst3P"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5jst3P"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__fstack_protector_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5jst3P
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_73429 && [1/2] /usr/bin/cc -D_Werror__fstack_protector_c  -pthread -maes -march=native -fno-strict-aliasing  -std=c11 -fdiagnostics-color=always   -Werror -fstack-protector -o CMakeFiles/cmTC_73429.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5jst3P/src.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_73429.dir/src.c.o -o cmTC_73429   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:131 (check_cxx_compiler_flag)"
+      - "scala/CMakeLists.txt:835 (add_cxx_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__fstack_protector_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yQccqa"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yQccqa"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__fstack_protector_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yQccqa
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_a764c && [1/2] /usr/bin/c++ -D_Werror__fstack_protector_cxx  -pthread -maes -march=native -fno-strict-aliasing  -std=c++14 -fdiagnostics-color=always   -Werror -fstack-protector -o CMakeFiles/cmTC_a764c.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yQccqa/src.cxx
+        [2/2] : && /usr/bin/c++ -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_a764c.dir/src.cxx.o -o cmTC_a764c   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:122 (check_c_compiler_flag)"
+      - "scala/CMakeLists.txt:836 (add_c_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__fstack_protector_strong_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-COtj0r"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-COtj0r"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__fstack_protector_strong_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-COtj0r
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_993c7 && [1/2] /usr/bin/cc -D_Werror__fstack_protector_strong_c  -pthread -maes -march=native -fno-strict-aliasing  -std=c11 -fdiagnostics-color=always   -Werror -fstack-protector-strong -o CMakeFiles/cmTC_993c7.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-COtj0r/src.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_993c7.dir/src.c.o -o cmTC_993c7   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:131 (check_cxx_compiler_flag)"
+      - "scala/CMakeLists.txt:837 (add_cxx_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__fstack_protector_strong_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EGW11z"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EGW11z"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__fstack_protector_strong_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EGW11z
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_2bf05 && [1/2] /usr/bin/c++ -D_Werror__fstack_protector_strong_cxx  -pthread -maes -march=native -fno-strict-aliasing  -std=c++14 -fdiagnostics-color=always   -Werror -fstack-protector-strong -o CMakeFiles/cmTC_2bf05.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EGW11z/src.cxx
+        [2/2] : && /usr/bin/c++ -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_2bf05.dir/src.cxx.o -o cmTC_2bf05   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:122 (check_c_compiler_flag)"
+      - "scala/CMakeLists.txt:842 (add_c_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__fcf_protection=full_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7mpL9y"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7mpL9y"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__fcf_protection=full_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7mpL9y
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_b0b97 && [1/2] /usr/bin/cc -D_Werror__fcf_protection=full_c  -pthread -maes -march=native -fno-strict-aliasing  -std=c11 -fdiagnostics-color=always   -Werror -fcf-protection=full -o CMakeFiles/cmTC_b0b97.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7mpL9y/src.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_b0b97.dir/src.c.o -o cmTC_b0b97   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:131 (check_cxx_compiler_flag)"
+      - "scala/CMakeLists.txt:843 (add_cxx_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__fcf_protection=full_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CF0Q3y"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CF0Q3y"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__fcf_protection=full_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CF0Q3y
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_12e59 && [1/2] /usr/bin/c++ -D_Werror__fcf_protection=full_cxx  -pthread -maes -march=native -fno-strict-aliasing  -std=c++14 -fdiagnostics-color=always   -Werror -fcf-protection=full -o CMakeFiles/cmTC_12e59.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CF0Q3y/src.cxx
+        [2/2] : && /usr/bin/c++ -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_12e59.dir/src.cxx.o -o cmTC_12e59   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:122 (check_c_compiler_flag)"
+      - "scala/CMakeLists.txt:846 (add_c_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__fstack_clash_protection_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8mYysF"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8mYysF"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__fstack_clash_protection_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8mYysF
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_5631e && [1/2] /usr/bin/cc -D_Werror__fstack_clash_protection_c  -pthread -maes -march=native -fno-strict-aliasing  -std=c11 -fdiagnostics-color=always   -Werror -fstack-clash-protection -o CMakeFiles/cmTC_5631e.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8mYysF/src.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_5631e.dir/src.c.o -o cmTC_5631e   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:131 (check_cxx_compiler_flag)"
+      - "scala/CMakeLists.txt:847 (add_cxx_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__fstack_clash_protection_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iQEVm2"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iQEVm2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__fstack_clash_protection_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iQEVm2
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_5ddcd && [1/2] /usr/bin/c++ -D_Werror__fstack_clash_protection_cxx  -pthread -maes -march=native -fno-strict-aliasing  -std=c++14 -fdiagnostics-color=always   -Werror -fstack-clash-protection -o CMakeFiles/cmTC_5ddcd.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iQEVm2/src.cxx
+        [2/2] : && /usr/bin/c++ -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_5ddcd.dir/src.cxx.o -o cmTC_5ddcd   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/cmake/CheckLinkerFlag.cmake:13 (try_compile)"
+      - "scala/CMakeLists.txt:140 (check_linker_flag)"
+      - "scala/CMakeLists.txt:865 (add_linker_flag_if_supported)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-pie"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "-pie_ld"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_2eb2e && [1/2] /usr/bin/cc   -pie  -std=c11 -fdiagnostics-color=always   -pie -o CMakeFiles/cmTC_2eb2e.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+        [2/2] : && /usr/bin/cc -pie  CMakeFiles/cmTC_2eb2e.dir/CheckLinkerFlag.c.o -o cmTC_2eb2e   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/cmake/CheckLinkerFlag.cmake:13 (try_compile)"
+      - "scala/CMakeLists.txt:140 (check_linker_flag)"
+      - "scala/CMakeLists.txt:868 (add_linker_flag_if_supported)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wl,-z,relro"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "-Wl_-z_relro_ld"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_53803 && [1/2] /usr/bin/cc   -Wl,-z,relro  -std=c11 -fdiagnostics-color=always   -Wl,-z,relro -o CMakeFiles/cmTC_53803.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+        [2/2] : && /usr/bin/cc -Wl,-z,relro  CMakeFiles/cmTC_53803.dir/CheckLinkerFlag.c.o -o cmTC_53803   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/cmake/CheckLinkerFlag.cmake:13 (try_compile)"
+      - "scala/CMakeLists.txt:140 (check_linker_flag)"
+      - "scala/CMakeLists.txt:869 (add_linker_flag_if_supported)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wl,-z,now"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "-Wl_-z_now_ld"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_88598 && [1/2] /usr/bin/cc   -Wl,-z,now  -std=c11 -fdiagnostics-color=always   -Wl,-z,now -o CMakeFiles/cmTC_88598.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+        [2/2] : && /usr/bin/cc -Wl,-z,now  CMakeFiles/cmTC_88598.dir/CheckLinkerFlag.c.o -o cmTC_88598   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/cmake/CheckLinkerFlag.cmake:13 (try_compile)"
+      - "scala/CMakeLists.txt:140 (check_linker_flag)"
+      - "scala/CMakeLists.txt:870 (add_linker_flag_if_supported)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wl,-z,noexecstack"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "-Wl_-z_noexecstack_ld"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_83742 && [1/2] /usr/bin/cc   -Wl,-z,noexecstack  -std=c11 -fdiagnostics-color=always   -Wl,-z,noexecstack -o CMakeFiles/cmTC_83742.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+        [2/2] : && /usr/bin/cc -Wl,-z,noexecstack  CMakeFiles/cmTC_83742.dir/CheckLinkerFlag.c.o -o cmTC_83742   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "scala/cmake/CheckLinkerFlag.cmake:13 (try_compile)"
+      - "scala/CMakeLists.txt:140 (check_linker_flag)"
+      - "scala/CMakeLists.txt:874 (add_linker_flag_if_supported)"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wl,-z,noexecheap"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "-Wl_-z_noexecheap_ld"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_d9f2e && [1/2] /usr/bin/cc   -Wl,-z,noexecheap  -std=c11 -fdiagnostics-color=always   -Wl,-z,noexecheap -o CMakeFiles/cmTC_d9f2e.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+        [2/2] : && /usr/bin/cc -Wl,-z,noexecheap  CMakeFiles/cmTC_d9f2e.dir/CheckLinkerFlag.c.o -o cmTC_d9f2e   && :
+        /usr/bin/ld: warning: -z noexecheap ignored
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:122 (check_c_compiler_flag)"
+      - "scala/CMakeLists.txt:894 (add_c_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__Werror=switch_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GTSr8O"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GTSr8O"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__Werror=switch_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GTSr8O
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_34c08 && [1/2] /usr/bin/cc -D_Werror__Werror=switch_c  -pthread -maes -march=native -fno-strict-aliasing  -std=c11 -fdiagnostics-color=always   -Werror -Werror=switch -o CMakeFiles/cmTC_34c08.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GTSr8O/src.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_34c08.dir/src.c.o -o cmTC_34c08   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:131 (check_cxx_compiler_flag)"
+      - "scala/CMakeLists.txt:895 (add_cxx_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__Werror=switch_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-dP6U2U"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-dP6U2U"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__Werror=switch_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-dP6U2U
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_d5de2 && [1/2] /usr/bin/c++ -D_Werror__Werror=switch_cxx  -pthread -maes -march=native -fno-strict-aliasing  -std=c++14 -fdiagnostics-color=always   -Werror -Werror=switch -o CMakeFiles/cmTC_d5de2.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-dP6U2U/src.cxx
+        [2/2] : && /usr/bin/c++ -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_d5de2.dir/src.cxx.o -o cmTC_d5de2   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:122 (check_c_compiler_flag)"
+      - "scala/CMakeLists.txt:896 (add_c_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__Werror=return_type_c"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-G15X3k"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-G15X3k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__Werror=return_type_c"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-G15X3k
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_3adb5 && [1/2] /usr/bin/cc -D_Werror__Werror=return_type_c  -pthread -maes -march=native -fno-strict-aliasing  -std=c11 -fdiagnostics-color=always   -Werror -Werror=return-type -o CMakeFiles/cmTC_3adb5.dir/src.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-G15X3k/src.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_3adb5.dir/src.c.o -o cmTC_3adb5   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "scala/CMakeLists.txt:131 (check_cxx_compiler_flag)"
+      - "scala/CMakeLists.txt:897 (add_cxx_flag_if_supported)"
+    checks:
+      - "Performing Test _Werror__Werror=return_type_cxx"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AseBdl"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AseBdl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "_Werror__Werror=return_type_cxx"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AseBdl
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_e7327 && [1/2] /usr/bin/c++ -D_Werror__Werror=return_type_cxx  -pthread -maes -march=native -fno-strict-aliasing  -std=c++14 -fdiagnostics-color=always   -Werror -Werror=return-type -o CMakeFiles/cmTC_e7327.dir/src.cxx.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AseBdl/src.cxx
+        [2/2] : && /usr/bin/c++ -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_e7327.dir/src.cxx.o -o cmTC_e7327   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "scala/cmake/FindReadline.cmake:65 (check_function_exists)"
+      - "scala/CMakeLists.txt:1144 (find_package)"
+    checks:
+      - "Looking for rl_copy_text"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OiuBHD"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OiuBHD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes -fPIC  -Wformat -fstack-protector -fstack-protector-strong -fcf-protection=full -fstack-clash-protection -Werror=switch -Werror=return-type -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g -g3"
+      CMAKE_EXE_LINKER_FLAGS: "  -pie -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack "
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "HAVE_COPY_TEXT"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OiuBHD
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_38ecc && [1/2] /usr/bin/cc   -pthread -maes -march=native -fno-strict-aliasing -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes -fPIC  -Wformat -fstack-protector -fstack-protector-strong -fcf-protection=full -fstack-clash-protection -Werror=switch -Werror=return-type -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=rl_copy_text -std=c11 -fdiagnostics-color=always -o CMakeFiles/cmTC_38ecc.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OiuBHD/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native -fno-strict-aliasing -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes -fPIC  -Wformat -fstack-protector -fstack-protector-strong -fcf-protection=full -fstack-clash-protection -Werror=switch -Werror=return-type -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=rl_copy_text -pie -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack CMakeFiles/cmTC_38ecc.dir/CheckFunctionExists.c.o -o cmTC_38ecc  /usr/lib/x86_64-linux-gnu/libreadline.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "scala/cmake/FindReadline.cmake:66 (check_function_exists)"
+      - "scala/CMakeLists.txt:1144 (find_package)"
+    checks:
+      - "Looking for rl_filename_completion_function"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pxmu9Z"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pxmu9Z"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -pthread -maes -march=native -fno-strict-aliasing -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes -fPIC  -Wformat -fstack-protector -fstack-protector-strong -fcf-protection=full -fstack-clash-protection -Werror=switch -Werror=return-type -fno-strict-aliasing"
+      CMAKE_C_FLAGS_DEBUG: "-g -g3"
+      CMAKE_EXE_LINKER_FLAGS: "  -pie -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack "
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake;/home/hayzam/Projects/scala-gui/scala/cmake;/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "HAVE_COMPLETION_FUNCTION"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pxmu9Z
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_68fd9 && [1/2] /usr/bin/cc   -pthread -maes -march=native -fno-strict-aliasing -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes -fPIC  -Wformat -fstack-protector -fstack-protector-strong -fcf-protection=full -fstack-clash-protection -Werror=switch -Werror=return-type -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=rl_filename_completion_function -std=c11 -fdiagnostics-color=always -o CMakeFiles/cmTC_68fd9.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pxmu9Z/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -pthread -maes -march=native -fno-strict-aliasing -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes -fPIC  -Wformat -fstack-protector -fstack-protector-strong -fcf-protection=full -fstack-clash-protection -Werror=switch -Werror=return-type -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=rl_filename_completion_function -pie -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack CMakeFiles/cmTC_68fd9.dir/CheckFunctionExists.c.o -o cmTC_68fd9  /usr/lib/x86_64-linux-gnu/libreadline.so && :
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckLanguage.cmake:93 (message)"
+      - "scala/external/supercop/functions.cmake:63 (check_language)"
+      - "scala/src/crypto/wallet/CMakeLists.txt:39 (scala_crypto_autodetect)"
+    checks:
+      - "Looking for a ASM-ATT compiler"
+    message: |
+      Looking for a ASM-ATT compiler passed with the following output:
+      -- The ASM-ATT compiler identification is GNU
+      -- Found assembler: /usr/bin/as
+      -- Configuring done (0.0s)
+      -- Generating done (0.0s)
+      -- Build files have been written to: /home/hayzam/Projects/scala-gui/cmake-build-debug/scala/src/crypto/wallet/CMakeFiles/CheckASM-ATT
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindX11.cmake:498 (check_library_exists)"
+      - "CMakeLists.txt:103 (find_package)"
+    checks:
+      - "Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0kWC5t"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0kWC5t"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "X11_LIB_X11_SOLO"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0kWC5t
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_af743 && [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -fdiagnostics-color=always -o CMakeFiles/cmTC_af743.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0kWC5t/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=XOpenDisplay  CMakeFiles/cmTC_af743.dir/CheckFunctionExists.c.o -o cmTC_af743  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXext.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindX11.cmake:513 (check_function_exists)"
+      - "CMakeLists.txt:103 (find_package)"
+    checks:
+      - "Looking for gethostbyname"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8XmIcT"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8XmIcT"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_GETHOSTBYNAME"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8XmIcT
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_0eb64 && [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -fdiagnostics-color=always -o CMakeFiles/cmTC_0eb64.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8XmIcT/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=gethostbyname  CMakeFiles/cmTC_0eb64.dir/CheckFunctionExists.c.o -o cmTC_0eb64   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindX11.cmake:527 (check_function_exists)"
+      - "CMakeLists.txt:103 (find_package)"
+    checks:
+      - "Looking for connect"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-tYz9k2"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-tYz9k2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_CONNECT"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-tYz9k2
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_b837d && [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -fdiagnostics-color=always -o CMakeFiles/cmTC_b837d.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-tYz9k2/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=connect  CMakeFiles/cmTC_b837d.dir/CheckFunctionExists.c.o -o cmTC_b837d   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindX11.cmake:536 (check_function_exists)"
+      - "CMakeLists.txt:103 (find_package)"
+    checks:
+      - "Looking for remove"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-khemr9"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-khemr9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_REMOVE"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-khemr9
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_c2a1e && [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -fdiagnostics-color=always -o CMakeFiles/cmTC_c2a1e.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-khemr9/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=remove  CMakeFiles/cmTC_c2a1e.dir/CheckFunctionExists.c.o -o cmTC_c2a1e   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindX11.cmake:545 (check_function_exists)"
+      - "CMakeLists.txt:103 (find_package)"
+    checks:
+      - "Looking for shmat"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nJRW51"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nJRW51"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_SHMAT"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nJRW51
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_ddc9d && [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -fdiagnostics-color=always -o CMakeFiles/cmTC_ddc9d.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nJRW51/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=shmat  CMakeFiles/cmTC_ddc9d.dir/CheckFunctionExists.c.o -o cmTC_ddc9d   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindX11.cmake:555 (check_library_exists)"
+      - "CMakeLists.txt:103 (find_package)"
+    checks:
+      - "Looking for IceConnectionNumber in ICE"
+    directories:
+      source: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xzJL4G"
+      binary: "/home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xzJL4G"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/hayzam/Projects/scala-gui/cmake"
+    buildResult:
+      variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
+      cached: true
+      stdout: |
+        Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xzJL4G
+        
+        Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_594c9 && [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -fdiagnostics-color=always -o CMakeFiles/cmTC_594c9.dir/CheckFunctionExists.c.o -c /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xzJL4G/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=IceConnectionNumber  CMakeFiles/cmTC_594c9.dir/CheckFunctionExists.c.o -o cmTC_594c9  -lICE && :
+        
+      exitCode: 0
+...

@@ -42,7 +42,7 @@ class SubaddressAccount : public QObject
     Q_OBJECT
 public:
     Q_INVOKABLE void getAll() const;
-    Q_INVOKABLE bool getRow(int index, std::function<void (Scala::SubaddressAccountRow &)> callback) const;
+    Q_INVOKABLE bool getRow(int index, std::function<void (scala::SubaddressAccountRow &)> callback) const;
     Q_INVOKABLE void addRow(const QString &label) const;
     Q_INVOKABLE void setLabel(quint32 accountIndex, const QString &label) const;
     Q_INVOKABLE void refresh() const;
@@ -55,11 +55,11 @@ signals:
 public slots:
 
 private:
-    explicit SubaddressAccount(Scala::SubaddressAccount * subaddressAccountImpl, QObject *parent);
+    explicit SubaddressAccount(scala::SubaddressAccount * subaddressAccountImpl, QObject *parent);
     friend class Wallet;
     mutable QReadWriteLock m_lock;
-    Scala::SubaddressAccount * m_subaddressAccountImpl;
-    mutable QList<Scala::SubaddressAccountRow*> m_rows;
+    scala::SubaddressAccount * m_subaddressAccountImpl;
+    mutable QList<scala::SubaddressAccountRow*> m_rows;
 };
 
 #endif // SUBADDRESSACCOUNT_H

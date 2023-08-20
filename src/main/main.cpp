@@ -289,7 +289,7 @@ Verify update binary using 'shasum'-compatible (SHA256 algo) output signed by tw
     parser.addHelpOption();
     parser.process(app);
 
-    Scala::Utils::onStartup();
+    scala::Utils::onStartup();
 
     Logger logger(app, parser.value(logPathOption));
 
@@ -297,8 +297,8 @@ Verify update binary using 'shasum'-compatible (SHA256 algo) output signed by tw
     // qWarning is not shown here unless SCALA_LOG_LEVEL env var is set
     bool logLevelOk;
     int logLevel = qEnvironmentVariableIntValue("SCALA_LOG_LEVEL", &logLevelOk);
-    if (logLevelOk && logLevel >= 0 && logLevel <= Scala::WalletManagerFactory::LogLevel_Max){
-        Scala::WalletManagerFactory::setLogLevel(logLevel);
+    if (logLevelOk && logLevel >= 0 && logLevel <= scala::WalletManagerFactory::LogLevel_Max){
+        scala::WalletManagerFactory::setLogLevel(logLevel);
     }
 
     if (parser.isSet(verifyUpdateOption))
@@ -524,7 +524,7 @@ Verify update binary using 'shasum'-compatible (SHA256 algo) output signed by tw
 #endif
     engine.rootContext()->setContextProperty("builtWithDesktopEntry", builtWithDesktopEntry);
 
-    engine.rootContext()->setContextProperty("scalaVersion", SCALA_VERSION_FULL);
+    engine.rootContext()->setContextProperty("scalaVersion", scala_VERSION_FULL);
 
     // Load main window (context properties needs to be defined obove this line)
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));

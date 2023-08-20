@@ -1,0 +1,26 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 6.1.0-10-amd64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineASM-ATTCompiler.cmake:9 (include)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Checking whether the ASM-ATT compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      GNU assembler (GNU Binutils for Debian) 2.40
+      Copyright (C) 2023 Free Software Foundation, Inc.
+      This program is free software; you may redistribute it under the terms of
+      the GNU General Public License version 3 or later.
+      This program has absolutely no warranty.
+      This assembler was configured for a target of `x86_64-linux-gnu'.
+...

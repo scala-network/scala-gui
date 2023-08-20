@@ -59,7 +59,7 @@ QVariant SubaddressModel::data(const QModelIndex &index, int role) const
 
     QVariant result;
 
-    bool found = m_subaddress->getRow(index.row(), [&index, &result, &role](const Scala::SubaddressRow &subaddress) {
+    bool found = m_subaddress->getRow(index.row(), [&index, &result, &role](const scala::SubaddressRow &subaddress) {
         switch (role) {
         case SubaddressAddressRole:
             result = QString::fromStdString(subaddress.getAddress());

@@ -1,0 +1,253 @@
+/home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -G Ninja -S /home/hayzam/Projects/scala-gui -B /home/hayzam/Projects/scala-gui/cmake-build-debug
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Initiating compile using CMake 3.26.4
+-- Found Git: /usr/bin/git (found version "2.39.2") 
+-- Checking submodules
+-- Submodule 'scala' is up-to-date
+-- Found PythonInterp: /usr/bin/python (found version "3.11.2") 
+-- CMake version 3.26.4
+-- Found usable ccache: /usr/bin/ccache
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Looking for -Wl,--no-undefined linker flag
+-- Looking for -Wl,--no-undefined linker flag - found
+-- Looking for -Wl,-undefined,error linker flag
+-- Looking for -Wl,-undefined,error linker flag - found
+-- Building without build tag
+-- Checking submodules
+-- Submodule 'external/miniupnp' is up-to-date
+-- Submodule 'external/rapidjson' is up-to-date
+-- Submodule 'external/trezor-common' is up-to-date
+-- Submodule 'external/randomx' is up-to-date
+-- Submodule 'external/supercop' is up-to-date
+-- Could not find DEVELOPER_LOCAL_TOOLS in env (not required)
+-- BOOST_IGNORE_SYSTEM_PATHS defaults to OFF
+-- Building for a 64-bit system
+-- Building internal libraries with position independent code
+-- Using LMDB as default DB type
+-- Stack trace on exception enabled (using easylogging++)
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test _Werror__pthread_c
+-- Performing Test _Werror__pthread_c - Success
+-- Performing Test _Werror__pthread_cxx
+-- Performing Test _Werror__pthread_cxx - Success
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.9")  
+-- Using OpenSSL include dir at /usr/include
+-- Found HIDAPI: /usr/lib/x86_64-linux-gnu/libhidapi-libusb.so  
+-- Looking for memset_s in c
+-- Looking for memset_s in c - not found
+-- Looking for explicit_bzero in c
+-- Looking for explicit_bzero in c - found
+-- Looking for strptime
+-- Looking for strptime - found
+CMake Warning (dev) at /home/hayzam/JetBrains/clion-2023.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (MiniUPnPc)
+  does not match the name of the calling package (Miniupnpc).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  scala/cmake/FindMiniupnpc.cmake:39 (find_package_handle_standard_args)
+  scala/external/CMakeLists.txt:38 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find MiniUPnPc (missing: MINIUPNP_INCLUDE_DIR MINIUPNP_LIBRARY) 
+-- Using in-tree miniupnpc
+-- Looking for libunbound
+-- Found libunbound include (unbound.h) in /usr/local/include
+-- Found libunbound shared library
+-- Using 64-bit LMDB from source tree
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- backtrace facility detected in default set of libraries
+-- Backtrace_LIBRARY: 
+-- Found Backtrace: /usr/include  
+-- Performing Test _march=native_cxx
+-- Performing Test _march=native_cxx - Success
+-- Setting CXX flag -march=native
+-- Performing Test _march=native_c
+-- Performing Test _march=native_c - Success
+-- Setting C flag -march=native
+-- Performing Test HAVE_CXX_ATOMICS
+-- Performing Test HAVE_CXX_ATOMICS - Success
+-- Setting CXX flag -march=native
+-- Setting C flag -march=native
+-- Using HIDAPI include dir at /usr/include/hidapi
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.21.12") 
+-- Protobuf lib: /usr/lib/x86_64-linux-gnu/libprotobuf.so, inc: /usr/include, protoc: /usr/bin/protoc
+CMake Warning at scala/cmake/CheckTrezor.cmake:126 (message):
+  Trezor protobuf messages could not be regenerated (err=1, python ).OUT: ,
+  ERR: Traceback (most recent call last):
+
+    File "/home/hayzam/Projects/scala-gui/scala/src/device_trezor/trezor/tools/pb2cpp.py", line 219, in <module>
+      main()
+    File "/home/hayzam/Projects/scala-gui/scala/src/device_trezor/trezor/tools/pb2cpp.py", line 213, in main
+      protoc(
+    File "/home/hayzam/Projects/scala-gui/scala/src/device_trezor/trezor/tools/pb2cpp.py", line 104, in protoc
+      shutil.copy(file, tmp_file)
+    File "/usr/lib/python3.11/shutil.py", line 419, in copy
+      copyfile(src, dst, follow_symlinks=follow_symlinks)
+    File "/usr/lib/python3.11/shutil.py", line 256, in copyfile
+      with open(src, 'rb') as fsrc:
+           ^^^^^^^^^^^^^^^
+
+  FileNotFoundError: [Errno 2] No such file or directory:
+  '/home/hayzam/Projects/scala-gui/scala/external/trezor-common/protob/messages-scala.proto'
+
+
+  Traceback (most recent call last):
+
+    File "/home/hayzam/Projects/scala-gui/scala/src/device_trezor/trezor/tools/build_protob.py", line 45, in <module>
+      subprocess.check_call(exec_args)
+    File "/usr/lib/python3.11/subprocess.py", line 413, in check_call
+      raise CalledProcessError(retcode, cmd)
+
+  subprocess.CalledProcessError: Command '['/usr/bin/python3.11',
+  '/home/hayzam/Projects/scala-gui/scala/src/device_trezor/trezor/tools/pb2cpp.py',
+  '-o',
+  '/home/hayzam/Projects/scala-gui/scala/src/device_trezor/trezor/tools/../messages',
+  '/home/hayzam/Projects/scala-gui/scala/external/trezor-common/protob/messages.proto',
+  '/home/hayzam/Projects/scala-gui/scala/external/trezor-common/protob/messages-common.proto',
+  '/home/hayzam/Projects/scala-gui/scala/external/trezor-common/protob/messages-management.proto',
+  '/home/hayzam/Projects/scala-gui/scala/external/trezor-common/protob/messages-scala.proto']'
+  returned non-zero exit status 1.
+
+  .Please read src/device_trezor/trezor/tools/README.md
+Call Stack (most recent call first):
+  scala/CMakeLists.txt:702 (include)
+
+
+-- Building on x86_64 for native
+-- Performing Test CC_SUPPORTS_MARCH_NATIVE
+-- Performing Test CC_SUPPORTS_MARCH_NATIVE - Success
+-- AES support enabled
+-- Performing Test _Werror__Wformat_c
+-- Performing Test _Werror__Wformat_c - Success
+-- Performing Test _Werror__Wformat_cxx
+-- Performing Test _Werror__Wformat_cxx - Success
+-- Performing Test _Werror__Wformat_security_c
+-- Performing Test _Werror__Wformat_security_c - Failed
+-- Performing Test _Werror__Wformat_security_cxx
+-- Performing Test _Werror__Wformat_security_cxx - Failed
+-- Performing Test _Werror__fstack_protector_c
+-- Performing Test _Werror__fstack_protector_c - Success
+-- Performing Test _Werror__fstack_protector_cxx
+-- Performing Test _Werror__fstack_protector_cxx - Success
+-- Performing Test _Werror__fstack_protector_strong_c
+-- Performing Test _Werror__fstack_protector_strong_c - Success
+-- Performing Test _Werror__fstack_protector_strong_cxx
+-- Performing Test _Werror__fstack_protector_strong_cxx - Success
+-- Performing Test _Werror__fcf_protection=full_c
+-- Performing Test _Werror__fcf_protection=full_c - Success
+-- Performing Test _Werror__fcf_protection=full_cxx
+-- Performing Test _Werror__fcf_protection=full_cxx - Success
+-- Performing Test _Werror__fstack_clash_protection_c
+-- Performing Test _Werror__fstack_clash_protection_c - Success
+-- Performing Test _Werror__fstack_clash_protection_cxx
+-- Performing Test _Werror__fstack_clash_protection_cxx - Success
+-- Looking for -pie linker flag
+-- Looking for -pie linker flag - found
+-- Looking for -Wl,-z,relro linker flag
+-- Looking for -Wl,-z,relro linker flag - found
+-- Looking for -Wl,-z,now linker flag
+-- Looking for -Wl,-z,now linker flag - found
+-- Looking for -Wl,-z,noexecstack linker flag
+-- Looking for -Wl,-z,noexecstack linker flag - found
+-- Looking for -Wl,-z,noexecheap linker flag
+-- Looking for -Wl,-z,noexecheap linker flag - not found
+-- Performing Test _Werror__Werror=switch_c
+-- Performing Test _Werror__Werror=switch_c - Success
+-- Performing Test _Werror__Werror=switch_cxx
+-- Performing Test _Werror__Werror=switch_cxx - Success
+-- Performing Test _Werror__Werror=return_type_c
+-- Performing Test _Werror__Werror=return_type_c - Success
+-- Performing Test _Werror__Werror=return_type_cxx
+-- Performing Test _Werror__Werror=return_type_cxx - Success
+-- Using C security hardening flags:  -Wformat -fstack-protector -fstack-protector-strong -fcf-protection=full -fstack-clash-protection -Werror=switch -Werror=return-type
+-- Using C++ security hardening flags:  -Wformat -fstack-protector -fstack-protector-strong -fcf-protection=full -fstack-clash-protection -Werror=switch -Werror=return-type
+-- Using linker security hardening flags:  -pie -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack
+-- Found Boost Version: 107400
+-- Found Readline: /usr/include  
+-- Looking for rl_copy_text
+-- Looking for rl_copy_text - found
+-- Looking for rl_filename_completion_function
+-- Looking for rl_filename_completion_function - found
+-- Found readline library at: /usr
+-- Found Git: /usr/bin/git
+-- You are currently on commit 5b0473b20
+-- You are building a tagged release
+-- Looking for a ASM-ATT compiler
+-- Looking for a ASM-ATT compiler - /usr/bin/as
+Wallet crypto is using amd64-64-24k backend
+-- Trezor support disabled
+-- Not building tests
+-- Building debug utilities
+-- Found Doxygen: /usr/bin/doxygen (found version "1.9.4") found components: doxygen dot 
+CMake Warning (dev) at scala/CMakeLists.txt:1257 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'BUILD_GUI_DEPS'.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found Git: /usr/bin/git
+-- You are currently on commit d2820bef6
+-- You are ahead of or behind a tagged release
+CMake Error at cmake/VersionGui.cmake:31 (configure_file):
+  Operation not permitted
+Call Stack (most recent call first):
+  cmake/VersionGui.cmake:41 (write_static_version_header)
+  CMakeLists.txt:79 (include)
+
+
+-- /home/hayzam/Projects/scala-gui/cmake
+-- libsodium: libraries at /usr/lib/x86_64-linux-gnu/libsodium.so
+-- Found X11: /usr/include   
+-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for remove
+-- Looking for remove - found
+-- Looking for shmat
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for IceConnectionNumber in ICE - found
+-- X11_FOUND = TRUE
+-- X11_INCLUDE_DIR = /usr/include
+-- X11_LIBRARIES = /usr/lib/x86_64-linux-gnu/libSM.so;/usr/lib/x86_64-linux-gnu/libICE.so;/usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+CMake Error at CMakeLists.txt:159 (find_package):
+  By not providing "FindQt5Core.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Qt5Core", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5Core" with any
+  of the following names:
+
+    Qt5CoreConfig.cmake
+    qt5core-config.cmake
+
+  Add the installation prefix of "Qt5Core" to CMAKE_PREFIX_PATH or set
+  "Qt5Core_DIR" to a directory containing one of the above files.  If
+  "Qt5Core" provides a separate development package or SDK, be sure it has
+  been installed.
+
+
+-- Configuring incomplete, errors occurred!

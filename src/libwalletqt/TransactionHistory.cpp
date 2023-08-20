@@ -145,7 +145,7 @@ bool TransactionHistory::TransactionHistory::locked() const
 }
 
 
-TransactionHistory::TransactionHistory(Scala::TransactionHistory *pimpl, QObject *parent)
+TransactionHistory::TransactionHistory(scala::TransactionHistory *pimpl, QObject *parent)
     : QObject(parent), m_pimpl(pimpl), m_minutesToUnlock(0), m_locked(false)
 {
 #if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)

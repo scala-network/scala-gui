@@ -45,7 +45,7 @@ class AddressBook : public QObject
 {
     Q_OBJECT
 public:
-    Q_INVOKABLE bool getRow(int index, std::function<void (Scala::AddressBookRow &)> callback) const;
+    Q_INVOKABLE bool getRow(int index, std::function<void (scala::AddressBookRow &)> callback) const;
     Q_INVOKABLE bool addRow(const QString &address, const QString &payment_id, const QString &description);
     Q_INVOKABLE bool deleteRow(int rowId);
     quint64 count() const;
@@ -74,11 +74,11 @@ signals:
 public slots:
 
 private:
-    explicit AddressBook(Scala::AddressBook * abImpl, QObject *parent);
+    explicit AddressBook(scala::AddressBook * abImpl, QObject *parent);
     friend class Wallet;
-    Scala::AddressBook * m_addressBookImpl;
+    scala::AddressBook * m_addressBookImpl;
     mutable QReadWriteLock m_lock;
-    QList<Scala::AddressBookRow*> m_rows;
+    QList<scala::AddressBookRow*> m_rows;
     QMap<QString, size_t> m_addresses;
 };
 

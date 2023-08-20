@@ -53,16 +53,16 @@ class PendingTransaction : public QObject
 
 public:
     enum Status {
-        Status_Ok       = Scala::PendingTransaction::Status_Ok,
-        Status_Error    = Scala::PendingTransaction::Status_Error,
-        Status_Critical    = Scala::PendingTransaction::Status_Critical
+        Status_Ok       = scala::PendingTransaction::Status_Ok,
+        Status_Error    = scala::PendingTransaction::Status_Error,
+        Status_Critical    = scala::PendingTransaction::Status_Critical
     };
     Q_ENUM(Status)
 
     enum Priority {
-        Priority_Low    = Scala::PendingTransaction::Priority_Low,
-        Priority_Medium = Scala::PendingTransaction::Priority_Medium,
-        Priority_High   = Scala::PendingTransaction::Priority_High
+        Priority_Low    = scala::PendingTransaction::Priority_Low,
+        Priority_Medium = scala::PendingTransaction::Priority_Medium,
+        Priority_High   = scala::PendingTransaction::Priority_High
     };
     Q_ENUM(Priority)
 
@@ -79,11 +79,11 @@ public:
     Q_INVOKABLE void setFilename(const QString &fileName);
 
 private:
-    explicit PendingTransaction(Scala::PendingTransaction * pt, QObject *parent = 0);
+    explicit PendingTransaction(scala::PendingTransaction * pt, QObject *parent = 0);
 
 private:
     friend class Wallet;
-    Scala::PendingTransaction * m_pimpl;
+    scala::PendingTransaction * m_pimpl;
     QString m_fileName;
 };
 

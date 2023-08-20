@@ -29,7 +29,7 @@
 #include "AddressBook.h"
 #include <QDebug>
 
-AddressBook::AddressBook(Scala::AddressBook *abImpl,QObject *parent)
+AddressBook::AddressBook(scala::AddressBook *abImpl,QObject *parent)
   : QObject(parent), m_addressBookImpl(abImpl)
 {
     getAll();
@@ -63,7 +63,7 @@ void AddressBook::getAll()
     emit refreshFinished();
 }
 
-bool AddressBook::getRow(int index, std::function<void (Scala::AddressBookRow &)> callback) const
+bool AddressBook::getRow(int index, std::function<void (scala::AddressBookRow &)> callback) const
 {
     QReadLocker locker(&m_lock);
 

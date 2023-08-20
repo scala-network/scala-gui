@@ -30,7 +30,7 @@
 #include <QMutexLocker>
 #include <QDebug>
 
-Scala::optional<std::string> PassphraseHelper::onDevicePassphraseRequest(bool & on_device)
+scala::optional<std::string> PassphraseHelper::onDevicePassphraseRequest(bool & on_device)
 {
     qDebug() << __FUNCTION__;
     QMutexLocker locker(&m_mutex_pass);
@@ -52,9 +52,9 @@ Scala::optional<std::string> PassphraseHelper::onDevicePassphraseRequest(bool & 
     if (!on_device) {
         auto tmpPass = m_passphrase.toStdString();
         m_passphrase = QString();
-        return Scala::optional<std::string>(tmpPass);
+        return scala::optional<std::string>(tmpPass);
     } else {
-        return Scala::optional<std::string>();
+        return scala::optional<std::string>();
     }
 }
 

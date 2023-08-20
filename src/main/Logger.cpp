@@ -100,11 +100,11 @@ void messageHandler(QtMsgType type, const QMessageLogContext &context, const QSt
     const std::string msg = message.toStdString();
     switch(type)
     {
-        case QtDebugMsg: Scala::Wallet::debug(cat, msg); break;
-        case QtInfoMsg: Scala::Wallet::info(cat, msg); break;
-        case QtWarningMsg: Scala::Wallet::warning(cat, msg); break;
-        case QtCriticalMsg: Scala::Wallet::error(cat, msg); break;
-        case QtFatalMsg: Scala::Wallet::error(cat, msg); break;
+        case QtDebugMsg: scala::Wallet::debug(cat, msg); break;
+        case QtInfoMsg: scala::Wallet::info(cat, msg); break;
+        case QtWarningMsg: scala::Wallet::warning(cat, msg); break;
+        case QtCriticalMsg: scala::Wallet::error(cat, msg); break;
+        case QtFatalMsg: scala::Wallet::error(cat, msg); break;
     }
 }
 
@@ -123,7 +123,7 @@ Logger::Logger(QCoreApplication &parent, QString userDefinedLogFilePath)
 void Logger::resetLogFilePath(bool portable)
 {
     m_logFilePath = QDir::toNativeSeparators(getLogPath(m_userDefinedLogFilePath, portable));
-    Scala::Wallet::init(m_applicationFilePath.c_str(), "scala-wallet-gui", m_logFilePath.toStdString(), true);
+    scala::Wallet::init(m_applicationFilePath.c_str(), "scala-wallet-gui", m_logFilePath.toStdString(), true);
     qWarning() << "Logging to" << m_logFilePath;
     emit logFilePathChanged();
 }

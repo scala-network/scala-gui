@@ -1,0 +1,48 @@
+Determining if the -Wl,--no-undefined linker flag is supported passed with the following output:
+Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_0465d && [1/2] /usr/bin/cc   -Wl,--no-undefined  -std=c11 -fdiagnostics-color=always   -Wl,--no-undefined -o CMakeFiles/cmTC_0465d.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+[2/2] : && /usr/bin/cc -Wl,--no-undefined  CMakeFiles/cmTC_0465d.dir/CheckLinkerFlag.c.o -o cmTC_0465d   && :
+
+
+
+Determining if the -Wl,-undefined,error linker flag is supported passed with the following output:
+Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_a5244 && [1/2] /usr/bin/cc   -Wl,-undefined,error  -std=c11 -fdiagnostics-color=always   -Wl,-undefined,error -o CMakeFiles/cmTC_a5244.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+[2/2] : && /usr/bin/cc -Wl,-undefined,error  CMakeFiles/cmTC_a5244.dir/CheckLinkerFlag.c.o -o cmTC_a5244   && :
+
+
+
+Determining if the -pie linker flag is supported passed with the following output:
+Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_2eb2e && [1/2] /usr/bin/cc   -pie  -std=c11 -fdiagnostics-color=always   -pie -o CMakeFiles/cmTC_2eb2e.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+[2/2] : && /usr/bin/cc -pie  CMakeFiles/cmTC_2eb2e.dir/CheckLinkerFlag.c.o -o cmTC_2eb2e   && :
+
+
+
+Determining if the -Wl,-z,relro linker flag is supported passed with the following output:
+Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_53803 && [1/2] /usr/bin/cc   -Wl,-z,relro  -std=c11 -fdiagnostics-color=always   -Wl,-z,relro -o CMakeFiles/cmTC_53803.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+[2/2] : && /usr/bin/cc -Wl,-z,relro  CMakeFiles/cmTC_53803.dir/CheckLinkerFlag.c.o -o cmTC_53803   && :
+
+
+
+Determining if the -Wl,-z,now linker flag is supported passed with the following output:
+Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_88598 && [1/2] /usr/bin/cc   -Wl,-z,now  -std=c11 -fdiagnostics-color=always   -Wl,-z,now -o CMakeFiles/cmTC_88598.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+[2/2] : && /usr/bin/cc -Wl,-z,now  CMakeFiles/cmTC_88598.dir/CheckLinkerFlag.c.o -o cmTC_88598   && :
+
+
+
+Determining if the -Wl,-z,noexecstack linker flag is supported passed with the following output:
+Change Dir: /home/hayzam/Projects/scala-gui/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/hayzam/JetBrains/clion-2023.2/bin/ninja/linux/x64/ninja -v cmTC_83742 && [1/2] /usr/bin/cc   -Wl,-z,noexecstack  -std=c11 -fdiagnostics-color=always   -Wl,-z,noexecstack -o CMakeFiles/cmTC_83742.dir/CheckLinkerFlag.c.o -c /home/hayzam/Projects/scala-gui/cmake/CheckLinkerFlag.c
+[2/2] : && /usr/bin/cc -Wl,-z,noexecstack  CMakeFiles/cmTC_83742.dir/CheckLinkerFlag.c.o -o cmTC_83742   && :
+
+
+

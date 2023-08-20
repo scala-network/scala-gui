@@ -319,17 +319,17 @@ void Wallet::initAsync(
 
 bool Wallet::isHwBacked() const
 {
-    return m_walletImpl->getDeviceType() != Scala::Wallet::Device_Software;
+    return m_walletImpl->getDeviceType() != scala::Wallet::Device_Software;
 }
 
 bool Wallet::isLedger() const
 {
-    return m_walletImpl->getDeviceType() == Scala::Wallet::Device_Ledger;
+    return m_walletImpl->getDeviceType() == scala::Wallet::Device_Ledger;
 }
 
 bool Wallet::isTrezor() const
 {
-    return m_walletImpl->getDeviceType() == Scala::Wallet::Device_Trezor;
+    return m_walletImpl->getDeviceType() == scala::Wallet::Device_Trezor;
 }
 
 //! create a view only wallet
@@ -578,15 +578,15 @@ PendingTransaction *Wallet::createTransaction(
     }
     std::vector<uint64_t> amounts;
     for (const auto &amount : destinationAmounts) {
-        amounts.push_back(Scala::Wallet::amountFromString(amount.toStdString()));
+        amounts.push_back(scala::Wallet::amountFromString(amount.toStdString()));
     }
     std::set<uint32_t> subaddr_indices;
-    Scala::PendingTransaction *ptImpl = m_walletImpl->createTransactionMultDest(
+    scala::PendingTransaction *ptImpl = m_walletImpl->createTransactionMultDest(
         destinations,
         payment_id.toStdString(),
         amounts,
         mixin_count,
-        static_cast<Scala::PendingTransaction::Priority>(priority),
+        static_cast<scala::PendingTransaction::Priority>(priority),
         currentSubaddressAccount(),
         subaddr_indices);
     PendingTransaction *result = new PendingTransaction(ptImpl, 0);
@@ -610,9 +610,9 @@ PendingTransaction *Wallet::createTransactionAll(const QString &dst_addr, const 
                                                  quint32 mixin_count, PendingTransaction::Priority priority)
 {
     std::set<uint32_t> subaddr_indices;
-    Scala::PendingTransaction * ptImpl = m_walletImpl->createTransaction(
-                dst_addr.toStdString(), payment_id.toStdString(), Scala::optional<uint64_t>(), mixin_count,
-                static_cast<Scala::PendingTransaction::Priority>(priority), currentSubaddressAccount(), subaddr_indices);
+    scala::PendingTransaction * ptImpl = m_walletImpl->createTransaction(
+                dst_addr.toStdString(), payment_id.toStdString(), scala::optional<uint64_t>(), mixin_count,
+                static_cast<scala::PendingTransaction::Priority>(priority), currentSubaddressAccount(), subaddr_indices);
     PendingTransaction * result = new PendingTransaction(ptImpl, this);
     return result;
 }
@@ -629,7 +629,7 @@ void Wallet::createTransactionAllAsync(const QString &dst_addr, const QString &p
 
 PendingTransaction *Wallet::createSweepUnmixableTransaction()
 {
-    Scala::PendingTransaction * ptImpl = m_walletImpl->createSweepUnmixableTransaction();
+    scala::PendingTransaction * ptImpl = m_walletImpl->createSweepUnmixableTransaction();
     PendingTransaction * result = new PendingTransaction(ptImpl, this);
     return result;
 }
@@ -645,7 +645,7 @@ void Wallet::createSweepUnmixableTransactionAsync()
 UnsignedTransaction * Wallet::loadTxFile(const QString &fileName)
 {
     qDebug() << "Trying to sign " << fileName;
-    Scala::UnsignedTransaction * ptImpl = m_walletImpl->loadUnsignedTx(fileName.toStdString());
+    scala::UnsignedTransaction * ptImpl = m_walletImpl->loadUnsignedTx(fileName.toStdString());
     UnsignedTransaction * result = new UnsignedTransaction(ptImpl, m_walletImpl, this);
     return result;
 }
@@ -700,8 +700,8 @@ void Wallet::estimateTransactionFeeAsync(
 
             const uint64_t fee = m_walletImpl->estimateTransactionFee(
                 destinations,
-                static_cast<Scala::PendingTransaction::Priority>(priority));
-            return QJSValueList({QString::fromStdString(Scala::Wallet::displayAmount(fee))});
+                static_cast<scala::PendingTransaction::Priority>(priority));
+            return QJSValueList({QString::fromStdString(scala::Wallet::displayAmount(fee))});
         },
         callback);
 }
@@ -771,7 +771,7 @@ SubaddressAccountModel *Wallet::subaddressAccountModel() const
 
 QString Wallet::generatePaymentId() const
 {
-    return QString::fromStdString(Scala::Wallet::genPaymentId());
+    return QString::fromStdString(scala::Wallet::genPaymentId());
 }
 
 QString Wallet::integratedAddress(const QString &paymentId) const
@@ -1095,7 +1095,7 @@ void Wallet::onPassphraseEntered(const QString &passphrase, bool enter_on_device
     }
 }
 
-Wallet::Wallet(Scala::Wallet *w, QObject *parent)
+Wallet::Wallet(scala::Wallet *w, QObject *parent)
     : QObject(parent)
     , m_walletImpl(w)
     , m_history(new TransactionHistory(m_walletImpl->history(), this))
@@ -1143,7 +1143,7 @@ Wallet::~Wallet()
     m_walletImpl->stop();
     m_scheduler.shutdownWaitForFinished();
 
-    //Scala::WalletManagerFactory::getWalletManager()->closeWallet(m_walletImpl);
+    //scala::WalletManagerFactory::getWalletManager()->closeWallet(m_walletImpl);
     if(status() == Status_Critical)
         qDebug("Not storing wallet cache");
     else if( m_walletImpl->store(""))

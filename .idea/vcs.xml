@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/external/quirc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/felidae" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/miniupnp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/randomx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/rapidjson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/rapidjson/thirdparty/gtest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/supercop" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/trezor-common" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/trezor-common/defs/ethereum/chains" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/trezor-common/defs/ethereum/tokens" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scala/external/unbound" vcs="Git" />
+  </component>
+</project>
