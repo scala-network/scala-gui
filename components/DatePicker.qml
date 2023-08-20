@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -34,15 +34,15 @@ import QtGraphicalEffects 1.0
 import QtQuick.Controls.Styles 1.2
 import FontAwesome 1.0
 
-import "." as MoneroComponents
-import "effects/" as MoneroEffects
+import "." as ScalaComponents
+import "effects/" as ScalaEffects
 
 Item {
     id: datePicker
     readonly property alias expanded: popup.visible
     property date currentDate
     property bool showCurrentDate: true
-    property color backgroundColor : MoneroComponents.Style.appWindowBorderColor
+    property color backgroundColor : ScalaComponents.Style.appWindowBorderColor
     property color errorColor : "red"
     property bool error: false
     property alias inputLabel: inputLabel
@@ -59,16 +59,16 @@ Item {
         height: 22
         width: parent.width
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             id: inputLabel
             anchors.top: parent.top
             anchors.topMargin: 2
             anchors.left: parent.left
-            font.family: MoneroComponents.Style.fontLight.name
+            font.family: ScalaComponents.Style.fontLight.name
             font.pixelSize: 14
             font.bold: false
             textFormat: Text.RichText
-            color: MoneroComponents.Style.defaultFontColor
+            color: ScalaComponents.Style.defaultFontColor
             themeTransition: false
 
             MouseArea {
@@ -105,7 +105,7 @@ Item {
             anchors.left: parent.left
             anchors.leftMargin: 2
             anchors.right: parent.right
-            property string headerFontColor: MoneroComponents.Style.blackTheme ? "#e6e6e6" : "#333333"
+            property string headerFontColor: ScalaComponents.Style.blackTheme ? "#e6e6e6" : "#333333"
             spacing: 0
 
             function setDate(date) {
@@ -127,10 +127,10 @@ Item {
                 id: dayInput
                 readOnly: true
                 Layout.preferredWidth: childrenRect.width + 40
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: ScalaComponents.Style.fontRegular.name
                 font.pixelSize: 14
                 color: datePicker.error ? errorColor : parent.headerFontColor
-                selectionColor: MoneroComponents.Style.dimmedFontColor
+                selectionColor: ScalaComponents.Style.dimmedFontColor
                 selectByMouse: true
                 horizontalAlignment: TextInput.AlignHCenter
                 maximumLength: 2
@@ -151,10 +151,10 @@ Item {
                 }
             }
 
-            MoneroComponents.TextPlain {
-                font.family: MoneroComponents.Style.fontRegular.name
+            ScalaComponents.TextPlain {
+                font.family: ScalaComponents.Style.fontRegular.name
                 font.pixelSize: 14
-                color: datePicker.error ? errorColor : MoneroComponents.Style.defaultFontColor
+                color: datePicker.error ? errorColor : ScalaComponents.Style.defaultFontColor
                 text: "-"
                 themeTransition: false
             }
@@ -163,10 +163,10 @@ Item {
                 id: monthInput
                 readOnly: true
                 Layout.preferredWidth: childrenRect.width + 40
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: ScalaComponents.Style.fontRegular.name
                 font.pixelSize: 14
                 color: datePicker.error ? errorColor : parent.headerFontColor
-                selectionColor: MoneroComponents.Style.dimmedFontColor
+                selectionColor: ScalaComponents.Style.dimmedFontColor
                 selectByMouse: true
                 horizontalAlignment: TextInput.AlignHCenter
                 maximumLength: 2
@@ -186,10 +186,10 @@ Item {
                 }
             }
 
-            MoneroComponents.TextPlain {
-                font.family: MoneroComponents.Style.fontRegular.name
+            ScalaComponents.TextPlain {
+                font.family: ScalaComponents.Style.fontRegular.name
                 font.pixelSize: 14
-                color: datePicker.error ? errorColor : MoneroComponents.Style.defaultFontColor
+                color: datePicker.error ? errorColor : ScalaComponents.Style.defaultFontColor
                 text: "-"
                 themeTransition: false
             }
@@ -197,10 +197,10 @@ Item {
             TextInput {
                 id: yearInput
                 Layout.preferredWidth: childrenRect.width + 60
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: ScalaComponents.Style.fontRegular.name
                 font.pixelSize: 14
                 color: datePicker.error ? errorColor : parent.headerFontColor
-                selectionColor: MoneroComponents.Style.dimmedFontColor
+                selectionColor: ScalaComponents.Style.dimmedFontColor
                 selectByMouse: true
                 horizontalAlignment: TextInput.AlignHCenter
                 maximumLength: 4
@@ -222,7 +222,7 @@ Item {
                 Layout.fillWidth: true
                 color: "transparent"
 
-                MoneroEffects.ImageMask {
+                ScalaEffects.ImageMask {
                     id: button
                     anchors.right: parent.right
                     anchors.rightMargin: 10
@@ -232,7 +232,7 @@ Item {
                     width: 12
                     fontAwesomeFallbackIcon: FontAwesome.arrowDown
                     fontAwesomeFallbackSize: 14
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     rotation: datePicker.expanded ? 180 : 0
                 }
 
@@ -261,9 +261,9 @@ Item {
             x: head.x
             y: head.y + head.height - 2
 
-            color: MoneroComponents.Style.middlePanelBackgroundColor
+            color: ScalaComponents.Style.middlePanelBackgroundColor
             border.width: 1
-            border.color: MoneroComponents.Style.appWindowBorderColor
+            border.color: ScalaComponents.Style.appWindowBorderColor
             height: datePicker.expanded ? calendar.height + 2 : 0
             clip: true
 
@@ -286,7 +286,7 @@ Item {
                 anchors.leftMargin: 1
                 anchors.rightMargin: 1
                 anchors.top: parent.top
-                color: MoneroComponents.Style.appWindowBorderColor
+                color: ScalaComponents.Style.appWindowBorderColor
                 height: 1
             }
 
@@ -302,7 +302,7 @@ Item {
 
                 style: CalendarStyle {
                     gridVisible: false
-                    background: Rectangle { color: MoneroComponents.Style.middlePanelBackgroundColor }
+                    background: Rectangle { color: ScalaComponents.Style.middlePanelBackgroundColor }
                     dayDelegate: Item {
                         z: parent.z + 1
                         implicitHeight: implicitWidth
@@ -314,10 +314,10 @@ Item {
                             radius: parent.implicitHeight / 2
                         }
 
-                        MoneroComponents.TextPlain {
+                        ScalaComponents.TextPlain {
                             id: dayText
                             anchors.centerIn: parent
-                            font.family: MoneroComponents.Style.fontMonoRegular.name
+                            font.family: ScalaComponents.Style.fontMonoRegular.name
                             font.pixelSize: {
                                 if(!styleData.visibleMonth) return 12
                                 return 14
@@ -331,22 +331,22 @@ Item {
                             color: {
                               if (currentDate.toDateString() === styleData.date.toDateString()) {
                                   if (dayArea.containsMouse) {
-                                      dayRect.color = MoneroComponents.Style.buttonBackgroundColorHover;
+                                      dayRect.color = ScalaComponents.Style.buttonBackgroundColorHover;
                                   } else {
-                                      dayRect.color = MoneroComponents.Style.buttonBackgroundColor;
+                                      dayRect.color = ScalaComponents.Style.buttonBackgroundColor;
                                   }
                               } else {
                                   if (dayArea.containsMouse) {
-                                      dayRect.color = MoneroComponents.Style.blackTheme ? "#20FFFFFF" : "#10000000"
+                                      dayRect.color = ScalaComponents.Style.blackTheme ? "#20FFFFFF" : "#10000000"
                                   } else {
                                       dayRect.color = "transparent";
                                   }
                               }
                               if(!styleData.valid) return "transparent"
                               if(styleData.date.toDateString() === (new Date()).toDateString()) return "#FFFF00"
-                              if(!styleData.visibleMonth) return MoneroComponents.Style.lightGreyFontColor
-                              if(dayArea.pressed) return MoneroComponents.Style.defaultFontColor
-                              return MoneroComponents.Style.defaultFontColor
+                              if(!styleData.visibleMonth) return ScalaComponents.Style.lightGreyFontColor
+                              if(dayArea.pressed) return ScalaComponents.Style.defaultFontColor
+                              return ScalaComponents.Style.defaultFontColor
                             }
                         }
 
@@ -376,12 +376,12 @@ Item {
                         implicitHeight: 20
                         implicitWidth: calendar.width / 7
 
-                        MoneroComponents.TextPlain {
+                        ScalaComponents.TextPlain {
                             anchors.centerIn: parent
                             elide: Text.ElideRight
-                            font.family: MoneroComponents.Style.fontMonoRegular.name
+                            font.family: ScalaComponents.Style.fontMonoRegular.name
                             font.pixelSize: 12
-                            color: MoneroComponents.Style.lightGreyFontColor
+                            color: ScalaComponents.Style.lightGreyFontColor
                             themeTransition: false
                             text: {
                                 var locale = Qt.locale()
@@ -391,15 +391,15 @@ Item {
                     }
 
                     navigationBar: Rectangle {
-                        color: MoneroComponents.Style.middlePanelBackgroundColor
+                        color: ScalaComponents.Style.middlePanelBackgroundColor
                         implicitWidth: calendar.width
                         implicitHeight: 30
 
-                        MoneroComponents.TextPlain {
+                        ScalaComponents.TextPlain {
                             anchors.centerIn: parent
-                            font.family: MoneroComponents.Style.fontMonoRegular.name
+                            font.family: ScalaComponents.Style.fontMonoRegular.name
                             font.pixelSize: 14
-                            color: MoneroComponents.Style.dimmedFontColor
+                            color: ScalaComponents.Style.dimmedFontColor
                             themeTransition: false
                             text: styleData.title
                         }
@@ -412,7 +412,7 @@ Item {
                             anchors.bottom: parent.bottom
                             width: height
 
-                            MoneroEffects.ImageMask {
+                            ScalaEffects.ImageMask {
                                 id: prevMonthIcon
                                 anchors.centerIn: parent
                                 image: "qrc:///images/prevMonth.png"
@@ -420,7 +420,7 @@ Item {
                                 width: 12
                                 fontAwesomeFallbackIcon: FontAwesome.arrowLeft
                                 fontAwesomeFallbackSize: 14
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                             }
 
                             MouseArea {
@@ -438,7 +438,7 @@ Item {
                             anchors.bottom: parent.bottom
                             width: height
 
-                            MoneroEffects.ImageMask {
+                            ScalaEffects.ImageMask {
                                 id: nextMonthIcon
                                 anchors.centerIn: parent
                                 image: "qrc:///images/prevMonth.png"
@@ -447,7 +447,7 @@ Item {
                                 rotation: 180
                                 fontAwesomeFallbackIcon: FontAwesome.arrowLeft
                                 fontAwesomeFallbackSize: 14
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                             }
 
                             MouseArea {

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -29,24 +29,24 @@
 import QtQuick.Controls 2.0
 import QtQuick 2.9
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 TextField {
     id: textField
-    font.family: MoneroComponents.Style.fontRegular.name
+    font.family: ScalaComponents.Style.fontRegular.name
     font.pixelSize: 18
     font.bold: true
     horizontalAlignment: TextInput.AlignLeft
     selectByMouse: true
-    color: MoneroComponents.Style.defaultFontColor
-    selectionColor: MoneroComponents.Style.textSelectionColor
-    selectedTextColor: MoneroComponents.Style.textSelectedColor
+    color: ScalaComponents.Style.defaultFontColor
+    selectionColor: ScalaComponents.Style.textSelectionColor
+    selectedTextColor: ScalaComponents.Style.textSelectedColor
 
     background: Rectangle {
         color: "transparent"
     }
 
-    MoneroComponents.ContextMenu {
+    ScalaComponents.ContextMenu {
         cursorShape: Qt.IBeamCursor
         onCut: textField.cut();
         onCopy: textField.copy();

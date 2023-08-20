@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -28,7 +28,7 @@
 
 import "../js/Wizard.js" as Wizard
 import "../components"
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 import QtQuick 2.9
 import QtQuick.Layouts 1.2
@@ -56,9 +56,9 @@ ColumnLayout {
 
         Text {
             text: title
-            font.family: MoneroComponents.Style.fontRegular.name
-            color: MoneroComponents.Style.defaultFontColor
-            opacity: MoneroComponents.Style.blackTheme ? 1.0 : 0.8
+            font.family: ScalaComponents.Style.fontRegular.name
+            color: ScalaComponents.Style.defaultFontColor
+            opacity: ScalaComponents.Style.blackTheme ? 1.0 : 0.8
             font.pixelSize: {
                 if (wizardController.layoutScale == 4) {
                     return 16;
@@ -76,7 +76,7 @@ ColumnLayout {
 
             Rectangle {
                 anchors.fill: parent
-                color: parent.parent.parent.focus ? MoneroComponents.Style.titleBarButtonHoverColor : "transparent"
+                color: parent.parent.parent.focus ? ScalaComponents.Style.titleBarButtonHoverColor : "transparent"
             }
         }
     }
@@ -86,10 +86,10 @@ ColumnLayout {
         Layout.alignment: Qt.AlignLeft
         visible: parent.subtitle !== "" && subtitleVisible
 
-        color: MoneroComponents.Style.dimmedFontColor
+        color: ScalaComponents.Style.dimmedFontColor
         text: subtitle
 
-        font.family: MoneroComponents.Style.fontRegular.name
+        font.family: ScalaComponents.Style.fontRegular.name
         font.pixelSize: {
             if (wizardController.layoutScale <= 2 ) {
                 return 16;
@@ -104,7 +104,7 @@ ColumnLayout {
 
         Rectangle {
             anchors.fill: parent
-            color: parent.parent.focus ? MoneroComponents.Style.titleBarButtonHoverColor : "transparent"
+            color: parent.parent.focus ? ScalaComponents.Style.titleBarButtonHoverColor : "transparent"
         }
     }
 }

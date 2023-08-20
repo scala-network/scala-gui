@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -46,7 +46,7 @@
 #include "qt/updater.h"
 #include "qt/ScopeGuard.h"
 
-class WalletPassphraseListenerImpl : public  Monero::WalletListener, public PassphraseReceiver
+class WalletPassphraseListenerImpl : public  Scala::WalletListener, public PassphraseReceiver
 {
 public:
   WalletPassphraseListenerImpl(WalletManager * mgr): m_mgr(mgr), m_phelper(mgr) {}
@@ -64,7 +64,7 @@ public:
       m_phelper.onPassphraseEntered(passphrase, enter_on_device, entry_abort);
   }
 
-  virtual Monero::optional<std::string> onDevicePassphraseRequest(bool & on_device) override
+  virtual Scala::optional<std::string> onDevicePassphraseRequest(bool & on_device) override
   {
       qDebug() << __FUNCTION__;
       return m_phelper.onDevicePassphraseRequest(on_device);
@@ -95,8 +95,8 @@ Wallet *WalletManager::createWallet(const QString &path, const QString &password
         qDebug() << "Closing open m_currentWallet" << m_currentWallet;
         delete m_currentWallet;
     }
-    Monero::Wallet * w = m_pimpl->createWallet(path.toStdString(), password.toStdString(),
-                                                  language.toStdString(), static_cast<Monero::NetworkType>(nettype), kdfRounds);
+    Scala::Wallet * w = m_pimpl->createWallet(path.toStdString(), password.toStdString(),
+                                                  language.toStdString(), static_cast<Scala::NetworkType>(nettype), kdfRounds);
     m_currentWallet  = new Wallet(w);
     return m_currentWallet;
 }
@@ -120,7 +120,7 @@ Wallet *WalletManager::openWallet(const QString &path, const QString &password, 
     qDebug("%s: opening wallet at %s, nettype = %d ",
            __PRETTY_FUNCTION__, qPrintable(path), nettype);
 
-    Monero::Wallet * w =  m_pimpl->openWallet(path.toStdString(), password.toStdString(), static_cast<Monero::NetworkType>(nettype), kdfRounds, &tmpListener);
+    Scala::Wallet * w =  m_pimpl->openWallet(path.toStdString(), password.toStdString(), static_cast<Scala::NetworkType>(nettype), kdfRounds, &tmpListener);
     w->setListener(nullptr);
 
     qDebug("%s: opened wallet: %s, status: %d", __PRETTY_FUNCTION__, w->address(0, 0).c_str(), w->status());
@@ -149,7 +149,7 @@ Wallet *WalletManager::recoveryWallet(const QString &path, const QString &seed, 
         qDebug() << "Closing open m_currentWallet" << m_currentWallet;
         delete m_currentWallet;
     }
-    Monero::Wallet * w = m_pimpl->recoveryWallet(path.toStdString(), "", seed.toStdString(), static_cast<Monero::NetworkType>(nettype), restoreHeight, kdfRounds, seed_offset.toStdString());
+    Scala::Wallet * w = m_pimpl->recoveryWallet(path.toStdString(), "", seed.toStdString(), static_cast<Scala::NetworkType>(nettype), restoreHeight, kdfRounds, seed_offset.toStdString());
     m_currentWallet = new Wallet(w);
     return m_currentWallet;
 }
@@ -164,7 +164,7 @@ Wallet *WalletManager::createWalletFromKeys(const QString &path, const QString &
         delete m_currentWallet;
         m_currentWallet = NULL;
     }
-    Monero::Wallet * w = m_pimpl->createWalletFromKeys(path.toStdString(), "", language.toStdString(), static_cast<Monero::NetworkType>(nettype), restoreHeight,
+    Scala::Wallet * w = m_pimpl->createWalletFromKeys(path.toStdString(), "", language.toStdString(), static_cast<Scala::NetworkType>(nettype), restoreHeight,
                                                        address.toStdString(), viewkey.toStdString(), spendkey.toStdString(), kdfRounds);
     m_currentWallet = new Wallet(w);
     return m_currentWallet;
@@ -188,7 +188,7 @@ Wallet *WalletManager::createWalletFromDevice(const QString &path, const QString
         delete m_currentWallet;
         m_currentWallet = NULL;
     }
-    Monero::Wallet * w = m_pimpl->createWalletFromDevice(path.toStdString(), password.toStdString(), static_cast<Monero::NetworkType>(nettype),
+    Scala::Wallet * w = m_pimpl->createWalletFromDevice(path.toStdString(), password.toStdString(), static_cast<Scala::NetworkType>(nettype),
                                                          deviceName.toStdString(), restoreHeight, subaddressLookahead.toStdString(), kdfRounds, &tmpListener);
     w->setListener(nullptr);
 
@@ -255,7 +255,7 @@ QString WalletManager::errorString() const
 
 quint64 WalletManager::maximumAllowedAmount()
 {
-    return Monero::Wallet::maximumAllowedAmount();
+    return Scala::Wallet::maximumAllowedAmount();
 }
 
 QString WalletManager::maximumAllowedAmountAsString() const
@@ -265,17 +265,17 @@ QString WalletManager::maximumAllowedAmountAsString() const
 
 QString WalletManager::displayAmount(quint64 amount)
 {
-    return QString::fromStdString(Monero::Wallet::displayAmount(amount));
+    return QString::fromStdString(Scala::Wallet::displayAmount(amount));
 }
 
 quint64 WalletManager::amountFromString(const QString &amount)
 {
-    return Monero::Wallet::amountFromString(amount.toStdString());
+    return Scala::Wallet::amountFromString(amount.toStdString());
 }
 
 quint64 WalletManager::amountFromDouble(double amount) const
 {
-    return Monero::Wallet::amountFromDouble(amount);
+    return Scala::Wallet::amountFromDouble(amount);
 }
 
 QString WalletManager::amountsSumFromStrings(const QVector<QString> &amounts)
@@ -291,18 +291,18 @@ QString WalletManager::amountsSumFromStrings(const QVector<QString> &amounts)
 
 bool WalletManager::paymentIdValid(const QString &payment_id) const
 {
-    return Monero::Wallet::paymentIdValid(payment_id.toStdString());
+    return Scala::Wallet::paymentIdValid(payment_id.toStdString());
 }
 
 bool WalletManager::addressValid(const QString &address, NetworkType::Type nettype) const
 {
-    return Monero::Wallet::addressValid(address.toStdString(), static_cast<Monero::NetworkType>(nettype));
+    return Scala::Wallet::addressValid(address.toStdString(), static_cast<Scala::NetworkType>(nettype));
 }
 
 bool WalletManager::keyValid(const QString &key, const QString &address, bool isViewKey,  NetworkType::Type nettype) const
 {
     std::string error;
-    if(!Monero::Wallet::keyValid(key.toStdString(), address.toStdString(), isViewKey, static_cast<Monero::NetworkType>(nettype), error)){
+    if(!Scala::Wallet::keyValid(key.toStdString(), address.toStdString(), isViewKey, static_cast<Scala::NetworkType>(nettype), error)){
         qDebug() << QString::fromStdString(error);
         return false;
     }
@@ -311,7 +311,7 @@ bool WalletManager::keyValid(const QString &key, const QString &address, bool is
 
 QString WalletManager::paymentIdFromAddress(const QString &address, NetworkType::Type nettype) const
 {
-    return QString::fromStdString(Monero::Wallet::paymentIdFromAddress(address.toStdString(), static_cast<Monero::NetworkType>(nettype)));
+    return QString::fromStdString(Scala::Wallet::paymentIdFromAddress(address.toStdString(), static_cast<Scala::NetworkType>(nettype)));
 }
 
 void WalletManager::setDaemonAddressAsync(const QString &address)
@@ -385,7 +385,7 @@ bool WalletManager::localDaemonSynced() const
 
 bool WalletManager::isDaemonLocal(const QString &daemon_address) const
 {
-    return daemon_address.isEmpty() ? false : Monero::Utils::isAddressLocal(daemon_address.toStdString());
+    return daemon_address.isEmpty() ? false : Scala::Utils::isAddressLocal(daemon_address.toStdString());
 }
 
 QString WalletManager::resolveOpenAlias(const QString &address) const
@@ -451,12 +451,12 @@ QString WalletManager::make_uri(const QString &address, const quint64 &amount, c
 
 void WalletManager::setLogLevel(int logLevel)
 {
-    Monero::WalletManagerFactory::setLogLevel(logLevel);
+    Scala::WalletManagerFactory::setLogLevel(logLevel);
 }
 
 void WalletManager::setLogCategories(const QString &categories)
 {
-    Monero::WalletManagerFactory::setLogCategories(categories.toStdString());
+    Scala::WalletManagerFactory::setLogCategories(categories.toStdString());
 }
 
 QString WalletManager::urlToLocalPath(const QUrl &url) const
@@ -472,7 +472,7 @@ QUrl WalletManager::localPathToUrl(const QString &path) const
 double WalletManager::getPasswordStrength(const QString &password) const
 {
     static const char *local_dict[] = {
-        "monero", "fluffypony", NULL
+        "scala", "fluffypony", NULL
     };
 
     if (!ZxcvbnInit("zxcvbn.dict")) {
@@ -505,7 +505,7 @@ void WalletManager::checkUpdatesAsync(
     const QString &version)
 {
     m_scheduler.run([this, software, subdir, buildTag, version] {
-        const auto updateInfo = Monero::WalletManager::checkUpdates(
+        const auto updateInfo = Scala::WalletManager::checkUpdates(
             software.toStdString(),
             subdir.toStdString(),
             buildTag.toStdString().c_str(),
@@ -538,7 +538,7 @@ void WalletManager::checkUpdatesAsync(
 QString WalletManager::checkUpdates(const QString &software, const QString &subdir) const
 {
   qDebug() << "Checking for updates";
-  const std::tuple<bool, std::string, std::string, std::string, std::string> result = Monero::WalletManager::checkUpdates(software.toStdString(), subdir.toStdString());
+  const std::tuple<bool, std::string, std::string, std::string, std::string> result = Scala::WalletManager::checkUpdates(software.toStdString(), subdir.toStdString());
   if (!std::get<0>(result))
     return QString("");
   return QString::fromStdString(std::get<1>(result) + "|" + std::get<2>(result) + "|" + std::get<3>(result) + "|" + std::get<4>(result));
@@ -567,7 +567,7 @@ WalletManager::WalletManager(QObject *parent)
     , m_passphraseReceiver(nullptr)
     , m_scheduler(this)
 {
-    m_pimpl =  Monero::WalletManagerFactory::getWalletManager();
+    m_pimpl =  Scala::WalletManagerFactory::getWalletManager();
 }
 
 WalletManager::~WalletManager()

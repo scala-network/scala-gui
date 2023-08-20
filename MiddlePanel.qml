@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -33,13 +33,13 @@ import QtQuick.Controls 2.0
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
-import moneroComponents.Wallet 1.0
+import scalaComponents.Wallet 1.0
 
 import "./pages"
 import "./pages/settings"
 import "./pages/merchant"
-import "./components" as MoneroComponents
-import "./components/effects/" as MoneroEffects
+import "./components" as ScalaComponents
+import "./components/effects/" as ScalaEffects
 
 Rectangle {
     id: root
@@ -72,20 +72,20 @@ Rectangle {
     Rectangle {
         // grey background on merchantView
         visible: currentView === merchantView
-        color: MoneroComponents.Style.moneroGrey
+        color: ScalaComponents.Style.scalaGrey
         anchors.fill: parent
     }
 
-    MoneroEffects.GradientBackground {
+    ScalaEffects.GradientBackground {
         visible: currentView !== merchantView
         anchors.fill: parent
-        fallBackColor: MoneroComponents.Style.middlePanelBackgroundColor
-        initialStartColor: MoneroComponents.Style.middlePanelBackgroundGradientStart
-        initialStopColor: MoneroComponents.Style.middlePanelBackgroundGradientStop
-        blackColorStart: MoneroComponents.Style._b_middlePanelBackgroundGradientStart
-        blackColorStop: MoneroComponents.Style._b_middlePanelBackgroundGradientStop
-        whiteColorStart: MoneroComponents.Style._w_middlePanelBackgroundGradientStart
-        whiteColorStop: MoneroComponents.Style._w_middlePanelBackgroundGradientStop
+        fallBackColor: ScalaComponents.Style.middlePanelBackgroundColor
+        initialStartColor: ScalaComponents.Style.middlePanelBackgroundGradientStart
+        initialStopColor: ScalaComponents.Style.middlePanelBackgroundGradientStop
+        blackColorStart: ScalaComponents.Style._b_middlePanelBackgroundGradientStart
+        blackColorStop: ScalaComponents.Style._b_middlePanelBackgroundGradientStop
+        whiteColorStart: ScalaComponents.Style._w_middlePanelBackgroundGradientStart
+        whiteColorStop: ScalaComponents.Style._w_middlePanelBackgroundGradientStop
         start: Qt.point(0, 0)
         end: Qt.point(height, width)
     }
@@ -237,12 +237,12 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         width: 1
-        color: MoneroComponents.Style.appWindowBorderColor
+        color: ScalaComponents.Style.appWindowBorderColor
 
-        MoneroEffects.ColorTransition {
+        ScalaEffects.ColorTransition {
             targetObj: parent
-            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+            blackColor: ScalaComponents.Style._b_appWindowBorderColor
+            whiteColor: ScalaComponents.Style._w_appWindowBorderColor
         }
     }
 

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -145,7 +145,7 @@ bool TransactionHistory::TransactionHistory::locked() const
 }
 
 
-TransactionHistory::TransactionHistory(Monero::TransactionHistory *pimpl, QObject *parent)
+TransactionHistory::TransactionHistory(Scala::TransactionHistory *pimpl, QObject *parent)
     : QObject(parent), m_pimpl(pimpl), m_minutesToUnlock(0), m_locked(false)
 {
 #if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
@@ -160,7 +160,7 @@ QString TransactionHistory::writeCSV(quint32 accountIndex, QString out)
 {
     // construct filename
     qint64 now = QDateTime::currentDateTime().currentMSecsSinceEpoch();
-    QString fn = QString(QString("%1/monero-txs_%2.csv").arg(out, QString::number(now / 1000)));
+    QString fn = QString(QString("%1/scala-txs_%2.csv").arg(out, QString::number(now / 1000)));
 
     // open file
     QFile data(fn);

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -33,14 +33,14 @@ import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.2
 import FontAwesome 1.0
 
-import "../components" as MoneroComponents
-import "../components/effects/" as MoneroEffects
+import "../components" as ScalaComponents
+import "../components/effects/" as ScalaEffects
 
-import moneroComponents.Clipboard 1.0
-import moneroComponents.Wallet 1.0
-import moneroComponents.WalletManager 1.0
-import moneroComponents.TransactionHistory 1.0
-import moneroComponents.TransactionHistoryModel 1.0
+import scalaComponents.Clipboard 1.0
+import scalaComponents.Wallet 1.0
+import scalaComponents.WalletManager 1.0
+import scalaComponents.TransactionHistory 1.0
+import scalaComponents.TransactionHistoryModel 1.0
 import "../js/TxUtils.js" as TxUtils
 
 Rectangle {
@@ -82,7 +82,7 @@ Rectangle {
             visible: !selectAndSend
             spacing: 0
 
-            MoneroComponents.LabelSubheader {
+            ScalaComponents.LabelSubheader {
                 Layout.fillWidth: true
                 fontSize: 24
                 textFormat: Text.RichText
@@ -92,28 +92,28 @@ Rectangle {
             RowLayout {
                 Layout.topMargin: 22
 
-                MoneroComponents.TextPlain {
+                ScalaComponents.TextPlain {
                     text: qsTr("Total balance: ") + translationManager.emptyString
                     Layout.fillWidth: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     font.pixelSize: 16
-                    font.family: MoneroComponents.Style.fontRegular.name
+                    font.family: ScalaComponents.Style.fontRegular.name
                     themeTransition: false
                 }
 
-                MoneroComponents.TextPlain {
+                ScalaComponents.TextPlain {
                     id: balanceAll
                     Layout.rightMargin: 87
-                    font.family: MoneroComponents.Style.fontMonoRegular.name;
+                    font.family: ScalaComponents.Style.fontMonoRegular.name;
                     font.pixelSize: 16
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
 
                     MouseArea {
                         hoverEnabled: true
                         anchors.fill: parent
                         cursorShape: Qt.PointingHandCursor
-                        onEntered: parent.color = MoneroComponents.Style.orange
-                        onExited: parent.color = MoneroComponents.Style.defaultFontColor
+                        onEntered: parent.color = ScalaComponents.Style.orange
+                        onExited: parent.color = ScalaComponents.Style.defaultFontColor
                         onClicked: {
                             console.log("Copied to clipboard");
                             var balanceAllNumberOnly = parent.text.slice(0, -4);
@@ -127,28 +127,28 @@ Rectangle {
             RowLayout {
                 Layout.topMargin: 10
 
-                MoneroComponents.TextPlain {
+                ScalaComponents.TextPlain {
                     text: qsTr("Total unlocked balance: ") + translationManager.emptyString
                     Layout.fillWidth: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     font.pixelSize: 16
-                    font.family: MoneroComponents.Style.fontRegular.name
+                    font.family: ScalaComponents.Style.fontRegular.name
                     themeTransition: false
                 }
 
-                MoneroComponents.TextPlain {
+                ScalaComponents.TextPlain {
                     id: unlockedBalanceAll
                     Layout.rightMargin: 87
-                    font.family: MoneroComponents.Style.fontMonoRegular.name;
+                    font.family: ScalaComponents.Style.fontMonoRegular.name;
                     font.pixelSize: 16
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
 
                     MouseArea {
                         hoverEnabled: true
                         anchors.fill: parent
                         cursorShape: Qt.PointingHandCursor
-                        onEntered: parent.color = MoneroComponents.Style.orange
-                        onExited: parent.color = MoneroComponents.Style.defaultFontColor
+                        onEntered: parent.color = ScalaComponents.Style.orange
+                        onExited: parent.color = ScalaComponents.Style.defaultFontColor
                         onClicked: {
                             console.log("Copied to clipboard");
                             var unlockedBalanceAllNumberOnly = parent.text.slice(0, -4);
@@ -167,14 +167,14 @@ Rectangle {
             RowLayout {
                 spacing: 0
 
-                MoneroComponents.LabelSubheader {
+                ScalaComponents.LabelSubheader {
                     Layout.fillWidth: true
                     fontSize: 24
                     textFormat: Text.RichText
                     text: qsTr("Accounts") + translationManager.emptyString
                 }
 
-                MoneroComponents.StandardButton {
+                ScalaComponents.StandardButton {
                     id: createNewAccountButton
                     visible: !selectAndSend
                     small: true
@@ -197,12 +197,12 @@ Rectangle {
                         anchors.left: createNewAccountButton.left
                         anchors.right: createNewAccountButton.right
                         height: 2
-                        color: MoneroComponents.Style.appWindowBorderColor
+                        color: ScalaComponents.Style.appWindowBorderColor
 
-                        MoneroEffects.ColorTransition {
+                        ScalaEffects.ColorTransition {
                             targetObj: parent
-                            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                            blackColor: ScalaComponents.Style._b_appWindowBorderColor
+                            whiteColor: ScalaComponents.Style._w_appWindowBorderColor
                         }
                     }
                 }
@@ -231,29 +231,29 @@ Rectangle {
                         height: subaddressAccountListRow.subaddressAccountListItemHeight
                         width: parent ? parent.width : undefined
                         Layout.fillWidth: true
-                        color: itemMouseArea.containsMouse || index === currentAccountIndex ? MoneroComponents.Style.titleBarButtonHoverColor : "transparent"
+                        color: itemMouseArea.containsMouse || index === currentAccountIndex ? ScalaComponents.Style.titleBarButtonHoverColor : "transparent"
 
                         Rectangle {
                             visible: index === currentAccountIndex
                             Layout.fillHeight: true
                             anchors.top: parent.top
                             anchors.bottom: parent.bottom
-                            color: MoneroComponents.Style.accountColors[currentAccountIndex % MoneroComponents.Style.accountColors.length]
+                            color: ScalaComponents.Style.accountColors[currentAccountIndex % ScalaComponents.Style.accountColors.length]
                             width: 2
                         }
 
                         Rectangle {
-                            color: MoneroComponents.Style.appWindowBorderColor
+                            color: ScalaComponents.Style.appWindowBorderColor
                             anchors.right: parent.right
                             anchors.left: parent.left
                             anchors.top: parent.top
                             height: 1
                             visible: index !== 0
 
-                            MoneroEffects.ColorTransition {
+                            ScalaEffects.ColorTransition {
                                 targetObj: parent
-                                blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                                whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                                blackColor: ScalaComponents.Style._b_appWindowBorderColor
+                                whiteColor: ScalaComponents.Style._w_appWindowBorderColor
                             }
                         }
 
@@ -263,9 +263,9 @@ Rectangle {
                             anchors.rightMargin: 80
                             color: "transparent"
 
-                            MoneroComponents.Label {
+                            ScalaComponents.Label {
                                 id: idLabel
-                                color: index === currentAccountIndex ? MoneroComponents.Style.defaultFontColor : "#757575"
+                                color: index === currentAccountIndex ? ScalaComponents.Style.defaultFontColor : "#757575"
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: parent.left
                                 anchors.leftMargin: 6
@@ -274,9 +274,9 @@ Rectangle {
                                 themeTransition: false
                             }
 
-                            MoneroComponents.Label {
+                            ScalaComponents.Label {
                                 id: nameLabel
-                                color: index === currentAccountIndex ? MoneroComponents.Style.defaultFontColor : MoneroComponents.Style.dimmedFontColor
+                                color: index === currentAccountIndex ? ScalaComponents.Style.defaultFontColor : ScalaComponents.Style.dimmedFontColor
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: idLabel.right
                                 anchors.leftMargin: 6
@@ -287,26 +287,26 @@ Rectangle {
                                 themeTransition: false
                             }
 
-                            MoneroComponents.Label {
+                            ScalaComponents.Label {
                                 id: addressLabel
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: balanceNumberLabel.left
                                 anchors.leftMargin: -addressLabel.width - 30
                                 fontSize: 16
-                                fontFamily: MoneroComponents.Style.fontMonoRegular.name;
+                                fontFamily: ScalaComponents.Style.fontMonoRegular.name;
                                 text: TxUtils.addressTruncatePretty(address, mainLayout.width < 740 ? 1 : (mainLayout.width < 900 ? 2 : 3))
                                 themeTransition: false
                             }
 
-                            MoneroComponents.Label {
+                            ScalaComponents.Label {
                                 id: balanceNumberLabel
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: parent.right
                                 anchors.leftMargin: -balanceNumberLabel.width
                                 fontSize: 16
-                                fontFamily: MoneroComponents.Style.fontMonoRegular.name;
+                                fontFamily: ScalaComponents.Style.fontMonoRegular.name;
                                 text: balance + " XMR"
                                 elide: Text.ElideRight
                                 textWidth: 180
@@ -333,12 +333,12 @@ Rectangle {
                             height: 21
                             spacing: 10
 
-                            MoneroComponents.IconButton {
+                            ScalaComponents.IconButton {
                                 id: renameButton
                                 image: "qrc:///images/edit.svg"
                                 fontAwesomeFallbackIcon: FontAwesome.edit
                                 fontAwesomeFallbackSize: 22
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 opacity: isOpenGL ? 0.5 : 1
                                 fontAwesomeFallbackOpacity: 0.5
                                 Layout.preferredWidth: 23
@@ -348,12 +348,12 @@ Rectangle {
                                 onClicked: pageAccount.renameSubaddressAccountLabel(index);
                             }
 
-                            MoneroComponents.IconButton {
+                            ScalaComponents.IconButton {
                                 id: copyButton
                                 image: "qrc:///images/copy.svg"
                                 fontAwesomeFallbackIcon: FontAwesome.clipboard
                                 fontAwesomeFallbackSize: 22
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 opacity: isOpenGL ? 0.5 : 1
                                 fontAwesomeFallbackOpacity: 0.5
                                 Layout.preferredWidth: 16
@@ -376,14 +376,14 @@ Rectangle {
             }
 
             Rectangle {
-                color: MoneroComponents.Style.appWindowBorderColor
+                color: ScalaComponents.Style.appWindowBorderColor
                 Layout.fillWidth: true
                 height: 1
 
-                MoneroEffects.ColorTransition {
+                ScalaEffects.ColorTransition {
                     targetObj: parent
-                    blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                    whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                    blackColor: ScalaComponents.Style._b_appWindowBorderColor
+                    whiteColor: ScalaComponents.Style._w_appWindowBorderColor
                 }
             }
         }

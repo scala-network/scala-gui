@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -36,18 +36,18 @@ import QtGraphicalEffects 1.0
 
 import FontAwesome 1.0
 
-import moneroComponents.Network 1.0
-import moneroComponents.Wallet 1.0
-import moneroComponents.WalletManager 1.0
-import moneroComponents.PendingTransaction 1.0
-import moneroComponents.NetworkType 1.0
-import moneroComponents.Settings 1.0
-import moneroComponents.P2PoolManager 1.0
+import scalaComponents.Network 1.0
+import scalaComponents.Wallet 1.0
+import scalaComponents.WalletManager 1.0
+import scalaComponents.PendingTransaction 1.0
+import scalaComponents.NetworkType 1.0
+import scalaComponents.Settings 1.0
+import scalaComponents.P2PoolManager 1.0
 
 import "components"
-import "components" as MoneroComponents
-import "components/effects" as MoneroEffects
-import "pages/merchant" as MoneroMerchant
+import "components" as ScalaComponents
+import "components/effects" as ScalaEffects
+import "pages/merchant" as ScalaMerchant
 import "wizard"
 import "js/Utils.js" as Utils
 import "js/Windows.js" as Windows
@@ -55,7 +55,7 @@ import "version.js" as Version
 
 ApplicationWindow {
     id: appWindow
-    title: "Monero" +
+    title: "Scala" +
         (persistentSettings.displayWalletNameInTitleBar && walletName
         ? " - " + walletName
         : "")
@@ -67,7 +67,7 @@ ApplicationWindow {
     property bool hideBalanceForced: false
     property bool ctrlPressed: false
     property alias persistentSettings : persistentSettings
-    property string accountsDir: !persistentSettings.portable ? moneroAccountsDir : persistentSettings.portableFolderName + "/wallets"
+    property string accountsDir: !persistentSettings.portable ? scalaAccountsDir : persistentSettings.portableFolderName + "/wallets"
     property var currentWallet;
     property bool disconnected: currentWallet ? currentWallet.disconnected : false
     property var transaction;
@@ -109,8 +109,8 @@ ApplicationWindow {
                 "xmreur": "https://api.kraken.com/0/public/Ticker?pair=XMREUR"
             },
             "coingecko": {
-                "xmrusd": "https://api.coingecko.com/api/v3/simple/price?ids=monero&vs_currencies=usd",
-                "xmreur": "https://api.coingecko.com/api/v3/simple/price?ids=monero&vs_currencies=eur"
+                "xmrusd": "https://api.coingecko.com/api/v3/simple/price?ids=scala&vs_currencies=usd",
+                "xmreur": "https://api.coingecko.com/api/v3/simple/price?ids=scala&vs_currencies=eur"
             },
             "cryptocompare": {
                 "xmrusd": "https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=USD",
@@ -421,8 +421,8 @@ ApplicationWindow {
     }
 
     function onUriHandler(uri){
-        if(uri.startsWith("monero://")){
-            var address = uri.substring("monero://".length);
+        if(uri.startsWith("scala://")){
+            var address = uri.substring("scala://".length);
 
             var params = {}
             if(address.length === 0) return;
@@ -754,7 +754,7 @@ ApplicationWindow {
         // resume refresh
         currentWallet.startRefresh();
         informationPopup.title = qsTr("Daemon failed to start") + translationManager.emptyString;
-        informationPopup.text  = error + ".\n\n" + qsTr("Please check your wallet and daemon log for errors. You can also try to start %1 manually.").arg((isWindows)? "monerod.exe" : "monerod")
+        informationPopup.text  = error + ".\n\n" + qsTr("Please check your wallet and daemon log for errors. You can also try to start %1 manually.").arg((isWindows)? "scalad.exe" : "scalad")
         if (middlePanel.advancedView.miningView.stopMiningEnabled == true) {
             walletManager.stopMining()
             p2poolManager.exit()
@@ -803,7 +803,7 @@ ApplicationWindow {
 
     function onWalletMoneySent(txId, amount) {
         // refresh transaction history here
-        console.log("monero sent found")
+        console.log("scala sent found")
         currentWallet.history.refresh(currentWallet.currentSubaddressAccount); // this will refresh model
 
         if(middlePanel.state == "History")
@@ -1063,10 +1063,10 @@ ApplicationWindow {
                 informationPopup.icon = StandardIcon.Critical;
             } else if (received > 0) {
                 if (in_pool) {
-                    informationPopup.text = qsTr("This address received %1 monero, but the transaction is not yet mined").arg(walletManager.displayAmount(received));
+                    informationPopup.text = qsTr("This address received %1 scala, but the transaction is not yet mined").arg(walletManager.displayAmount(received));
                 }
                 else {
-                    informationPopup.text = qsTr("This address received %1 monero, with %2 confirmation(s).").arg(walletManager.displayAmount(received)).arg(confirmations);
+                    informationPopup.text = qsTr("This address received %1 scala, with %2 confirmation(s).").arg(walletManager.displayAmount(received)).arg(confirmations);
                 }
             }
             else {
@@ -1125,7 +1125,7 @@ ApplicationWindow {
             wizard.wizardState = "wizardHome";
             rootItem.state = "wizard"
             // reset balance, clear spendable funds message
-            clearMoneroCardLabelText();
+            clearScalaCardLabelText();
             leftPanel.minutesToUnlock = "";
             // reset fields
             middlePanel.addressBookView.clearFields();
@@ -1146,7 +1146,7 @@ ApplicationWindow {
     height: screenAvailableHeight > maxWindowHeight
         ? maxWindowHeight
         : Math.min(screenAvailableHeight, 700)
-    color: MoneroComponents.Style.appWindowBackgroundColor
+    color: ScalaComponents.Style.appWindowBackgroundColor
     flags: persistentSettings.customDecorations ? Windows.flagsCustomDecorations : Windows.flags
 
     Timer {
@@ -1171,11 +1171,11 @@ ApplicationWindow {
             return ticker;
         } else if(url.startsWith("https://api.coingecko.com/api/v3/")){
             var key = currency === "xmreur" ? "eur" : "usd";
-            if(!resp.hasOwnProperty("monero") || !resp["monero"].hasOwnProperty(key)){
+            if(!resp.hasOwnProperty("scala") || !resp["scala"].hasOwnProperty(key)){
                 appWindow.fiatApiError("Coingecko API has error(s)");
                 return;
             }
-            return resp["monero"][key];
+            return resp["scala"][key];
         } else if(url.startsWith("https://min-api.cryptocompare.com/data/")){
             var key = currency === "xmreur" ? "EUR" : "USD";
             if(!resp.hasOwnProperty(key)){
@@ -1357,7 +1357,7 @@ ApplicationWindow {
                 oshelper.createDesktopEntry();
             } else if (isLinux) {
                 confirmationDialog.title = qsTr("Desktop entry") + translationManager.emptyString;
-                confirmationDialog.text  = qsTr("Would you like to register Monero GUI Desktop entry?") + translationManager.emptyString;
+                confirmationDialog.text  = qsTr("Would you like to register Scala GUI Desktop entry?") + translationManager.emptyString;
                 confirmationDialog.icon = StandardIcon.Question;
                 confirmationDialog.cancelText = qsTr("No") + translationManager.emptyString;
                 confirmationDialog.okText = qsTr("Yes") + translationManager.emptyString;
@@ -1372,11 +1372,11 @@ ApplicationWindow {
         remoteNodesModel.initialize();
     }
 
-    MoneroSettings {
+    ScalaSettings {
         id: persistentSettings
         fileName: {
             if(isTails && tailsUsePersistence)
-                return homePath + "/Persistent/Monero/monero-core.conf";
+                return homePath + "/Persistent/Scala/scala-core.conf";
             return "";
         }
 
@@ -1434,7 +1434,7 @@ ApplicationWindow {
         property bool lockOnUserInActivity: true
         property int walletMode: 2
         property int lockOnUserInActivityInterval: 10  // minutes
-        property bool blackTheme: MoneroComponents.Style.blackTheme
+        property bool blackTheme: ScalaComponents.Style.blackTheme
         property bool checkForUpdates: true
         property bool autosave: true
         property int autosaveMinutes: 10
@@ -1472,7 +1472,7 @@ ApplicationWindow {
         }
 
         Component.onCompleted: {
-            MoneroComponents.Style.blackTheme = persistentSettings.blackTheme
+            ScalaComponents.Style.blackTheme = persistentSettings.blackTheme
         }
     }
 
@@ -1630,7 +1630,7 @@ ApplicationWindow {
         }
     }
 
-    MoneroComponents.UpdateDialog {
+    ScalaComponents.UpdateDialog {
         id: updateDialog
 
         allowed: !passwordDialog.visible && !inputDialog.visible && !splash.visible
@@ -1638,7 +1638,7 @@ ApplicationWindow {
         y: (parent.height - height) / 2
     }
 
-    MoneroComponents.RemoteNodeDialog {
+    ScalaComponents.RemoteNodeDialog {
         id: remoteNodeDialog
     }
 
@@ -1860,7 +1860,7 @@ ApplicationWindow {
             WizardController {
                 id: wizard
                 anchors.fill: parent
-                onUseMoneroClicked: {
+                onUseScalaClicked: {
                     rootItem.state = "normal";
                     appWindow.openWallet("wizard");
                 }
@@ -1890,11 +1890,11 @@ ApplicationWindow {
             height: 34
             width: 34
 
-            MoneroEffects.ImageMask {
+            ScalaEffects.ImageMask {
                 anchors.centerIn: parent
                 visible: persistentSettings.customDecorations
                 image: "qrc:///images/resize.png"
-                color: MoneroComponents.Style.defaultFontColor
+                color: ScalaComponents.Style.defaultFontColor
                 width: 12
                 height: 12
                 opacity: (parent.containsMouse || parent.pressed) ? 0.5 : 1.0
@@ -1938,7 +1938,7 @@ ApplicationWindow {
             onMinimizeClicked: appWindow.visibility = Window.Minimized
         }
 
-        MoneroMerchant.MerchantTitlebar {
+        ScalaMerchant.MerchantTitlebar {
             id: titleBarOrange
             visible: persistentSettings.customDecorations && middlePanel.state === "Merchant"
             anchors.left: parent.left
@@ -1966,7 +1966,7 @@ ApplicationWindow {
                 source: "qrc:///images/tip.png"
             }
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 id: content
                 anchors.horizontalCenter: parent.horizontalCenter
                 y: 6
@@ -2083,14 +2083,14 @@ ApplicationWindow {
         anchors.bottom: parent.bottom
         width: statusMessageText.contentWidth + 20
         anchors.horizontalCenter: parent.horizontalCenter
-        color: MoneroComponents.Style.blackTheme ? "black" : "white"
+        color: ScalaComponents.Style.blackTheme ? "black" : "white"
         height: 40
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             id: statusMessageText
             anchors.fill: parent
             anchors.margins: 10
             font.pixelSize: 14
-            color: MoneroComponents.Style.defaultFontColor
+            color: ScalaComponents.Style.defaultFontColor
             themeTransition: false
         }
     }
@@ -2200,7 +2200,7 @@ ApplicationWindow {
     function checkUpdates() {
         const version = Version.GUI_VERSION.match(/\d+\.\d+\.\d+\.\d+/);
         if (version) {
-            walletManager.checkUpdatesAsync("monero-gui", "gui", getBuildTag(), version[0]);
+            walletManager.checkUpdatesAsync("scala-gui", "gui", getBuildTag(), version[0]);
         } else {
             console.error("failed to parse version number", Version.GUI_VERSION);
         }
@@ -2225,14 +2225,14 @@ ApplicationWindow {
     }
 
     // reset label text. othewise potential privacy leak showing unlock time when switching wallets
-    function clearMoneroCardLabelText(){
+    function clearScalaCardLabelText(){
         leftPanel.balanceString = "?.??"
         leftPanel.balanceFiatString = "?.??"
     }
 
     // some fields need an extra nudge when changing languages
     function resetLanguageFields(){
-        clearMoneroCardLabelText()
+        clearScalaCardLabelText()
         if (currentWallet) {
             onWalletRefresh();
         }
@@ -2310,10 +2310,10 @@ ApplicationWindow {
         visible: blur.visible
         anchors.fill: parent
         anchors.topMargin: titleBar.height
-        color: MoneroComponents.Style.blackTheme ? "black" : "white"
+        color: ScalaComponents.Style.blackTheme ? "black" : "white"
         opacity: isOpenGL ? 0.3 : inputDialog.visible || splash.visible ? 0.7 : 1.0
 
-        MoneroEffects.ColorTransition {
+        ScalaEffects.ColorTransition {
             targetObj: parent
             blackColor: "black"
             whiteColor: "white"
@@ -2327,77 +2327,77 @@ ApplicationWindow {
 
     // borders on white theme + linux
     Rectangle {
-        visible: isLinux && !MoneroComponents.Style.blackTheme && middlePanel.state !== "Merchant"
+        visible: isLinux && !ScalaComponents.Style.blackTheme && middlePanel.state !== "Merchant"
         z: parent.z + 1
         anchors.left: parent.left
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         width: 1
-        color: MoneroComponents.Style.appWindowBorderColor
+        color: ScalaComponents.Style.appWindowBorderColor
 
-        MoneroEffects.ColorTransition {
+        ScalaEffects.ColorTransition {
             targetObj: parent
-            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+            blackColor: ScalaComponents.Style._b_appWindowBorderColor
+            whiteColor: ScalaComponents.Style._w_appWindowBorderColor
         }
     }
 
     Rectangle {
-        visible: isLinux && !MoneroComponents.Style.blackTheme && middlePanel.state !== "Merchant"
+        visible: isLinux && !ScalaComponents.Style.blackTheme && middlePanel.state !== "Merchant"
         z: parent.z + 1
         anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         width: 1
-        color: MoneroComponents.Style.appWindowBorderColor
+        color: ScalaComponents.Style.appWindowBorderColor
 
-        MoneroEffects.ColorTransition {
+        ScalaEffects.ColorTransition {
             targetObj: parent
-            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+            blackColor: ScalaComponents.Style._b_appWindowBorderColor
+            whiteColor: ScalaComponents.Style._w_appWindowBorderColor
         }
     }
 
     Rectangle {
-        visible: isLinux && !MoneroComponents.Style.blackTheme && middlePanel.state !== "Merchant"
+        visible: isLinux && !ScalaComponents.Style.blackTheme && middlePanel.state !== "Merchant"
         z: parent.z + 1
         anchors.right: parent.right
         anchors.top: parent.top
         anchors.left: parent.left
         height: 1
-        color: MoneroComponents.Style.appWindowBorderColor
+        color: ScalaComponents.Style.appWindowBorderColor
 
-        MoneroEffects.ColorTransition {
+        ScalaEffects.ColorTransition {
             targetObj: parent
-            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+            blackColor: ScalaComponents.Style._b_appWindowBorderColor
+            whiteColor: ScalaComponents.Style._w_appWindowBorderColor
         }
     }
 
     Rectangle {
-        visible: isLinux && !MoneroComponents.Style.blackTheme && middlePanel.state !== "Merchant"
+        visible: isLinux && !ScalaComponents.Style.blackTheme && middlePanel.state !== "Merchant"
         z: parent.z + 1
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         height: 1
-        color: MoneroComponents.Style.appWindowBorderColor
+        color: ScalaComponents.Style.appWindowBorderColor
 
-        MoneroEffects.ColorTransition {
+        ScalaEffects.ColorTransition {
             targetObj: parent
-            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+            blackColor: ScalaComponents.Style._b_appWindowBorderColor
+            whiteColor: ScalaComponents.Style._w_appWindowBorderColor
         }
     }
 
-    MoneroComponents.LanguageSidebar {
+    ScalaComponents.LanguageSidebar {
         id: languageSidebar
         dragMargin: 0
         onAboutToShow: previousActiveFocusItem = activeFocusItem;
         onClosed: { if (previousActiveFocusItem) previousActiveFocusItem.forceActiveFocus() }
     }
 
-    MoneroComponents.MenuBar { }
+    ScalaComponents.MenuBar { }
 
     Network {
         id: network

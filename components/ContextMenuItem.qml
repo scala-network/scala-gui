@@ -3,7 +3,7 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 
 import FontAwesome 1.0
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 MenuItem {
     id: menuItem
@@ -12,7 +12,7 @@ MenuItem {
     property alias glyphIcon: glyphIcon.text
 
     background: Rectangle {
-        color: MoneroComponents.Style.buttonBackgroundColorDisabledHover
+        color: ScalaComponents.Style.buttonBackgroundColorDisabledHover
         opacity: 0
 
         MouseArea {
@@ -45,15 +45,15 @@ MenuItem {
         Text {
             id: glyphIcon
 
-            color: MoneroComponents.Style.buttonTextColor
+            color: ScalaComponents.Style.buttonTextColor
             font.family: glyphIconSolid ? FontAwesome.fontFamilySolid : FontAwesome.fontFamily
             font.pixelSize: 14
             font.styleName: glyphIconSolid ? "Solid" : "Regular"
         }
 
         Text {
-            color: MoneroComponents.Style.blackTheme ? MoneroComponents.Style.buttonTextColor : MoneroComponents.Style.defaultFontColor
-            font.family: MoneroComponents.Style.fontRegular.name
+            color: ScalaComponents.Style.blackTheme ? ScalaComponents.Style.buttonTextColor : ScalaComponents.Style.defaultFontColor
+            font.family: ScalaComponents.Style.fontRegular.name
             font.pixelSize: 14
             Layout.fillWidth: true
             text: menuItem.text

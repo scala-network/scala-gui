@@ -1,4 +1,4 @@
-import "../components" as MoneroComponents;
+import "../components" as ScalaComponents;
 import QtQuick 2.9
 import QtQuick.Layouts 1.2
 import FontAwesome 1.0
@@ -82,14 +82,14 @@ ColumnLayout {
         id: wordRow
         spacing: 0
 
-        MoneroComponents.Label {
-            color: lineEdit.inputHasFocus ? MoneroComponents.Style.defaultFontColor : MoneroComponents.Style.dimmedFontColor
+        ScalaComponents.Label {
+            color: lineEdit.inputHasFocus ? ScalaComponents.Style.defaultFontColor : ScalaComponents.Style.dimmedFontColor
             fontSize: 13
             text: (wordNumber + 1)
             themeTransition: false
         }
 
-        MoneroComponents.LineEdit {
+        ScalaComponents.LineEdit {
             id: lineEdit
             property bool firstUserInput: true
             inputHeight: 29
@@ -111,17 +111,17 @@ ColumnLayout {
             onTabPressed: focusOnNextField()
         }
 
-        MoneroComponents.Label {
+        ScalaComponents.Label {
             id: wordText
             Layout.leftMargin: 10
-            color: MoneroComponents.Style.defaultFontColor
+            color: ScalaComponents.Style.defaultFontColor
             fontSize: seedListItem.focus ? 19 : 16
             fontBold: true
             text: word
             themeTransition: false
         }
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             id: icon
             Layout.leftMargin: wordsMatch ? 10 : 0
             property bool wordsMatch: lineEdit.text === wordText.text
@@ -131,7 +131,7 @@ ColumnLayout {
             font.styleName: "Solid"
             font.pixelSize: 15
             text: wordsMatch ? FontAwesome.checkCircle : FontAwesome.exclamationCircle
-            color: wordsMatch ? (MoneroComponents.Style.blackTheme ? "#00FF00" : "#008000") : "#FF0000"
+            color: wordsMatch ? (ScalaComponents.Style.blackTheme ? "#00FF00" : "#008000") : "#FF0000"
             themeTransition: false
             onTextChanged: {
                 if (wizardCreateWallet2.seedListGrid && wordsMatch) {
@@ -146,7 +146,7 @@ ColumnLayout {
 
     Rectangle {
         id: underLine
-        color: lineEdit.inputHasFocus ? MoneroComponents.Style.defaultFontColor : MoneroComponents.Style.appWindowBorderColor
+        color: lineEdit.inputHasFocus ? ScalaComponents.Style.defaultFontColor : ScalaComponents.Style.appWindowBorderColor
         Layout.fillWidth: true
         height: 1
     }

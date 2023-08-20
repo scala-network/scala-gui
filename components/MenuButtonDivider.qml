@@ -1,15 +1,15 @@
 import QtQuick 2.9
 
-import "." as MoneroComponents
-import "effects/" as MoneroEffects
+import "." as ScalaComponents
+import "effects/" as ScalaEffects
 
 Rectangle {
-    color: MoneroComponents.Style.appWindowBorderColor
+    color: ScalaComponents.Style.appWindowBorderColor
     height: 1
 
-    MoneroEffects.ColorTransition {
+    ScalaEffects.ColorTransition {
         targetObj: parent
-        blackColor: MoneroComponents.Style._b_appWindowBorderColor
-        whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+        blackColor: ScalaComponents.Style._b_appWindowBorderColor
+        whiteColor: ScalaComponents.Style._w_appWindowBorderColor
     }
 }

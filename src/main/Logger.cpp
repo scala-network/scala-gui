@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -38,19 +38,19 @@
 #include <easylogging++.h>
 #include <wallet/api/wallet2_api.h>
 
-#include "qt/MoneroSettings.h"
+#include "qt/ScalaSettings.h"
 #include "qt/TailsOS.h"
 
 // default log path by OS (should be writable)
-static const QString defaultLogName = "monero-wallet-gui.log";
+static const QString defaultLogName = "scala-wallet-gui.log";
 #if defined(Q_OS_IOS)
     //AppDataLocation = "<APPROOT>/Library/Application Support"
     static const QString osPath = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(0);
-    static const QString appFolder = "monero-wallet-gui";
+    static const QString appFolder = "scala-wallet-gui";
 #elif defined(Q_OS_WIN)
     //AppDataLocation = "C:/Users/<USER>/AppData/Roaming/<APPNAME>"
     static const QString osPath = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(0);
-    static const QString appFolder = "monero-wallet-gui";
+    static const QString appFolder = "scala-wallet-gui";
 #elif defined(Q_OS_ANDROID)
     //AppDataLocation = "<USER>/<APPNAME>/files"
     static const QString osPath = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(1);
@@ -62,7 +62,7 @@ static const QString defaultLogName = "monero-wallet-gui.log";
 #else // linux + bsd
     //HomeLocation = "~"
     static const QString osPath = QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0);
-    static const QString appFolder = ".bitmonero";
+    static const QString appFolder = ".bitscala";
 #endif
 
 
@@ -77,11 +77,11 @@ const QString getLogPath(const QString &userDefinedLogFilePath, bool portable)
 
     if (portable)
     {
-        return QDir(MoneroSettings::portableFolderName()).filePath(defaultLogName);
+        return QDir(ScalaSettings::portableFolderName()).filePath(defaultLogName);
     }
 
     if(TailsOS::detect() && TailsOS::usePersistence)
-        return QDir::homePath() + "/Persistent/Monero/logs/" + defaultLogName;
+        return QDir::homePath() + "/Persistent/Scala/logs/" + defaultLogName;
     else {
         QDir appDir(osPath + "/" + appFolder);
         if(!appDir.exists())
@@ -100,11 +100,11 @@ void messageHandler(QtMsgType type, const QMessageLogContext &context, const QSt
     const std::string msg = message.toStdString();
     switch(type)
     {
-        case QtDebugMsg: Monero::Wallet::debug(cat, msg); break;
-        case QtInfoMsg: Monero::Wallet::info(cat, msg); break;
-        case QtWarningMsg: Monero::Wallet::warning(cat, msg); break;
-        case QtCriticalMsg: Monero::Wallet::error(cat, msg); break;
-        case QtFatalMsg: Monero::Wallet::error(cat, msg); break;
+        case QtDebugMsg: Scala::Wallet::debug(cat, msg); break;
+        case QtInfoMsg: Scala::Wallet::info(cat, msg); break;
+        case QtWarningMsg: Scala::Wallet::warning(cat, msg); break;
+        case QtCriticalMsg: Scala::Wallet::error(cat, msg); break;
+        case QtFatalMsg: Scala::Wallet::error(cat, msg); break;
     }
 }
 
@@ -123,7 +123,7 @@ Logger::Logger(QCoreApplication &parent, QString userDefinedLogFilePath)
 void Logger::resetLogFilePath(bool portable)
 {
     m_logFilePath = QDir::toNativeSeparators(getLogPath(m_userDefinedLogFilePath, portable));
-    Monero::Wallet::init(m_applicationFilePath.c_str(), "monero-wallet-gui", m_logFilePath.toStdString(), true);
+    Scala::Wallet::init(m_applicationFilePath.c_str(), "scala-wallet-gui", m_logFilePath.toStdString(), true);
     qWarning() << "Logging to" << m_logFilePath;
     emit logFilePathChanged();
 }

@@ -70,8 +70,8 @@
     </message>
     <message>
         <location filename="../pages/AddressBook.qml" line="93"/>
-        <source>This makes it easier to send or receive Monero and reduces errors when typing in addresses manually.</source>
-        <translation>Isto torna mais fácil enviar ou receber Monero e reduz erros quando escreve os endereços manualmente.</translation>
+        <source>This makes it easier to send or receive Scala and reduces errors when typing in addresses manually.</source>
+        <translation>Isto torna mais fácil enviar ou receber Scala e reduz erros quando escreve os endereços manualmente.</translation>
     </message>
     <message>
         <location filename="../pages/AddressBook.qml" line="102"/>
@@ -635,13 +635,13 @@ It is recommended to enter passphrase on the hardware wallet for better security
     </message>
     <message>
         <location filename="../pages/Keys.qml" line="62"/>
-        <source>WARNING: Do not reuse your Monero keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy.</source>
-        <translation>AVISO: Não reutilize as suas chaves privadas do Monero noutro fork, A MENOS que este fork preveja proteções contra a reutilização de chaves. Se o fizer estará a pôr em risco a sua privacidade.</translation>
+        <source>WARNING: Do not reuse your Scala keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy.</source>
+        <translation>AVISO: Não reutilize as suas chaves privadas do Scala noutro fork, A MENOS que este fork preveja proteções contra a reutilização de chaves. Se o fizer estará a pôr em risco a sua privacidade.</translation>
     </message>
     <message>
         <location filename="../pages/Keys.qml" line="85"/>
-        <source>WARNING: Copying your seed to clipboard can expose you to malicious software, which may record your seed and steal your Monero. Please write down your seed manually.</source>
-        <translation>AVISO: Copiar a seed para a área de transferência pode criar exposição a software malicioso, que pode gravar a seed e roubar o seu Monero. Por favor escreva a seed manualmente.</translation>
+        <source>WARNING: Copying your seed to clipboard can expose you to malicious software, which may record your seed and steal your Scala. Please write down your seed manually.</source>
+        <translation>AVISO: Copiar a seed para a área de transferência pode criar exposição a software malicioso, que pode gravar a seed e roubar o seu Scala. Por favor escreva a seed manualmente.</translation>
     </message>
     <message>
         <location filename="../pages/Keys.qml" line="106"/>
@@ -1067,9 +1067,9 @@ It is recommended to enter passphrase on the hardware wallet for better security
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="76"/>
-        <source>Mining with your computer helps strengthen the Monero network. The more people mine, the harder it is for the network to be attacked, and every little bit helps.
+        <source>Mining with your computer helps strengthen the Scala network. The more people mine, the harder it is for the network to be attacked, and every little bit helps.
 
-Mining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
+Mining also gives you a small chance to earn some Scala. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1720,8 +1720,8 @@ Mining also gives you a small chance to earn some Monero. Your computer will cre
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="102"/>
-        <source>Embedded Monero version: </source>
-        <translation>Versão Monero: </translation>
+        <source>Embedded Scala version: </source>
+        <translation>Versão Scala: </translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="132"/>
@@ -1831,12 +1831,12 @@ O ficheiro de cache antigo será renomeado e poderá ser restaurado mais tarde.
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="410"/>
-        <source>Donate to Monero</source>
-        <translation>Doar para o Monero</translation>
+        <source>Donate to Scala</source>
+        <translation>Doar para o Scala</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="412"/>
-        <source>Donation to Monero Core Team</source>
+        <source>Donation to Scala Core Team</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2015,13 +2015,13 @@ O ficheiro de cache antigo será renomeado e poderá ser restaurado mais tarde.
     </message>
     <message>
         <location filename="../pages/settings/SettingsNode.qml" line="224"/>
-        <source>Uses a third-party server to connect to the Monero network. Less secure, but easier on your computer.</source>
-        <translation>Utiliza um servidor remoto para ligar à rede Monero. É um método menos seguro, mas necessita de menos espaço de armazenamento local.</translation>
+        <source>Uses a third-party server to connect to the Scala network. Less secure, but easier on your computer.</source>
+        <translation>Utiliza um servidor remoto para ligar à rede Scala. É um método menos seguro, mas necessita de menos espaço de armazenamento local.</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsNode.qml" line="253"/>
-        <source>To find a remote node, type &apos;Monero remote node&apos; into your favorite search engine. Please ensure the node is run by a trusted third-party.</source>
-        <translation>Para encontrar um node remoto, escreva &apos;node remoto de Monero&apos; no seu motor de busca favorito. Confirme sempre que o node é gerido por uma entidade confiável.</translation>
+        <source>To find a remote node, type &apos;Scala remote node&apos; into your favorite search engine. Please ensure the node is run by a trusted third-party.</source>
+        <translation>Para encontrar um node remoto, escreva &apos;node remoto de Scala&apos; no seu motor de busca favorito. Confirme sempre que o node é gerido por uma entidade confiável.</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsNode.qml" line="317"/>
@@ -2205,7 +2205,7 @@ Pode alterar a password nas configurações da carteira.</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsWallet.qml" line="177"/>
-        <source>Receive Monero for your business, easily.</source>
+        <source>Receive Scala for your business, easily.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2233,8 +2233,8 @@ Pode alterar a password nas configurações da carteira.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="103"/>
-        <source>This page allows you to interact with the shared ring database. This database is meant for use by Monero wallets as well as wallets from Monero clones which reuse the Monero keys.</source>
-        <translation>Esta secção permite-lhe interagir com a base de dados de rings. Esta base de dados é intencionada para a utilização de carteiras de Monero assim como carteiras de clones do Monero que usam as mesmas chaves.</translation>
+        <source>This page allows you to interact with the shared ring database. This database is meant for use by Scala wallets as well as wallets from Scala clones which reuse the Scala keys.</source>
+        <translation>Esta secção permite-lhe interagir com a base de dados de rings. Esta base de dados é intencionada para a utilização de carteiras de Scala assim como carteiras de clones do Scala que usam as mesmas chaves.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="115"/>
@@ -2243,8 +2243,8 @@ Pode alterar a password nas configurações da carteira.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="116"/>
-        <source>In order to obscure which inputs in a Monero transaction are being spent, a third party should not be able to tell which inputs in a ring are already known to be spent. Being able to do so would weaken the protection afforded by ring signatures. If all but one of the inputs are known to be already spent, then the input being actually spent becomes apparent, thereby nullifying the effect of ring signatures, one of the three main layers of privacy protection Monero uses.&lt;br&gt;To help transactions avoid those inputs, a list of known spent ones can be used to avoid using them in new transactions. Such a list is maintained by the Monero project and is available on the getmonero.org website, and you can import this list here.&lt;br&gt;Alternatively, you can scan the blockchain (and the blockchain of key-reusing Monero clones) yourself using the monero-blockchain-mark-spent-outputs tool to create a list of known spent outputs.&lt;br&gt;</source>
-        <translation>De forma a esconder qual é a verdadeira transação que está a ser gasta, Monero utiliza varias transacções selecionadas automaticamente na mesma transação, uma terceira pessoa não deve conseguir distinguir qual é a transação verdadeira das falsas. Caso o consiga fazer irá enfraquecer a a protecção dada pelas ring signatures. Se todas as transacções excepto uma forem conhecidas por já terem sido gastas, então torna-se evidente qual é a transação que está a ser gasta e a utilização de ring signatures fica sem efeito, sendo as ring signatures uma das 3 camadas que permite a protecção de privacidade em Monero.&lt;br&gt;Para ajudar a evitar essas transacções, é-lhe fornecida uma lista com transacções já conhecidas como gastas e assim pode evitar usa-las numa nova transação. Esta lista é mantida pelo Monero Project e está disponivel no site oficinal getmonero.org, e pode importar essa lista para aqui.&lt;br&gt;Em alternativa, pode utilizar a ferramenta monero-blockchain-mark-spent-outputs e criar essa mesma lista de transacções conhecidas como gastas.</translation>
+        <source>In order to obscure which inputs in a Scala transaction are being spent, a third party should not be able to tell which inputs in a ring are already known to be spent. Being able to do so would weaken the protection afforded by ring signatures. If all but one of the inputs are known to be already spent, then the input being actually spent becomes apparent, thereby nullifying the effect of ring signatures, one of the three main layers of privacy protection Scala uses.&lt;br&gt;To help transactions avoid those inputs, a list of known spent ones can be used to avoid using them in new transactions. Such a list is maintained by the Scala project and is available on the getscala.org website, and you can import this list here.&lt;br&gt;Alternatively, you can scan the blockchain (and the blockchain of key-reusing Scala clones) yourself using the scala-blockchain-mark-spent-outputs tool to create a list of known spent outputs.&lt;br&gt;</source>
+        <translation>De forma a esconder qual é a verdadeira transação que está a ser gasta, Scala utiliza varias transacções selecionadas automaticamente na mesma transação, uma terceira pessoa não deve conseguir distinguir qual é a transação verdadeira das falsas. Caso o consiga fazer irá enfraquecer a a protecção dada pelas ring signatures. Se todas as transacções excepto uma forem conhecidas por já terem sido gastas, então torna-se evidente qual é a transação que está a ser gasta e a utilização de ring signatures fica sem efeito, sendo as ring signatures uma das 3 camadas que permite a protecção de privacidade em Scala.&lt;br&gt;Para ajudar a evitar essas transacções, é-lhe fornecida uma lista com transacções já conhecidas como gastas e assim pode evitar usa-las numa nova transação. Esta lista é mantida pelo Scala Project e está disponivel no site oficinal getscala.org, e pode importar essa lista para aqui.&lt;br&gt;Em alternativa, pode utilizar a ferramenta scala-blockchain-mark-spent-outputs e criar essa mesma lista de transacções conhecidas como gastas.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="134"/>
@@ -2313,13 +2313,13 @@ Pode alterar a password nas configurações da carteira.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="247"/>
-        <source>In order to avoid nullifying the protection afforded by Monero&apos;s ring signatures, an output should not be spent with different rings on different blockchains. While this is normally not a concern, it can become one when a key-reusing Monero clone allows you to spend existing outputs. In this case, you need to ensure this existing outputs uses the same ring on both chains.&lt;br&gt;This will be done automatically by Monero and any key-reusing software which is not trying to actively strip you of your privacy.&lt;br&gt;If you are using a key-reusing Monero clone too, and this clone does not include this protection, you can still ensure your transactions are protected by spending on the clone first, then manually adding the ring on this page, which allows you to then spend your Monero safely.&lt;br&gt;If you do not use a key-reusing Monero clone without these safety features, then you do not need to do anything as it is all automated.&lt;br&gt;</source>
-        <translation>Para evitar anular a proteção oferecida pelo Monero, um output não deve ser usado com diferentes rings em blockchains diferentes. Normalmente isto não é uma preocupação, poderá tornar-se uma quando um clone do Monero permite a utilização de outputs já gastos na rede original do Monero. Neste caso é necessário que garante que estes outputs que já tinham sido gastos na rede Monero usem os mesmos rings em ambas as blockchains.&lt;br&gt;Isto é feito automaticamente pelo Monero e por qualquer outro software que não está a tentar destruir a sua provacidade.&lt;br&gt;Se você está a utilizar um clone de Monero e este clone não inclui uma proteção contra isto, poderá obter na mesma a sua proteção garantido que as transações são feitas primeiro no clone do Monero e de seguida adicionado a ring utilizada nesta página, o que permite que depois utilize o seu Monero em segurança.&lt;br&gt;Se você optar por não usar um clone do Monero então não necessita de se preocupar, tudo será feito automaticamente.&lt;br&gt;</translation>
+        <source>In order to avoid nullifying the protection afforded by Scala&apos;s ring signatures, an output should not be spent with different rings on different blockchains. While this is normally not a concern, it can become one when a key-reusing Scala clone allows you to spend existing outputs. In this case, you need to ensure this existing outputs uses the same ring on both chains.&lt;br&gt;This will be done automatically by Scala and any key-reusing software which is not trying to actively strip you of your privacy.&lt;br&gt;If you are using a key-reusing Scala clone too, and this clone does not include this protection, you can still ensure your transactions are protected by spending on the clone first, then manually adding the ring on this page, which allows you to then spend your Scala safely.&lt;br&gt;If you do not use a key-reusing Scala clone without these safety features, then you do not need to do anything as it is all automated.&lt;br&gt;</source>
+        <translation>Para evitar anular a proteção oferecida pelo Scala, um output não deve ser usado com diferentes rings em blockchains diferentes. Normalmente isto não é uma preocupação, poderá tornar-se uma quando um clone do Scala permite a utilização de outputs já gastos na rede original do Scala. Neste caso é necessário que garante que estes outputs que já tinham sido gastos na rede Scala usem os mesmos rings em ambas as blockchains.&lt;br&gt;Isto é feito automaticamente pelo Scala e por qualquer outro software que não está a tentar destruir a sua provacidade.&lt;br&gt;Se você está a utilizar um clone de Scala e este clone não inclui uma proteção contra isto, poderá obter na mesma a sua proteção garantido que as transações são feitas primeiro no clone do Scala e de seguida adicionado a ring utilizada nesta página, o que permite que depois utilize o seu Scala em segurança.&lt;br&gt;Se você optar por não usar um clone do Scala então não necessita de se preocupar, tudo será feito automaticamente.&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="266"/>
-        <source>This records rings used by outputs spent on Monero on a key reusing chain, so that the same ring may be reused to avoid privacy issues.</source>
-        <translation>Estes registos contêm assinaturas usadas em transacções num clone do Monero com as mesmas chaves, é necessário utilizar as mesmas assinaturas para evitar perda de privacidade.</translation>
+        <source>This records rings used by outputs spent on Scala on a key reusing chain, so that the same ring may be reused to avoid privacy issues.</source>
+        <translation>Estes registos contêm assinaturas usadas em transacções num clone do Scala com as mesmas chaves, é necessário utilizar as mesmas assinaturas para evitar perda de privacidade.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="277"/>
@@ -2503,8 +2503,8 @@ Pode alterar a password nas configurações da carteira.</translation>
     </message>
     <message>
         <location filename="../pages/Sign.qml" line="341"/>
-        <source>Enter the Monero Address (example: 44AFFq5kSiGBoZ...)</source>
-        <translation>Introduza o Endereço de Monero (exemplo: 44AFFq5kSiGBoZ...)</translation>
+        <source>Enter the Scala Address (example: 44AFFq5kSiGBoZ...)</source>
+        <translation>Introduza o Endereço de Scala (exemplo: 44AFFq5kSiGBoZ...)</translation>
     </message>
     <message>
         <location filename="../pages/Sign.qml" line="351"/>
@@ -2887,8 +2887,8 @@ Confirmation message:
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="1071"/>
-        <source>Monero sent successfully</source>
-        <translation>Monero enviado com sucesso</translation>
+        <source>Scala sent successfully</source>
+        <translation>Scala enviado com sucesso</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="896"/>
@@ -3111,7 +3111,7 @@ Por favor atualize ou execute outra versão do daemon</translation>
     </message>
     <message>
         <location filename="../components/TxConfirmationDialog.qml" line="311"/>
-        <source>Monero address</source>
+        <source>Scala address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3263,12 +3263,12 @@ For the case with Spend Proof, you don&apos;t need to specify the recipient addr
     <name>UpdateDialog</name>
     <message>
         <location filename="../components/UpdateDialog.qml" line="77"/>
-        <source>New Monero version v%1 is available.</source>
+        <source>New Scala version v%1 is available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../components/UpdateDialog.qml" line="98"/>
-        <source>Please visit getmonero.org for details</source>
+        <source>Please visit getscala.org for details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3642,8 +3642,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardCreateWallet3.qml" line="60"/>
-        <source>To be able to communicate with the Monero network your wallet needs to be connected to a Monero node. For best privacy it&apos;s recommended to run your own node.</source>
-        <translation>Para poder comunicar com a rede Monero, a carteira necessita de estar conectada a um node Monero. Para a melhor privacidade é recomendado correr o seu próprio node.</translation>
+        <source>To be able to communicate with the Scala network your wallet needs to be connected to a Scala node. For best privacy it&apos;s recommended to run your own node.</source>
+        <translation>Para poder comunicar com a rede Scala, a carteira necessita de estar conectada a um node Scala. Para a melhor privacidade é recomendado correr o seu próprio node.</translation>
     </message>
 </context>
 <context>
@@ -3703,8 +3703,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardDaemonSettings.qml" line="152"/>
-        <source>Additionally, you may specify a bootstrap node to use Monero immediately.</source>
-        <translation>Adicionalmente, pode especificar o bootstrap node para usar Monero imediatamente.</translation>
+        <source>Additionally, you may specify a bootstrap node to use Scala immediately.</source>
+        <translation>Adicionalmente, pode especificar o bootstrap node para usar Scala imediatamente.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDaemonSettings.qml" line="192"/>
@@ -3716,7 +3716,7 @@ your input may be required.</source>
     <name>WizardHome</name>
     <message>
         <location filename="../wizard/WizardHome.qml" line="66"/>
-        <source>Welcome to Monero</source>
+        <source>Welcome to Scala</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3738,8 +3738,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="82"/>
-        <source>Choose this option if this is your first time using Monero.</source>
-        <translation>Escolha esta opção se esta é a sua primeira vez a usar Monero.</translation>
+        <source>Choose this option if this is your first time using Scala.</source>
+        <translation>Escolha esta opção se esta é a sua primeira vez a usar Scala.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="104"/>
@@ -3748,8 +3748,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="108"/>
-        <source>Connect your hardware wallet to create a new Monero wallet.</source>
-        <translation>Conecte a sua carteira de hardware para criar uma nova carteira Monero.</translation>
+        <source>Connect your hardware wallet to create a new Scala wallet.</source>
+        <translation>Conecte a sua carteira de hardware para criar uma nova carteira Scala.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="127"/>
@@ -3814,7 +3814,7 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardModeBootstrap.qml" line="84"/>
-        <source>Temporary use of remote nodes is useful in order to use Monero immediately (hence the name bootstrap), however be aware that when using remote nodes (including with the bootstrap setting), nodes could track your IP address, track your &quot;restore height&quot; and associated block request data, and send you inaccurate information to learn more about transactions you make.</source>
+        <source>Temporary use of remote nodes is useful in order to use Scala immediately (hence the name bootstrap), however be aware that when using remote nodes (including with the bootstrap setting), nodes could track your IP address, track your &quot;restore height&quot; and associated block request data, and send you inaccurate information to learn more about transactions you make.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3837,8 +3837,8 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardModeRemoteNodeWarning.qml" line="72"/>
-        <source>This mode is ideal for managing small amounts of Monero. You have access to basic features for making and managing transactions. It will automatically connect to the Monero network so you can start using Monero immediately.</source>
-        <translation>Este modo é ideal para gerenciar pequenas quantidades do Monero. Você tem acesso a recursos básicos para fazer e gerenciar transacções. Ele se conectará automaticamente à rede Monero para que você possa começar a usar o Monero imediatamente.</translation>
+        <source>This mode is ideal for managing small amounts of Scala. You have access to basic features for making and managing transactions. It will automatically connect to the Scala network so you can start using Scala immediately.</source>
+        <translation>Este modo é ideal para gerenciar pequenas quantidades do Scala. Você tem acesso a recursos básicos para fazer e gerenciar transacções. Ele se conectará automaticamente à rede Scala para que você possa começar a usar o Scala imediatamente.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardModeRemoteNodeWarning.qml" line="85"/>
@@ -3928,7 +3928,7 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardModeSelection.qml" line="166"/>
-        <source>Create portable wallets and use them on any PC. Enable if you installed Monero on a USB stick, an external drive, or any other portable storage medium.</source>
+        <source>Create portable wallets and use them on any PC. Enable if you installed Scala on a USB stick, an external drive, or any other portable storage medium.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4100,10 +4100,10 @@ your input may be required.</source>
     </message>
     <message>
         <location filename="../wizard/WizardRestoreWallet3.qml" line="63"/>
-        <source>To be able to communicate with the Monero network your wallet needs to be connected to a Monero node. For best privacy it&apos;s recommended to run your own node.
+        <source>To be able to communicate with the Scala network your wallet needs to be connected to a Scala node. For best privacy it&apos;s recommended to run your own node.
 
 If you don&apos;t have the option to run your own node, there&apos;s an option to connect to a remote node.</source>
-        <translation>Para poder comunicar com a rede Monero, a carteira necessita de estar conectada a um node Monero. Para a melhor privacidade é recomendado correr o seu próprio node.
+        <translation>Para poder comunicar com a rede Scala, a carteira necessita de estar conectada a um node Scala. Para a melhor privacidade é recomendado correr o seu próprio node.
 
 Caso não tenha a possibilidade de usar o seu próprio node tem a opção de se ligar ao um node remoto.</translation>
     </message>
@@ -4342,8 +4342,8 @@ Caso não tenha a possibilidade de usar o seu próprio node tem a opção de se 
     </message>
     <message>
         <location filename="../main.qml" line="1055"/>
-        <source>This address received %1 monero, with %2 confirmation(s).</source>
-        <translation>Este endereço recebeu %1 monero, com %2 confirmação(ões)</translation>
+        <source>This address received %1 scala, with %2 confirmation(s).</source>
+        <translation>Este endereço recebeu %1 scala, com %2 confirmação(ões)</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1066"/>
@@ -4367,7 +4367,7 @@ Caso não tenha a possibilidade de usar o seu próprio node tem a opção de se 
     </message>
     <message>
         <location filename="../main.qml" line="1345"/>
-        <source>Would you like to register Monero GUI Desktop entry?</source>
+        <source>Would you like to register Scala GUI Desktop entry?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4499,8 +4499,8 @@ Caso não tenha a possibilidade de usar o seu próprio node tem a opção de se 
     </message>
     <message>
         <location filename="../main.qml" line="1052"/>
-        <source>This address received %1 monero, but the transaction is not yet mined</source>
-        <translation>Este endereço recebeu %1 monero, porém a transação ainda não foi minerada</translation>
+        <source>This address received %1 scala, but the transaction is not yet mined</source>
+        <translation>Este endereço recebeu %1 scala, porém a transação ainda não foi minerada</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1059"/>

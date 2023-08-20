@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -37,9 +37,9 @@ class NetworkType : public QObject
 
 public:
     enum Type : uint8_t {
-        MAINNET = Monero::MAINNET,
-        TESTNET = Monero::TESTNET,
-        STAGENET = Monero::STAGENET
+        MAINNET = Scala::MAINNET,
+        TESTNET = Scala::TESTNET,
+        STAGENET = Scala::STAGENET
     };
     Q_ENUM(Type)
 };

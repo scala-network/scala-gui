@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -34,8 +34,8 @@ import QtQuick.Controls.Styles 1.4
 import QtQuick.Window 2.0
 import FontAwesome 1.0
 
-import "." as MoneroComponents
-import "effects/" as MoneroEffects
+import "." as ScalaComponents
+import "effects/" as ScalaEffects
 import "../js/Utils.js" as Utils
 
 Item {
@@ -169,9 +169,9 @@ Item {
                 Layout.fillWidth: true
 
                 font.pixelSize: 16
-                font.family: MoneroComponents.Style.fontLight.name
+                font.family: ScalaComponents.Style.fontLight.name
 
-                color: MoneroComponents.Style.defaultFontColor
+                color: ScalaComponents.Style.defaultFontColor
             }
 
             Label {
@@ -181,17 +181,17 @@ Item {
                 wrapMode: Text.Wrap
 
                 font.pixelSize: 14
-                font.family: MoneroComponents.Style.fontLight.name
+                font.family: ScalaComponents.Style.fontLight.name
 
-                color: MoneroComponents.Style.warningColor
+                color: ScalaComponents.Style.warningColor
             }
 
             Label {
                 id: errorTextLabel
                 visible: root.errorText || text !== ""
-                color: MoneroComponents.Style.errorColor
+                color: ScalaComponents.Style.errorColor
                 font.pixelSize: 16
-                font.family: MoneroComponents.Style.fontLight.name
+                font.family: ScalaComponents.Style.fontLight.name
                 Layout.fillWidth: true
                 wrapMode: Text.Wrap
             }
@@ -199,15 +199,15 @@ Item {
             Label {
                 id: capsLockTextLabel
                 visible: false
-                color: MoneroComponents.Style.errorColor
+                color: ScalaComponents.Style.errorColor
                 font.pixelSize: 16
-                font.family: MoneroComponents.Style.fontLight.name
+                font.family: ScalaComponents.Style.fontLight.name
                 Layout.fillWidth: true
                 wrapMode: Text.Wrap
                 text: qsTr("CAPSLOCKS IS ON.") + translationManager.emptyString;
             }
 
-            MoneroComponents.LineEdit {
+            ScalaComponents.LineEdit {
                 id: passwordInput1
                 password: true
                 Layout.topMargin: 6
@@ -243,12 +243,12 @@ Item {
                 Layout.fillWidth: true
 
                 font.pixelSize: 16
-                font.family: MoneroComponents.Style.fontLight.name
+                font.family: ScalaComponents.Style.fontLight.name
 
-                color: MoneroComponents.Style.defaultFontColor
+                color: ScalaComponents.Style.defaultFontColor
             }
 
-            MoneroComponents.LineEdit {
+            ScalaComponents.LineEdit {
                 id: passwordInput2
                 passwordLinked: passwordInput1
                 visible: !passwordDialogMode
@@ -280,7 +280,7 @@ Item {
                 Layout.topMargin: 16
                 Layout.alignment: Qt.AlignRight
 
-                MoneroComponents.StandardButton {
+                ScalaComponents.StandardButton {
                     id: cancelButton
                     primary: false
                     small: true
@@ -289,7 +289,7 @@ Item {
                     onClicked: onCancel()
                 }
 
-                MoneroComponents.StandardButton {
+                ScalaComponents.StandardButton {
                     id: okButton
                     fontAwesomeIcon: true
                     rightIcon: okButtonIcon

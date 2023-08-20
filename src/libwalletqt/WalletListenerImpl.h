@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020, The Monero Project
+// Copyright (c) 2014-2020, The Scala Project
 //
 // All rights reserved.
 //
@@ -26,15 +26,15 @@
 // STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef MONERO_GUI_WALLETLISTENERIMPL_H
-#define MONERO_GUI_WALLETLISTENERIMPL_H
+#ifndef SCALA_GUI_WALLETLISTENERIMPL_H
+#define SCALA_GUI_WALLETLISTENERIMPL_H
 
 #include "wallet/api/wallet2_api.h"
 #include "PassphraseHelper.h"
 
 class Wallet;
 
-class WalletListenerImpl : public Monero::WalletListener, public PassphraseReceiver
+class WalletListenerImpl : public Scala::WalletListener, public PassphraseReceiver
 {
 public:
     WalletListenerImpl(Wallet * w);
@@ -58,11 +58,11 @@ public:
 
     virtual void onPassphraseEntered(const QString &passphrase, bool enter_on_device, bool entry_abort) override;
 
-    virtual Monero::optional<std::string> onDevicePassphraseRequest(bool & on_device) override;
+    virtual Scala::optional<std::string> onDevicePassphraseRequest(bool & on_device) override;
 
 private:
     Wallet * m_wallet;
     PassphraseHelper m_phelper;
 };
 
-#endif //MONERO_GUI_WALLETLISTENERIMPL_H
+#endif //SCALA_GUI_WALLETLISTENERIMPL_H

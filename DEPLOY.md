@@ -6,9 +6,9 @@ Use macOS 10.12 - 10.13 for better backwards compability.
 
 2. Get the latest LTS from here: https://www.qt.io/offline-installers and install
 
-3. `git clone --recursive -b v0.X.Y.Z --depth 1 https://github.com/monero-project/monero-gui` 
+3. `git clone --recursive -b v0.X.Y.Z --depth 1 https://github.com/scala-project/scala-gui` 
 
-4. Compile `monero-wallet-gui.app`
+4. Compile `scala-wallet-gui.app`
 
 ```
 mkdir build && cd build
@@ -17,7 +17,7 @@ make
 make deploy
 ```
 
-5. Replace the `monerod` binary inside `monero-wallet-gui.app/Contents/MacOS/` with one built using deterministic builds / gitian.
+5. Replace the `scalad` binary inside `scala-wallet-gui.app/Contents/MacOS/` with one built using deterministic builds / gitian.
 
 ## Codesigning and notarizing
 
@@ -34,14 +34,14 @@ make deploy
 </plist>
 ```
 
-2. `codesign --deep --force --verify --verbose --options runtime --timestamp --entitlements entitlements.plist --sign 'XXXXXXXXXX' monero-wallet-gui.app`
+2. `codesign --deep --force --verify --verbose --options runtime --timestamp --entitlements entitlements.plist --sign 'XXXXXXXXXX' scala-wallet-gui.app`
 
-You can check if this step worked by using `codesign -dvvv monero-wallet-gui.app`
+You can check if this step worked by using `codesign -dvvv scala-wallet-gui.app`
 
-3. `hdiutil create -fs HFS+ -srcfolder monero-gui-v0.X.Y.Z -volname monero-wallet-gui monero-gui-mac-x64-v0.X.Y.Z.dmg`
+3. `hdiutil create -fs HFS+ -srcfolder scala-gui-v0.X.Y.Z -volname scala-wallet-gui scala-gui-mac-x64-v0.X.Y.Z.dmg`
 
-4. `xcrun altool -t osx --file monero-gui-mac-x64-v0.X.Y.Z.dmg --primary-bundle-id org.monero-project.monero-wallet-gui.dmg --notarize-app --username email@address.org`
+4. `xcrun altool -t osx --file scala-gui-mac-x64-v0.X.Y.Z.dmg --primary-bundle-id org.scala-project.scala-wallet-gui.dmg --notarize-app --username email@address.org`
 
 5. `xcrun altool --notarization-info aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee -u email@address.org`
 
-6. `xcrun stapler staple -v monero-gui-mac-x64-v0.X.Y.Z.dmg`
+6. `xcrun stapler staple -v scala-gui-mac-x64-v0.X.Y.Z.dmg`

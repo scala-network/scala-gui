@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -63,8 +63,8 @@ class TransactionInfo : public QObject
 
 public:
     enum Direction {
-        Direction_In  =  Monero::TransactionInfo::Direction_In,
-        Direction_Out =  Monero::TransactionInfo::Direction_Out,
+        Direction_In  =  Scala::TransactionInfo::Direction_In,
+        Direction_Out =  Scala::TransactionInfo::Direction_Out,
         Direction_Both // invalid direction value, used for filtering
     };
 
@@ -95,7 +95,7 @@ public:
     //! used in tx details popup
     QString destinations_formatted() const;
 private:
-    explicit TransactionInfo(const Monero::TransactionInfo *pimpl, QObject *parent = 0);
+    explicit TransactionInfo(const Scala::TransactionInfo *pimpl, QObject *parent = 0);
 private:
     friend class TransactionHistory;
     mutable QList<Transfer*> m_transfers;

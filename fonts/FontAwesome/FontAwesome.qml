@@ -23,7 +23,7 @@ Object {
     property string fontFamilyBrands: brands.name
     property string fontFamilySolid: solid.name
 
-    // Icons used in Monero GUI (Font Awesome version 5.15.3)
+    // Icons used in Scala GUI (Font Awesome version 5.15.3)
     // To add new icons, check unicodes in Font Awesome Free's Cheatsheet:
     // https://fontawesome.com/v5/cheatsheet/free/solid
     // https://fontawesome.com/v5/cheatsheet/free/regular
@@ -58,7 +58,7 @@ Object {
     property string minus : "\uf068"
     property string minusCircle : "\uf056"
     property string moonO : "\uf186"
-    property string monero : "\uf3d0"
+    property string scala : "\uf3d0"
     property string paste : "\uf0ea"
     property string pencilSquare : "\uf14b"
     property string plus : "\uf067"

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -27,7 +27,7 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import Qt.labs.platform 1.0 as PlatformLabs
-import "." as MoneroComponents
+import "." as ScalaComponents
 
 PlatformLabs.MenuBar {
     PlatformLabs.Menu {
@@ -41,9 +41,9 @@ PlatformLabs.MenuBar {
     PlatformLabs.Menu {
         title: qsTr("View")
         PlatformLabs.MenuItem {
-            text: MoneroComponents.Style.blackTheme ? qsTr("Light Theme") : qsTr("Dark Theme")
+            text: ScalaComponents.Style.blackTheme ? qsTr("Light Theme") : qsTr("Dark Theme")
             onTriggered: {
-                MoneroComponents.Style.blackTheme = !MoneroComponents.Style.blackTheme;
+                ScalaComponents.Style.blackTheme = !ScalaComponents.Style.blackTheme;
             }
         }
         PlatformLabs.MenuItem {

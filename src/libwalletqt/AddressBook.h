@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -36,7 +36,7 @@
 #include <QList>
 #include <QDateTime>
 
-namespace Monero {
+namespace Scala {
 struct AddressBook;
 }
 class AddressBookRow;
@@ -45,7 +45,7 @@ class AddressBook : public QObject
 {
     Q_OBJECT
 public:
-    Q_INVOKABLE bool getRow(int index, std::function<void (Monero::AddressBookRow &)> callback) const;
+    Q_INVOKABLE bool getRow(int index, std::function<void (Scala::AddressBookRow &)> callback) const;
     Q_INVOKABLE bool addRow(const QString &address, const QString &payment_id, const QString &description);
     Q_INVOKABLE bool deleteRow(int rowId);
     quint64 count() const;
@@ -74,11 +74,11 @@ signals:
 public slots:
 
 private:
-    explicit AddressBook(Monero::AddressBook * abImpl, QObject *parent);
+    explicit AddressBook(Scala::AddressBook * abImpl, QObject *parent);
     friend class Wallet;
-    Monero::AddressBook * m_addressBookImpl;
+    Scala::AddressBook * m_addressBookImpl;
     mutable QReadWriteLock m_lock;
-    QList<Monero::AddressBookRow*> m_rows;
+    QList<Scala::AddressBookRow*> m_rows;
     QMap<QString, size_t> m_addresses;
 };
 

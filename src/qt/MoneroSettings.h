@@ -4,7 +4,7 @@
 ** Contact: https://www.qt.io/licensing/
 **
 ****************************************************************************/
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -33,8 +33,8 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-#ifndef MONEROSETTINGS_H
-#define MONEROSETTINGS_H
+#ifndef SCALASETTINGS_H
+#define SCALASETTINGS_H
 
 #include <memory>
 
@@ -47,7 +47,7 @@
 
 static const int settingsWriteDelay = 500; // ms
 
-class MoneroSettings : public QObject, public QQmlParserStatus
+class ScalaSettings : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
@@ -56,7 +56,7 @@ class MoneroSettings : public QObject, public QQmlParserStatus
     Q_PROPERTY(QString portableFolderName READ portableFolderName CONSTANT)
 
 public:
-    explicit MoneroSettings(QObject *parent = nullptr);
+    explicit ScalaSettings(QObject *parent = nullptr);
 
     QString fileName() const;
     void setFileName(const QString &fileName);
@@ -98,4 +98,4 @@ private:
     int m_timerId = 0;
 };
 
-#endif // MONEROSETTINGS_H
+#endif // SCALASETTINGS_H

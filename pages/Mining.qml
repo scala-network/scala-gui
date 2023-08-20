@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -30,10 +30,10 @@ import QtQml.Models 2.2
 import QtQuick 2.9
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.2
-import "../components" as MoneroComponents
-import moneroComponents.Wallet 1.0
-import moneroComponents.P2PoolManager 1.0
-import moneroComponents.DaemonManager 1.0
+import "../components" as ScalaComponents
+import scalaComponents.Wallet 1.0
+import scalaComponents.P2PoolManager 1.0
+import scalaComponents.DaemonManager 1.0
 
 Rectangle {
     id: root
@@ -53,36 +53,36 @@ Rectangle {
         anchors.right: parent.right
         spacing: 20
 
-        MoneroComponents.Label {
+        ScalaComponents.Label {
             id: soloTitleLabel
             fontSize: 24
             text: qsTr("Mining") + translationManager.emptyString
         }
 
-        MoneroComponents.WarningBox {
+        ScalaComponents.WarningBox {
             Layout.bottomMargin: 8
             id: localDaemonWarning
             text: qsTr("Mining is only available on local daemons.") + translationManager.emptyString
             visible: persistentSettings.useRemoteNode && !persistentSettings.allowRemoteNodeMining
         }
 
-        MoneroComponents.WarningBox {
+        ScalaComponents.WarningBox {
             Layout.bottomMargin: 8
             text: qsTr("Your daemon must be synchronized before you can start mining") + translationManager.emptyString
             visible: !persistentSettings.useRemoteNode && !appWindow.daemonSynced
         }
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             id: soloMainLabel
-            text: qsTr("Mining with your computer helps strengthen the Monero network. The more people mine, the harder it is for the network to be attacked, and every little bit helps.\n\nMining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!") + "\n\n" + qsTr("P2Pool mining is a decentralized way to pool mine that pays out more frequently compared to solo mining, while also supporting the network.") + translationManager.emptyString
+            text: qsTr("Mining with your computer helps strengthen the Scala network. The more people mine, the harder it is for the network to be attacked, and every little bit helps.\n\nMining also gives you a small chance to earn some Scala. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!") + "\n\n" + qsTr("P2Pool mining is a decentralized way to pool mine that pays out more frequently compared to solo mining, while also supporting the network.") + translationManager.emptyString
             wrapMode: Text.Wrap
             Layout.fillWidth: true
-            font.family: MoneroComponents.Style.fontRegular.name
+            font.family: ScalaComponents.Style.fontRegular.name
             font.pixelSize: 14
-            color: MoneroComponents.Style.defaultFontColor
+            color: ScalaComponents.Style.defaultFontColor
         }
 
-        MoneroComponents.WarningBox {
+        ScalaComponents.WarningBox {
             id: warningLabel
             Layout.topMargin: 8
             Layout.bottomMargin: 8
@@ -106,9 +106,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: miningModeLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     text: qsTr("Mining mode") + translationManager.emptyString
                     fontSize: 16
                 }
@@ -118,7 +118,7 @@ Rectangle {
                 Layout.topMargin: 5
                 spacing: 10
 
-                MoneroComponents.StandardDropdown {
+                ScalaComponents.StandardDropdown {
                     Layout.maximumWidth: 200
                     id: miningModeDropdown
                     visible: true
@@ -137,9 +137,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: soloMinerThreadsLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     text: qsTr("CPU threads") + translationManager.emptyString
                     fontSize: 16
                     wrapMode: Text.WordWrap
@@ -151,7 +151,7 @@ Rectangle {
                 spacing: 16
 
                 RowLayout {
-                    MoneroComponents.StandardButton {
+                    ScalaComponents.StandardButton {
                         id: removeThreadButton
                         small: true
                         primary: false
@@ -160,10 +160,10 @@ Rectangle {
                         onClicked: threads--
                     }
 
-                    MoneroComponents.TextPlain {
+                    ScalaComponents.TextPlain {
                         Layout.bottomMargin: 1
                         Layout.minimumWidth: 45
-                        color: MoneroComponents.Style.defaultFontColor
+                        color: ScalaComponents.Style.defaultFontColor
                         text: threads
                         horizontalAlignment: Text.AlignHCenter
                         font.pixelSize: 16
@@ -181,7 +181,7 @@ Rectangle {
                         }
                     }
 
-                    MoneroComponents.StandardButton {
+                    ScalaComponents.StandardButton {
                         id: addThreadButton
                         small: true
                         primary: false
@@ -192,7 +192,7 @@ Rectangle {
                 }
 
                 RowLayout {
-                    MoneroComponents.StandardButton {
+                    ScalaComponents.StandardButton {
                         id: autoRecommendedThreadsButton
                         small: true
                         primary: false
@@ -204,7 +204,7 @@ Rectangle {
                         }
                     }
 
-                    MoneroComponents.StandardButton {
+                    ScalaComponents.StandardButton {
                         id: autoSetMaxThreadsButton
                         small: true
                         primary: false
@@ -220,7 +220,7 @@ Rectangle {
                 RowLayout {
                     // Disable this option until stable
                     visible: false
-                    MoneroComponents.CheckBox {
+                    ScalaComponents.CheckBox {
                         id: ignoreBattery
                         enabled: startSoloMinerButton.enabled
                         checked: !persistentSettings.miningIgnoreBattery
@@ -234,9 +234,9 @@ Rectangle {
                 Layout.alignment: Qt.AlignTop | Qt.AlignLeft
                 Layout.minimumWidth: 140
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: optionsLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     visible: !persistentSettings.allow_p2pool_mining
                     text: qsTr("Options") + translationManager.emptyString
                     fontSize: 16
@@ -250,7 +250,7 @@ Rectangle {
                 spacing: 16
 
                 RowLayout {
-                    MoneroComponents.CheckBox {
+                    ScalaComponents.CheckBox {
                         id: backgroundMining
                         visible: !persistentSettings.allow_p2pool_mining
                         enabled: startSoloMinerButton.enabled && !persistentSettings.allow_p2pool_mining
@@ -264,9 +264,9 @@ Rectangle {
             ColumnLayout {
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: manageSoloMinerLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     text: qsTr("Manage miner") + translationManager.emptyString
                     fontSize: 16
                     wrapMode: Text.Wrap
@@ -279,7 +279,7 @@ Rectangle {
                 spacing: 16
 
                 RowLayout {
-                    MoneroComponents.StandardButton {
+                    ScalaComponents.StandardButton {
                         visible: true
                         id: startSoloMinerButton
                         small: true
@@ -337,7 +337,7 @@ Rectangle {
                         }
                     }
 
-                    MoneroComponents.StandardButton {
+                    ScalaComponents.StandardButton {
                         visible: true
                         id: stopSoloMinerButton
                         small: true
@@ -356,9 +356,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: statusLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     text: qsTr("Status") + translationManager.emptyString
                     fontSize: 16
                 }
@@ -368,7 +368,7 @@ Rectangle {
                 Layout.fillWidth: true
                 spacing: 16
 
-                MoneroComponents.LineEditMulti {
+                ScalaComponents.LineEditMulti {
                     id: statusText
                     Layout.minimumWidth: 300
                     text: qsTr("Not mining") + translationManager.emptyString
@@ -390,15 +390,15 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: chainLabel
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     visible: persistentSettings.allow_p2pool_mining
                     text: qsTr("Chain") + translationManager.emptyString
                     fontSize: 16
                 }
 
-                MoneroComponents.Tooltip {
+                ScalaComponents.Tooltip {
                     id: chainsHelpTooltip
                     text: qsTr("Use the mini chain if you have a low hashrate.") + translationManager.emptyString
                 }
@@ -422,7 +422,7 @@ Rectangle {
                 Layout.topMargin: 5
                 spacing: 10
 
-                MoneroComponents.StandardDropdown {
+                ScalaComponents.StandardDropdown {
                     Layout.maximumWidth: 200
                     id: chainDropdown
                     visible: persistentSettings.allow_p2pool_mining
@@ -436,22 +436,22 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.alignment : Qt.AlignTop | Qt.AlignLeft
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: flagsLabel
                     visible: persistentSettings.allow_p2pool_mining
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     text: qsTr("Flags") + translationManager.emptyString
                     fontSize: 16
                 }
 
-                MoneroComponents.Tooltip {
+                ScalaComponents.Tooltip {
                     id: flagsHelpTooltip
                     text: "
                     Usage:<br>
                         --wallet             Wallet address to mine to. Subaddresses and integrated addresses are not supported!<br>
-                        --host               IP address of your Monero node, default is 127.0.0.1<br>
-                        --rpc-port           monerod RPC API port number, default is 18081<br>
-                        --zmq-port           monerod ZMQ pub port number, default is 18083 (same port as in monerod\'s \"--zmq-pub\" command line parameter)<br>
+                        --host               IP address of your Scala node, default is 127.0.0.1<br>
+                        --rpc-port           scalad RPC API port number, default is 18081<br>
+                        --zmq-port           scalad ZMQ pub port number, default is 18083 (same port as in scalad\'s \"--zmq-pub\" command line parameter)<br>
                         --stratum            Comma-separated list of IP:port for stratum server to listen on<br>
                         --p2p                Comma-separated list of IP:port for p2p server to listen on<br>
                         --addpeers           Comma-separated list of IP:port of other p2pool nodes to connect to<br>
@@ -463,7 +463,7 @@ Rectangle {
                         --stratum-api        An alias for --local-api<br>
                         --no-cache           Disable p2pool.cache<br>
                         --no-color           Disable colors in console output<br>
-                        --no-randomx         Disable internal RandomX hasher: p2pool will use RPC calls to monerod to check PoW hashes<br>
+                        --no-randomx         Disable internal RandomX hasher: p2pool will use RPC calls to scalad to check PoW hashes<br>
                         --out-peers N        Maximum number of outgoing connections for p2p server (any value between 10 and 1000)<br>
                         --in-peers N         Maximum number of incoming connections for p2p server (any value between 10 and 1000)<br>
                         --start-mining N     Start built-in miner using N threads (any value between 1 and 64)<br>
@@ -488,7 +488,7 @@ Rectangle {
 
             ColumnLayout {
                 Layout.fillWidth: true
-                MoneroComponents.LineEditMulti {
+                ScalaComponents.LineEditMulti {
                     id: p2poolFlags
                     Layout.minimumWidth: 100
                     Layout.bottomMargin: 20
@@ -572,7 +572,7 @@ Rectangle {
         errorPopup.open()
     }
 
-    MoneroComponents.StandardDialog {
+    ScalaComponents.StandardDialog {
         id: errorPopup
         cancelVisible: false
     }

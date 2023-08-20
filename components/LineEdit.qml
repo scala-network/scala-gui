@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -31,7 +31,7 @@ import QtQuick 2.9
 import QtGraphicalEffects 1.0
 import QtQuick.Layouts 1.1
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 ColumnLayout {
     id: item
@@ -56,10 +56,10 @@ ColumnLayout {
 
     property alias placeholderText: placeholderLabel.text
     property bool placeholderCenter: false
-    property string placeholderFontFamily: MoneroComponents.Style.fontRegular.name
+    property string placeholderFontFamily: ScalaComponents.Style.fontRegular.name
     property bool placeholderFontBold: false
     property int placeholderFontSize: 18
-    property string placeholderColor: MoneroComponents.Style.defaultFontColor
+    property string placeholderColor: ScalaComponents.Style.defaultFontColor
     property real placeholderOpacity: 0.35
     property real placeholderLeftMargin: {
         if (placeholderCenter) {
@@ -81,15 +81,15 @@ ColumnLayout {
     property bool borderDisabled: false
     property string borderColor: {
         if ((error && input.text !== "") || (errorWhenEmpty && input.text == "")) {
-            return MoneroComponents.Style.inputBorderColorInvalid;
+            return ScalaComponents.Style.inputBorderColorInvalid;
         } else if (input.activeFocus) {
-            return MoneroComponents.Style.inputBorderColorActive;
+            return ScalaComponents.Style.inputBorderColorActive;
         } else {
-            return MoneroComponents.Style.inputBorderColorInActive;
+            return ScalaComponents.Style.inputBorderColorInActive;
         }
     }
 
-    property string fontFamily: MoneroComponents.Style.fontRegular.name
+    property string fontFamily: ScalaComponents.Style.fontRegular.name
     property int fontSize: 18
     property bool fontBold: false
     property alias fontColor: input.color
@@ -167,15 +167,15 @@ ColumnLayout {
         height: (inputLabel.height + 10)
         visible: showingHeader ? true : false
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             id: inputLabel
             anchors.top: parent.top
             anchors.left: parent.left
-            font.family: MoneroComponents.Style.fontRegular.name
+            font.family: ScalaComponents.Style.fontRegular.name
             font.pixelSize: labelFontSize
             font.bold: labelFontBold
             textFormat: Text.RichText
-            color: MoneroComponents.Style.defaultFontColor
+            color: ScalaComponents.Style.defaultFontColor
             onLinkActivated: item.labelLinkActivated()
 
             MouseArea {
@@ -189,7 +189,7 @@ ColumnLayout {
             anchors.right: parent.right
             spacing: 16
 
-            MoneroComponents.LabelButton {
+            ScalaComponents.LabelButton {
                 id: copyButtonId
                 text: qsTr("Copy") + translationManager.emptyString
                 onClicked: {
@@ -202,7 +202,7 @@ ColumnLayout {
                 visible: copyButton && input.text !== ""
             }
 
-            MoneroComponents.LabelButton {
+            ScalaComponents.LabelButton {
                 id: pasteButtonId
                 onClicked: {
                     input.clear();
@@ -214,7 +214,7 @@ ColumnLayout {
         }
     }
 
-    MoneroComponents.Input {
+    ScalaComponents.Input {
         id: input
         Keys.onBacktabPressed: {
             item.backtabPressed();
@@ -244,7 +244,7 @@ ColumnLayout {
         onTextChanged: item.textUpdated()
         echoMode: isPasswordHidden() ? TextInput.Password : TextInput.Normal
 
-        MoneroComponents.Label {
+        ScalaComponents.Label {
             visible: password || passwordLinked
             fontSize: 20
             text: isPasswordHidden() ? FontAwesome.eye : FontAwesome.eyeSlash
@@ -264,7 +264,7 @@ ColumnLayout {
             }
         }
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             id: placeholderLabel
             visible: input.text ? false : true
             anchors.verticalCenter: parent.verticalCenter
@@ -284,7 +284,7 @@ ColumnLayout {
         Rectangle {
             anchors.fill: parent
             anchors.topMargin: 1
-            color: item.enabled ? "transparent" : MoneroComponents.Style.inputBoxBackgroundDisabled
+            color: item.enabled ? "transparent" : ScalaComponents.Style.inputBoxBackgroundDisabled
         }
 
         Rectangle {

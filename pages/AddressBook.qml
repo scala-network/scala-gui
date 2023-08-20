@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -31,14 +31,14 @@ import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.2
 
-import "../components" as MoneroComponents
-import "../components/effects/" as MoneroEffects
+import "../components" as ScalaComponents
+import "../components/effects/" as ScalaEffects
 
 import "../js/TxUtils.js" as TxUtils
-import moneroComponents.AddressBook 1.0
-import moneroComponents.AddressBookModel 1.0
-import moneroComponents.Clipboard 1.0
-import moneroComponents.NetworkType 1.0
+import scalaComponents.AddressBook 1.0
+import scalaComponents.AddressBookModel 1.0
+import scalaComponents.Clipboard 1.0
+import scalaComponents.NetworkType 1.0
 import FontAwesome 1.0
 
 Rectangle {
@@ -70,8 +70,8 @@ Rectangle {
             Text {
                 id: titleLabel
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.defaultFontColor
-                font.family: MoneroComponents.Style.fontRegular.name
+                color: ScalaComponents.Style.defaultFontColor
+                font.family: ScalaComponents.Style.fontRegular.name
                 font.pixelSize: 32
                 horizontalAlignment: TextInput.AlignLeft
                 wrapMode: Text.WordWrap;
@@ -83,18 +83,18 @@ Rectangle {
 
             Text {
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dimmedFontColor
-                font.family: MoneroComponents.Style.fontRegular.name
+                color: ScalaComponents.Style.dimmedFontColor
+                font.family: ScalaComponents.Style.fontRegular.name
                 font.pixelSize: 16
                 horizontalAlignment: TextInput.AlignLeft
                 wrapMode: Text.WordWrap;
                 leftPadding: 0
                 topPadding: 0
-                text: qsTr("This makes it easier to send or receive Monero and reduces errors when typing in addresses manually.") + translationManager.emptyString
+                text: qsTr("This makes it easier to send or receive Scala and reduces errors when typing in addresses manually.") + translationManager.emptyString
                 width: parent.width
             }
 
-            MoneroComponents.StandardButton {
+            ScalaComponents.StandardButton {
                 id: addFirstEntryButton
                 Layout.topMargin: 20
                 Layout.alignment: Qt.AlignHCenter
@@ -111,13 +111,13 @@ Rectangle {
             visible: addressBookListView.count >= 1
             spacing: 0
 
-            MoneroComponents.Label {
+            ScalaComponents.Label {
                 Layout.bottomMargin: 20
                 fontSize: 32
                 text: qsTr("Address book") + translationManager.emptyString
             }
 
-            MoneroComponents.StandardButton {
+            ScalaComponents.StandardButton {
                 id: addAddressButton
                 Layout.bottomMargin: 8
                 Layout.alignment: Qt.AlignRight
@@ -148,7 +148,7 @@ Rectangle {
                         height: addressBookListRow.addressBookListItemHeight
                         width: parent ? parent.width : undefined
                         Layout.fillWidth: true
-                        color: itemMouseArea.containsMouse ? MoneroComponents.Style.titleBarButtonHoverColor : "transparent"
+                        color: itemMouseArea.containsMouse ? ScalaComponents.Style.titleBarButtonHoverColor : "transparent"
 
                         function doSend() {
                             console.log("Sending to: ", address +" "+ paymentId);
@@ -157,16 +157,16 @@ Rectangle {
                         }
 
                         Rectangle {
-                            color: MoneroComponents.Style.appWindowBorderColor
+                            color: ScalaComponents.Style.appWindowBorderColor
                             anchors.right: parent.right
                             anchors.left: parent.left
                             anchors.top: parent.top
                             height: 1
 
-                            MoneroEffects.ColorTransition {
+                            ScalaEffects.ColorTransition {
                                 targetObj: parent
-                                blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                                whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                                blackColor: ScalaComponents.Style._b_appWindowBorderColor
+                                whiteColor: ScalaComponents.Style._w_appWindowBorderColor
                             }
                         }
 
@@ -176,9 +176,9 @@ Rectangle {
                             anchors.rightMargin: 125
                             color: "transparent"
 
-                            MoneroComponents.Label {
+                            ScalaComponents.Label {
                                 id: descriptionLabel
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: parent.left
                                 anchors.leftMargin: 6
@@ -188,15 +188,15 @@ Rectangle {
                                 textWidth: addressLabel.x - descriptionLabel.x - 1
                             }
 
-                            MoneroComponents.Label {
+                            ScalaComponents.Label {
                                 id: addressLabel
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: parent.right
                                 anchors.leftMargin: -addressLabel.width - 5
 
                                 fontSize: 16
-                                fontFamily: MoneroComponents.Style.fontMonoRegular.name;
+                                fontFamily: ScalaComponents.Style.fontMonoRegular.name;
                                 text: TxUtils.addressTruncatePretty(address, mainLayout.width < 540 ? 1 : (mainLayout.width < 700 ? 2 : 3));
                             }
 
@@ -219,10 +219,10 @@ Rectangle {
                             height: 21
                             spacing: 10
 
-                            MoneroComponents.IconButton {
+                            ScalaComponents.IconButton {
                                 id: sendToButton
                                 image: "qrc:///images/arrow-right-in-circle-outline-medium-white.svg"
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 opacity: isOpenGL ? 0.5 : 1
                                 fontAwesomeFallbackIcon: FontAwesome.arrowRight
                                 fontAwesomeFallbackSize: 22
@@ -236,10 +236,10 @@ Rectangle {
                                 }
                             }
 
-                            MoneroComponents.IconButton {
+                            ScalaComponents.IconButton {
                                 fontAwesomeFallbackIcon: FontAwesome.searchPlus
                                 fontAwesomeFallbackSize: 22
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 fontAwesomeFallbackOpacity: 0.5
                                 Layout.preferredWidth: 23
                                 Layout.preferredHeight: 21
@@ -248,10 +248,10 @@ Rectangle {
                                 onClicked: doSearchInHistory(address)
                             }
 
-                            MoneroComponents.IconButton {
+                            ScalaComponents.IconButton {
                                 id: editEntryButton
                                 image: "qrc:///images/edit.svg"
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 opacity: isOpenGL ? 0.5 : 1
                                 fontAwesomeFallbackIcon: FontAwesome.edit
                                 fontAwesomeFallbackSize: 22
@@ -266,10 +266,10 @@ Rectangle {
                                 }
                             }
 
-                            MoneroComponents.IconButton {
+                            ScalaComponents.IconButton {
                                 id: copyButton
                                 image: "qrc:///images/copy.svg"
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 opacity: isOpenGL ? 0.5 : 1
                                 fontAwesomeFallbackIcon: FontAwesome.clipboard
                                 fontAwesomeFallbackSize: 22
@@ -291,14 +291,14 @@ Rectangle {
 
             Rectangle {
                 id: border2
-                color: MoneroComponents.Style.appWindowBorderColor
+                color: ScalaComponents.Style.appWindowBorderColor
                 Layout.fillWidth: true
                 height: 1
 
-                MoneroEffects.ColorTransition {
+                ScalaEffects.ColorTransition {
                     targetObj: border2
-                    blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                    whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                    blackColor: ScalaComponents.Style._b_appWindowBorderColor
+                    whiteColor: ScalaComponents.Style._w_appWindowBorderColor
                 }
             }
         }
@@ -307,13 +307,13 @@ Rectangle {
             visible: false
             spacing: 0
 
-            MoneroComponents.Label {
+            ScalaComponents.Label {
                 fontSize: 32
                 wrapMode: Text.WordWrap
                 text: (root.editEntry ? qsTr("Edit entry") : qsTr("Add an address")) + translationManager.emptyString
             }
 
-            MoneroComponents.LineEditMulti {
+            ScalaComponents.LineEditMulti {
                 id: addressLine
                 visible: !root.editEntry
                 Layout.topMargin: 20
@@ -323,11 +323,11 @@ Rectangle {
                     .arg(qsTr("Address")) + translationManager.emptyString
                 placeholderText: {
                     if(persistentSettings.nettype == NetworkType.MAINNET){
-                        return "4.. / 8.. / monero:.. / OpenAlias";
+                        return "4.. / 8.. / scala:.. / OpenAlias";
                     } else if (persistentSettings.nettype == NetworkType.STAGENET){
-                        return "5.. / 7.. / monero:..";
+                        return "5.. / 7.. / scala:..";
                     } else if(persistentSettings.nettype == NetworkType.TESTNET){
-                        return "9.. / B.. / monero:..";
+                        return "9.. / B.. / scala:..";
                     }
                 }
                 wrapMode: Text.WrapAnywhere
@@ -343,7 +343,7 @@ Rectangle {
                 onEnterPressed: addButton.enabled ? addButton.clicked() : ""
                 onReturnPressed: addButton.enabled ? addButton.clicked() : ""
 
-                MoneroComponents.InlineButton {
+                ScalaComponents.InlineButton {
                     fontFamily: FontAwesome.fontFamilySolid
                     fontStyleName: "Solid"
                     fontPixelSize: 18
@@ -366,8 +366,8 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.InlineButton {
-                    buttonColor: MoneroComponents.Style.orange
+                ScalaComponents.InlineButton {
+                    buttonColor: ScalaComponents.Style.orange
                     fontFamily: FontAwesome.fontFamily
                     text: FontAwesome.qrcode
                     visible : appWindow.qrScannerEnabled && !addressLine.text
@@ -378,7 +378,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.StandardButton {
+            ScalaComponents.StandardButton {
                 id: resolveButton
                 KeyNavigation.backtab: addressLine
                 KeyNavigation.tab: descriptionLine
@@ -419,7 +419,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.LineEdit {
+            ScalaComponents.LineEdit {
                 id: descriptionLine
                 KeyNavigation.backtab: resolveButton.visible ? resolveButton : addressLine
                 KeyNavigation.tab: addButton.enabled ? addButton : cancelButton
@@ -436,7 +436,7 @@ Rectangle {
                 Layout.topMargin: 20
                 Layout.alignment: Qt.AlignRight
 
-                MoneroComponents.StandardButton {
+                ScalaComponents.StandardButton {
                     id: cancelButton
                     KeyNavigation.backtab: addButton
                     KeyNavigation.tab: deleteButton.visible ? deleteButton : addressLine
@@ -446,7 +446,7 @@ Rectangle {
                     onClicked: root.showAddressBook();
                 }
 
-                MoneroComponents.StandardButton {
+                ScalaComponents.StandardButton {
                     id: deleteButton
                     KeyNavigation.backtab: cancelButton
                     KeyNavigation.tab: addressLine
@@ -460,7 +460,7 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.StandardButton {
+                ScalaComponents.StandardButton {
                     id: addButton
                     KeyNavigation.backtab: descriptionLine
                     KeyNavigation.tab: cancelButton
@@ -549,7 +549,7 @@ Rectangle {
       oaPopup.open()
     }
 
-    MoneroComponents.StandardDialog {
+    ScalaComponents.StandardDialog {
         // dynamically change onclose handler
         property var onCloseCallback
         id: oaPopup

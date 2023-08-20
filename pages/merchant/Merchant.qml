@@ -5,18 +5,18 @@ import QtGraphicalEffects 1.0
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Dialogs 1.2
 
-import moneroComponents.Clipboard 1.0
-import moneroComponents.Wallet 1.0
-import moneroComponents.WalletManager 1.0
-import moneroComponents.TransactionHistory 1.0
-import moneroComponents.TransactionHistoryModel 1.0
-import moneroComponents.Subaddress 1.0
-import moneroComponents.SubaddressModel 1.0
+import scalaComponents.Clipboard 1.0
+import scalaComponents.Wallet 1.0
+import scalaComponents.WalletManager 1.0
+import scalaComponents.TransactionHistory 1.0
+import scalaComponents.TransactionHistoryModel 1.0
+import scalaComponents.Subaddress 1.0
+import scalaComponents.SubaddressModel 1.0
 
 import "../../js/Windows.js" as Windows
 import "../../js/TxUtils.js" as TxUtils
 import "../../js/Utils.js" as Utils
-import "../../components" as MoneroComponents
+import "../../components" as ScalaComponents
 import "../../pages"
 import "."
 
@@ -125,7 +125,7 @@ Item {
                                 Layout.preferredWidth: 10
                             }
 
-                            MoneroComponents.TextPlain {
+                            ScalaComponents.TextPlain {
                                 font.pixelSize: 16
                                 font.bold: true
                                 color: "#767676"
@@ -259,7 +259,7 @@ Item {
                 width: (parent.width - qrImg.width) - (50)
                 height: 32
 
-                MoneroComponents.TextPlain {
+                ScalaComponents.TextPlain {
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.horizontalCenter: parent.horizontalCenter
                     font.pixelSize: 12
@@ -287,7 +287,7 @@ Item {
                 width: 220
                 height: 32
 
-                MoneroComponents.TextPlain {
+                ScalaComponents.TextPlain {
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.horizontalCenter: parent.horizontalCenter
                     font.pixelSize: 12
@@ -333,7 +333,7 @@ Item {
                                 Layout.preferredWidth: 10
                             }
 
-                            MoneroComponents.TextPlain {
+                            ScalaComponents.TextPlain {
                                 font.pixelSize: 14
                                 font.bold: true
                                 color: "#767676"
@@ -354,7 +354,7 @@ Item {
 //                            Layout.fillHeight: true
 //                            color: "transparent"
 
-//                            MoneroComponents.TextPlain {
+//                            ScalaComponents.TextPlain {
 //                                anchors.verticalCenter: parent.verticalCenter
 //                                anchors.right: parent.right
 //                                anchors.rightMargin: 20
@@ -388,7 +388,7 @@ Item {
                         color: "#d9d9d9"
                     }
 
-                    MoneroComponents.TextPlain {
+                    ScalaComponents.TextPlain {
                         property string _color: "#767676"
                         Layout.fillWidth: true
                         Layout.margins: 20
@@ -408,7 +408,7 @@ Item {
                             hoverEnabled: true
                             cursorShape: Qt.PointingHandCursor
                             onEntered: {
-                                parent.color = MoneroComponents.Style.orange
+                                parent.color = ScalaComponents.Style.orange
                             }
                             onExited: {
                                 parent.color = parent._color
@@ -445,7 +445,7 @@ Item {
                     anchors.left: parent.left
                     anchors.right: parent.right
 
-                    MoneroComponents.TextPlain {
+                    ScalaComponents.TextPlain {
                         font.pixelSize: 14
                         font.bold: false
                         color: "white"
@@ -458,7 +458,7 @@ Item {
                         width: 220
                         source: "qrc:///images/merchant/input_box.png"
 
-                        MoneroComponents.Input {
+                        ScalaComponents.Input {
                             id: amountToReceive
                             topPadding: 0
                             leftPadding: 10
@@ -496,7 +496,7 @@ Item {
                         width: 220
                     }
 
-                    MoneroComponents.TextPlain {
+                    ScalaComponents.TextPlain {
                         // @TODO: When we have XMR/USD rate avi. in the future.
                         visible: false
                         font.pixelSize: 14
@@ -536,7 +536,7 @@ Item {
                     }
                 }
 
-                MoneroComponents.TextPlain {
+                ScalaComponents.TextPlain {
                     id: content
                     font.pixelSize: 14
                     font.bold: false
@@ -565,12 +565,12 @@ Item {
         width: 400
         radius: 5
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             font.pixelSize: 14
             font.bold: true
-            color: MoneroComponents.Style.moneroGrey
+            color: ScalaComponents.Style.scalaGrey
             text: qsTr("The merchant page requires a larger window") + translationManager.emptyString
             themeTransition: false
         }

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 //
 // All rights reserved.
 //
@@ -32,9 +32,9 @@ import QtQuick.Dialogs 1.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Window 2.0
-import moneroComponents.Wallet 1.0
+import scalaComponents.Wallet 1.0
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 Window {
     id: root
@@ -53,7 +53,7 @@ Window {
     // TODO: implement without hardcoding sizes
     width: 480
     height: 200
-    color: MoneroComponents.Style.middlePanelBackgroundColor
+    color: ScalaComponents.Style.middlePanelBackgroundColor
 
     // Make window draggable
     MouseArea {
@@ -95,14 +95,14 @@ Window {
                 }
             }
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 text: qsTr("Starting local node in %1 seconds").arg(countDown) + translationManager.emptyString;
                 font.pixelSize: 18
                 Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
                 themeTransition: false
-                color: MoneroComponents.Style.defaultFontColor
+                color: ScalaComponents.Style.defaultFontColor
             }
 
         }
@@ -112,7 +112,7 @@ Window {
             spacing: 60
             Layout.alignment: Qt.AlignHCenter
 
-            MoneroComponents.StandardButton {
+            ScalaComponents.StandardButton {
                 id: okButton
                 visible:false
                 fontSize: 14
@@ -126,7 +126,7 @@ Window {
                 }
             }
 
-            MoneroComponents.StandardButton {
+            ScalaComponents.StandardButton {
                 id: cancelButton
                 fontSize: 14
                 text: qsTr("Use custom settings") + translationManager.emptyString

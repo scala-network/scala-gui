@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -33,7 +33,7 @@ import QtQuick.Dialogs 1.2
 import FontAwesome 1.0
 
 import "../../js/Utils.js" as Utils
-import "../../components" as MoneroComponents
+import "../../components" as ScalaComponents
 
 Rectangle {
     color: "transparent"
@@ -50,7 +50,7 @@ Rectangle {
         anchors.topMargin: 0
         spacing: 0
 
-        MoneroComponents.SettingsListItem {
+        ScalaComponents.SettingsListItem {
             iconText: FontAwesome.lock
             description: qsTr("Locks the wallet on demand.") + translationManager.emptyString
             title: qsTr("Lock this wallet") + translationManager.emptyString
@@ -58,7 +58,7 @@ Rectangle {
             onClicked: appWindow.lock();
         }
 
-        MoneroComponents.SettingsListItem {
+        ScalaComponents.SettingsListItem {
             iconText: FontAwesome.signOutAlt
             description: qsTr("Logs out of this wallet.") + translationManager.emptyString
             title: qsTr("Close this wallet") + translationManager.emptyString
@@ -66,7 +66,7 @@ Rectangle {
             onClicked: appWindow.showWizard()
         }
 
-        MoneroComponents.SettingsListItem {
+        ScalaComponents.SettingsListItem {
             iconText: FontAwesome.eye
             description: qsTr("Creates a new wallet that can only view and initiate transactions, but requires a spendable wallet to sign transactions before sending.") + translationManager.emptyString
             title: qsTr("Create a view-only wallet") + translationManager.emptyString
@@ -88,7 +88,7 @@ Rectangle {
             }
         }
 
-        MoneroComponents.SettingsListItem {
+        ScalaComponents.SettingsListItem {
             iconText: FontAwesome.key
             description: qsTr("Store this information safely to recover your wallet in the future.") + translationManager.emptyString
             title: qsTr("Show seed & keys") + translationManager.emptyString
@@ -98,7 +98,7 @@ Rectangle {
             }
         }
 
-        MoneroComponents.SettingsListItem {
+        ScalaComponents.SettingsListItem {
             enabled: leftPanel.progressBar.fillLevel == 100
             iconText: FontAwesome.repeat
             description: qsTr("Use this feature if you think the shown balance is not accurate.") + translationManager.emptyString
@@ -127,7 +127,7 @@ Rectangle {
             }
         }
 
-        MoneroComponents.SettingsListItem {
+        ScalaComponents.SettingsListItem {
             enabled: leftPanel.progressBar.fillLevel == 100
             iconText: FontAwesome.magnifyingGlass
             description: qsTr("Use this feature if a transaction is missing in your wallet history. This will expose the transaction ID to the remote node, which can harm your privacy.") + translationManager.emptyString
@@ -148,7 +148,7 @@ Rectangle {
             }
         }
 
-        MoneroComponents.SettingsListItem {
+        ScalaComponents.SettingsListItem {
             iconText: FontAwesome.ellipsisH
             description: qsTr("Change the password of your wallet.") + translationManager.emptyString
             title: qsTr("Change wallet password") + translationManager.emptyString
@@ -171,10 +171,10 @@ Rectangle {
             }
         }
 
-        MoneroComponents.SettingsListItem {
+        ScalaComponents.SettingsListItem {
             iconText: FontAwesome.cashRegister
             isLast: true
-            description: qsTr("Receive Monero for your business, easily.") + translationManager.emptyString
+            description: qsTr("Receive Scala for your business, easily.") + translationManager.emptyString
             title: qsTr("Enter merchant mode") + translationManager.emptyString
 
             onClicked: {

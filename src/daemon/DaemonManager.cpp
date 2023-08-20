@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -50,13 +50,13 @@ namespace {
 
 bool DaemonManager::start(const QString &flags, NetworkType::Type nettype, const QString &dataDir, const QString &bootstrapNodeAddress, bool noSync /* = false*/, bool pruneBlockchain /* = false*/)
 {
-    if (!QFileInfo(m_monerod).isFile())
+    if (!QFileInfo(m_scalad).isFile())
     {
-        emit daemonStartFailure("\"" + QDir::toNativeSeparators(m_monerod) + "\" " + tr("executable is missing"));
+        emit daemonStartFailure("\"" + QDir::toNativeSeparators(m_scalad) + "\" " + tr("executable is missing"));
         return false;
     }
 
-    // prepare command line arguments and pass to monerod
+    // prepare command line arguments and pass to scalad
     QStringList arguments;
 
     // Start daemon with --detach flag on non-windows platforms
@@ -106,7 +106,7 @@ bool DaemonManager::start(const QString &flags, NetworkType::Type nettype, const
         arguments << "--max-concurrency" << QString::number(concurrency);
     }
 
-    qDebug() << "starting monerod " + m_monerod;
+    qDebug() << "starting scalad " + m_scalad;
     qDebug() << "With command line arguments " << arguments;
 
     QMutexLocker locker(&m_daemonMutex);
@@ -117,8 +117,8 @@ bool DaemonManager::start(const QString &flags, NetworkType::Type nettype, const
     connect(m_daemon.get(), SIGNAL(readyReadStandardOutput()), this, SLOT(printOutput()));
     connect(m_daemon.get(), SIGNAL(readyReadStandardError()), this, SLOT(printError()));
 
-    // Start monerod
-    bool started = m_daemon->startDetached(m_monerod, arguments);
+    // Start scalad
+    bool started = m_daemon->startDetached(m_scalad, arguments);
 
     // add state changed listener
     connect(m_daemon.get(), SIGNAL(stateChanged(QProcess::ProcessState)), this, SLOT(stateChanged(QProcess::ProcessState)));
@@ -187,9 +187,9 @@ bool DaemonManager::stopWatcher(NetworkType::Type nettype, const QString &dataDi
             if(counter >= 5) {
                 qDebug() << "Killing it! ";
 #ifdef Q_OS_WIN
-                QProcess::execute("taskkill",  {"/F", "/IM", "monerod.exe"});
+                QProcess::execute("taskkill",  {"/F", "/IM", "scalad.exe"});
 #else
-                QProcess::execute("pkill", {"monerod"});
+                QProcess::execute("pkill", {"scalad"});
 #endif
             }
 
@@ -275,7 +275,7 @@ bool DaemonManager::sendCommand(const QStringList &cmd, NetworkType::Type nettyp
     qDebug() << "sending external cmd: " << external_cmd;
 
 
-    p.start(m_monerod, external_cmd);
+    p.start(m_scalad, external_cmd);
 
     bool started = p.waitForFinished(-1);
     message = p.readAllStandardOutput();
@@ -350,7 +350,7 @@ QString DaemonManager::getArgs(const QString &dataDir) {
     QStringList tempArgs;
     #ifdef Q_OS_WIN
         //powershell
-        tempArgs << "Get-CimInstance Win32_Process -Filter \"name = 'monerod.exe'\" | select -ExpandProperty CommandLine ";
+        tempArgs << "Get-CimInstance Win32_Process -Filter \"name = 'scalad.exe'\" | select -ExpandProperty CommandLine ";
         p.setProgram("powershell");
         p.setArguments(tempArgs);
         p.start();
@@ -359,7 +359,7 @@ QString DaemonManager::getArgs(const QString &dataDir) {
 
     #elif defined(Q_OS_UNIX)
         //pgrep
-        tempArgs << "monerod";
+        tempArgs << "scalad";
         p.setProgram("pgrep");
         p.setArguments(tempArgs);
         p.start();
@@ -398,14 +398,14 @@ DaemonManager::DaemonManager(QObject *parent)
     , m_scheduler(this)
 {
 
-    // Platform depetent path to monerod
+    // Platform depetent path to scalad
 #ifdef Q_OS_WIN
-    m_monerod = QApplication::applicationDirPath() + "/monerod.exe";
+    m_scalad = QApplication::applicationDirPath() + "/scalad.exe";
 #elif defined(Q_OS_UNIX)
-    m_monerod = QApplication::applicationDirPath() + "/monerod";
+    m_scalad = QApplication::applicationDirPath() + "/scalad";
 #endif
 
-    if (m_monerod.length() == 0) {
+    if (m_scalad.length() == 0) {
         qCritical() << "no daemon binary defined for current platform";
     }
 }

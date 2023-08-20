@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2020, The Monero Project
+// Copyright (c) 2014-2020, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -26,7 +26,7 @@
 // STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 import QtQuick 2.9
 import QtQuick.XmlListModel 2.0
@@ -42,7 +42,7 @@ Drawer {
     y: titleBar.height
 
     background: Rectangle {
-        color: MoneroComponents.Style.blackTheme ? "#0d0d0d" : "white"
+        color: ScalaComponents.Style.blackTheme ? "#0d0d0d" : "white"
         width: parent.width
     }
 
@@ -71,7 +71,7 @@ Drawer {
 
             delegate: Rectangle {
                 id: item
-                color: index == languagesListView.currentIndex ? MoneroComponents.Style.titleBarButtonHoverColor : "transparent"
+                color: index == languagesListView.currentIndex ? ScalaComponents.Style.titleBarButtonHoverColor : "transparent"
                 width: sideBar.width
                 height: 32
 
@@ -103,7 +103,7 @@ Drawer {
                     anchors.leftMargin: 0
                     height: parent.height
                     width: 2
-                    color: index == languagesListView.currentIndex ? MoneroComponents.Style.buttonBackgroundColor : "transparent"
+                    color: index == languagesListView.currentIndex ? ScalaComponents.Style.buttonBackgroundColor : "transparent"
                 }
 
                 Rectangle {
@@ -121,12 +121,12 @@ Drawer {
                     }
                 }
 
-                MoneroComponents.TextPlain {
+                ScalaComponents.TextPlain {
                     anchors.left: parent.left
                     anchors.leftMargin: 32
                     font.bold: languagesListView.currentIndex == index ? true : false
                     font.pixelSize: 14
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     text: display_name
                     anchors.verticalCenter: parent.verticalCenter
                 }
@@ -135,8 +135,8 @@ Drawer {
                     anchors.bottom: parent.bottom
                     anchors.left: parent.left
                     anchors.right: parent.right
-                    color: MoneroComponents.Style.dividerColor
-                    opacity: MoneroComponents.Style.dividerOpacity
+                    color: ScalaComponents.Style.dividerColor
+                    opacity: ScalaComponents.Style.dividerOpacity
                     height: 1
                 }
 

@@ -2,7 +2,7 @@ import QtQuick 2.9
 import QtQuick.Controls 2.0 as QtQuickControls
 import QtQuick.Layouts 1.1
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 ColumnLayout {
     property alias from: slider.from
@@ -16,11 +16,11 @@ ColumnLayout {
 
     spacing: 0
 
-    MoneroComponents.TextPlain {
+    ScalaComponents.TextPlain {
         id: label
-        color: MoneroComponents.Style.defaultFontColor
+        color: ScalaComponents.Style.defaultFontColor
         font.pixelSize: 14
-        font.family: MoneroComponents.Style.fontRegular.name
+        font.family: ScalaComponents.Style.fontRegular.name
     }
 
     QtQuickControls.Slider {
@@ -36,12 +36,12 @@ ColumnLayout {
             width: parent.availableWidth
             height: implicitHeight
             radius: 2
-            color: MoneroComponents.Style.progressBarBackgroundColor
+            color: ScalaComponents.Style.progressBarBackgroundColor
 
             Rectangle {
                 width: parent.visualPosition * parent.width
                 height: parent.height
-                color: MoneroComponents.Style.green
+                color: ScalaComponents.Style.green
                 radius: 2
             }
         }
@@ -53,7 +53,7 @@ ColumnLayout {
             implicitHeight: 18
             radius: 8
             color: parent.pressed ? "#f0f0f0" : "#f6f6f6"
-            border.color: MoneroComponents.Style.grey
+            border.color: ScalaComponents.Style.grey
         }
 
         onMoved: parent.moved()

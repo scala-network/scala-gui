@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -80,7 +80,7 @@ public slots:
 private:
     std::unique_ptr<QProcess> m_daemon;
     QMutex m_daemonMutex;
-    QString m_monerod;
+    QString m_scalad;
     bool m_app_exit = false;
     bool m_noSync = false;
     QString args = "";

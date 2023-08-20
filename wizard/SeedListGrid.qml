@@ -5,7 +5,7 @@ import QtQuick.Controls 2.0
 
 import "../js/Wizard.js" as Wizard
 import "../js/Utils.js" as Utils
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 GridLayout {
     id: seedGrid

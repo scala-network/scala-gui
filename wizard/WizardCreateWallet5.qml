@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -31,7 +31,7 @@ import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.0
 
 import "../js/Wizard.js" as Wizard
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 Rectangle {
     id: wizardCreateWallet5
@@ -83,7 +83,7 @@ Rectangle {
                     wizardController.wizardStateView.wizardCreateWallet3View.pwField = "";
                     wizardController.wizardStateView.wizardCreateWallet3View.pwConfirmField = "";
                     wizardController.writeWallet(function() {
-                        wizardController.useMoneroClicked();
+                        wizardController.useScalaClicked();
                         wizardController.walletOptionsIsRecoveringFromDevice = false;
                     });
                     btnNext.enabled = true;

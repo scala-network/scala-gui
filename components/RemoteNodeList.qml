@@ -1,4 +1,4 @@
-// Copyright (c) 2021, The Monero Project
+// Copyright (c) 2021, The Scala Project
 //
 // All rights reserved.
 //
@@ -31,14 +31,14 @@ import QtQuick.Layouts 1.1
 
 import FontAwesome 1.0
 
-import "." as MoneroComponents
-import "effects/" as MoneroEffects
+import "." as ScalaComponents
+import "effects/" as ScalaEffects
 
 ColumnLayout {
     id: remoteNodeList
     spacing: 20
 
-    MoneroComponents.CheckBox {
+    ScalaComponents.CheckBox {
         border: false
         checkedIcon: FontAwesome.minusCircle
         uncheckedIcon: FontAwesome.plusCircle
@@ -59,7 +59,7 @@ ColumnLayout {
             Rectangle {
                 height: 30
                 Layout.fillWidth: true
-                color: itemMouseArea.containsMouse || trustedDaemonCheckMark.labelMouseArea.containsMouse || index === remoteNodesModel.selected ? MoneroComponents.Style.titleBarButtonHoverColor : "transparent"
+                color: itemMouseArea.containsMouse || trustedDaemonCheckMark.labelMouseArea.containsMouse || index === remoteNodesModel.selected ? ScalaComponents.Style.titleBarButtonHoverColor : "transparent"
 
                 Rectangle {
                     visible: index === remoteNodesModel.selected
@@ -71,17 +71,17 @@ ColumnLayout {
                 }
 
                 Rectangle {
-                    color: MoneroComponents.Style.appWindowBorderColor
+                    color: ScalaComponents.Style.appWindowBorderColor
                     anchors.right: parent.right
                     anchors.left: parent.left
                     anchors.top: parent.top
                     height: 1
                     visible: index > 0
 
-                    MoneroEffects.ColorTransition {
+                    ScalaEffects.ColorTransition {
                         targetObj: parent
-                        blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                        whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                        blackColor: ScalaComponents.Style._b_appWindowBorderColor
+                        whiteColor: ScalaComponents.Style._w_appWindowBorderColor
                     }
                 }
 
@@ -91,10 +91,10 @@ ColumnLayout {
                     color: "transparent"
                     property var trusted: remoteNodesModel.get(index) ? remoteNodesModel.get(index).trusted : false
 
-                    MoneroComponents.TextPlain {
+                    ScalaComponents.TextPlain {
                         id: addressText
                         width: parent.width - trustedDaemonCheckMark.width
-                        color: index === remoteNodesModel.selected ? MoneroComponents.Style.defaultFontColor : MoneroComponents.Style.dimmedFontColor
+                        color: index === remoteNodesModel.selected ? ScalaComponents.Style.defaultFontColor : ScalaComponents.Style.dimmedFontColor
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.left: parent.left
                         anchors.leftMargin: 6
@@ -104,7 +104,7 @@ ColumnLayout {
                         elide: Text.ElideMiddle
                     }
 
-                    MoneroComponents.Label {
+                    ScalaComponents.Label {
                         id: trustedDaemonCheckMark
                         anchors.left: addressText.right
                         anchors.leftMargin: 3
@@ -113,7 +113,7 @@ ColumnLayout {
                         z: itemMouseArea.z + 1
                         fontSize: 16
                         fontFamily: FontAwesome.fontFamilySolid
-                        fontColor: index === remoteNodesModel.selected ? MoneroComponents.Style.defaultFontColor : MoneroComponents.Style.dimmedFontColor
+                        fontColor: index === remoteNodesModel.selected ? ScalaComponents.Style.defaultFontColor : ScalaComponents.Style.dimmedFontColor
                         styleName: "Solid"
                         visible: trusted
                         text: FontAwesome.shieldAlt
@@ -136,7 +136,7 @@ ColumnLayout {
                     height: 30
                     spacing: 2
 
-                    MoneroComponents.InlineButton {
+                    ScalaComponents.InlineButton {
                         buttonColor: "transparent"
                         fontFamily: FontAwesome.fontFamily
                         fontPixelSize: 18
@@ -151,7 +151,7 @@ ColumnLayout {
                         })
                     }
 
-                    MoneroComponents.InlineButton {
+                    ScalaComponents.InlineButton {
                         buttonColor: "transparent"
                         fontFamily: FontAwesome.fontFamily
                         text: FontAwesome.times

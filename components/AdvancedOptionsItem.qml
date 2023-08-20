@@ -1,7 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.1
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 RowLayout {
     id: advancedOptionsItem
@@ -19,7 +19,7 @@ RowLayout {
         Layout.maximumWidth: 195
         Layout.leftMargin: 10
 
-        MoneroComponents.Label {
+        ScalaComponents.Label {
             id: title
             fontSize: 14
             tooltipIconVisible: true

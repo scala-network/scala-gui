@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -30,8 +30,8 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.1
 
 import FontAwesome 1.0
-import moneroComponents.Wallet 1.0
-import "../components" as MoneroComponents
+import scalaComponents.Wallet 1.0
+import "../components" as ScalaComponents
 
 Rectangle {
     id: item
@@ -82,7 +82,7 @@ Rectangle {
                 if(item.connected == Wallet.ConnectionStatus_Connected){
                     return 1
                 } else {
-                    MoneroComponents.Style.blackTheme ? 0.5 : 0.3
+                    ScalaComponents.Style.blackTheme ? 0.5 : 0.3
                 }
             }
 
@@ -94,7 +94,7 @@ Rectangle {
                 source: {
                     if(appWindow.isMining) {
                        return "qrc:///images/miningxmr.png"
-                    } else if(item.connected == Wallet.ConnectionStatus_Connected || !MoneroComponents.Style.blackTheme) {
+                    } else if(item.connected == Wallet.ConnectionStatus_Connected || !ScalaComponents.Style.blackTheme) {
                         return "qrc:///images/lightning.png"
                     } else {
                         return "qrc:///images/lightning-white.png"
@@ -120,30 +120,30 @@ Rectangle {
             height: 40
             width: 260
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 id: statusText
                 anchors.left: parent.left
                 anchors.top: parent.top
                 anchors.topMargin: 0
-                font.family: MoneroComponents.Style.fontMedium.name
+                font.family: ScalaComponents.Style.fontMedium.name
                 font.bold: true
                 font.pixelSize: 13
-                color: MoneroComponents.Style.blackTheme ? MoneroComponents.Style.dimmedFontColor : MoneroComponents.Style.defaultFontColor
-                opacity: MoneroComponents.Style.blackTheme ? 0.65 : 0.75
+                color: ScalaComponents.Style.blackTheme ? ScalaComponents.Style.dimmedFontColor : ScalaComponents.Style.defaultFontColor
+                opacity: ScalaComponents.Style.blackTheme ? 0.65 : 0.75
                 text: qsTr("Network status") + translationManager.emptyString
                 themeTransition: false
             }
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 id: statusTextVal
                 anchors.left: parent.left
                 anchors.top: parent.top
                 anchors.topMargin: 14
-                font.family: MoneroComponents.Style.fontMedium.name
+                font.family: ScalaComponents.Style.fontMedium.name
                 font.pixelSize: 20
-                color: MoneroComponents.Style.defaultFontColor
+                color: ScalaComponents.Style.defaultFontColor
                 text: getConnectionStatusString(item.connected) + translationManager.emptyString
-                opacity: MoneroComponents.Style.blackTheme ? 1.0 : 0.7
+                opacity: ScalaComponents.Style.blackTheme ? 1.0 : 0.7
                 themeTransition: false
 
                 MouseArea {
@@ -161,11 +161,11 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 anchors.left: statusTextVal.right
                 anchors.leftMargin: 16
                 anchors.verticalCenter: parent.verticalCenter
-                color: refreshMouseArea.containsMouse ?  MoneroComponents.Style.defaultFontColor : MoneroComponents.Style.dimmedFontColor
+                color: refreshMouseArea.containsMouse ?  ScalaComponents.Style.defaultFontColor : ScalaComponents.Style.dimmedFontColor
                 font.family: FontAwesome.fontFamilySolid
                 font.pixelSize: 24
                 font.styleName: "Solid"

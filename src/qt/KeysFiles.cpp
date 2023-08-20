@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -100,15 +100,15 @@ void WalletKeysFilesModel::clear()
     endResetModel();
 }
 
-void WalletKeysFilesModel::refresh(const QString &moneroAccountsDir)
+void WalletKeysFilesModel::refresh(const QString &scalaAccountsDir)
 {
     this->clear();
-    this->findWallets(moneroAccountsDir);
+    this->findWallets(scalaAccountsDir);
 }
 
-void WalletKeysFilesModel::findWallets(const QString &moneroAccountsDir)
+void WalletKeysFilesModel::findWallets(const QString &scalaAccountsDir)
 {
-    QDirIterator it(moneroAccountsDir, QDirIterator::Subdirectories);
+    QDirIterator it(scalaAccountsDir, QDirIterator::Subdirectories);
     while (it.hasNext())
     {
         it.next();

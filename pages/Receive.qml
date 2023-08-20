@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 //
 // All rights reserved.
 //
@@ -33,16 +33,16 @@ import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.2
 import FontAwesome 1.0
 
-import "../components" as MoneroComponents
-import "../components/effects/" as MoneroEffects
+import "../components" as ScalaComponents
+import "../components/effects/" as ScalaEffects
 
-import moneroComponents.Clipboard 1.0
-import moneroComponents.Wallet 1.0
-import moneroComponents.WalletManager 1.0
-import moneroComponents.TransactionHistory 1.0
-import moneroComponents.TransactionHistoryModel 1.0
-import moneroComponents.Subaddress 1.0
-import moneroComponents.SubaddressModel 1.0
+import scalaComponents.Clipboard 1.0
+import scalaComponents.Wallet 1.0
+import scalaComponents.WalletManager 1.0
+import scalaComponents.TransactionHistory 1.0
+import scalaComponents.TransactionHistoryModel 1.0
+import scalaComponents.Subaddress 1.0
+import scalaComponents.SubaddressModel 1.0
 import "../js/TxUtils.js" as TxUtils
 
 Rectangle {
@@ -91,17 +91,17 @@ Rectangle {
             spacing: 0
             property int qrSize: 220
 
-            MoneroComponents.Navbar {
+            ScalaComponents.Navbar {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.bottomMargin: 10
 
-                MoneroComponents.NavbarItem {
+                ScalaComponents.NavbarItem {
                     active: state == "Address"
                     text: qsTr("Address") + translationManager.emptyString
                     onSelected: state = "Address"
                 }
 
-                MoneroComponents.NavbarItem {
+                ScalaComponents.NavbarItem {
                     active: state == "PaymentRequest"
                     text: qsTr("Payment request") + translationManager.emptyString
                     onSelected: {
@@ -113,7 +113,7 @@ Rectangle {
 
             Rectangle {
                 id: qrContainer
-                color: MoneroComponents.Style.blackTheme ? "white" : "transparent"
+                color: ScalaComponents.Style.blackTheme ? "white" : "transparent"
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
                 Layout.maximumWidth: parent.qrSize
@@ -166,13 +166,13 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.Tooltip {
+                ScalaComponents.Tooltip {
                     id: qrCodeTooltip
                     text: qsTr("Left click: copy QR code to clipboard") + "<br>" +  qsTr("Right click: save QR code as image file") + translationManager.emptyString
                 }
             }
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 id: qrCodeText
                 Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: 6
@@ -181,7 +181,7 @@ Rectangle {
                 verticalAlignment: Text.AlignVCenter
                 visible: paymentRequestGridLayout.visible
                 font.pixelSize: 12
-                color: qrCodeTextMouseArea.containsMouse ? MoneroComponents.Style.orange : MoneroComponents.Style.defaultFontColor
+                color: qrCodeTextMouseArea.containsMouse ? ScalaComponents.Style.orange : ScalaComponents.Style.defaultFontColor
                 text: generateQRCodeString();
                 wrapMode: Text.WrapAnywhere
                 tooltip: qsTr("Copy payment request to clipboard") + translationManager.emptyString
@@ -211,7 +211,7 @@ Rectangle {
                 Layout.preferredWidth: 285
                 Layout.maximumWidth: 285
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: amountTitleFiat
                     Layout.bottomMargin: 3
                     Layout.preferredWidth: 90
@@ -220,26 +220,26 @@ Rectangle {
                     text: qsTr("Amount") + translationManager.emptyString
                 }
 
-                MoneroComponents.Input {
+                ScalaComponents.Input {
                     id: amountToReceiveFiat
                     Layout.preferredWidth: 165
                     Layout.maximumWidth: 165
                     visible: persistentSettings.fiatPriceEnabled
                     topPadding: 5
                     leftPadding: 5
-                    font.family: MoneroComponents.Style.fontMonoRegular.name
+                    font.family: ScalaComponents.Style.fontMonoRegular.name
                     font.pixelSize: 14
                     font.bold: false
                     horizontalAlignment: TextInput.AlignLeft
                     verticalAlignment: TextInput.AlignVCenter
                     selectByMouse: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     placeholderText: "0.00"
 
                     background: Rectangle {
-                        color: MoneroComponents.Style.blackTheme ? "transparent" : "white"
+                        color: ScalaComponents.Style.blackTheme ? "transparent" : "white"
                         radius: 3
-                        border.color: parent.activeFocus ? MoneroComponents.Style.inputBorderColorActive : MoneroComponents.Style.inputBorderColorInActive
+                        border.color: parent.activeFocus ? ScalaComponents.Style.inputBorderColorActive : ScalaComponents.Style.inputBorderColorInActive
                         border.width: 1
                     }
                     onTextEdited: {
@@ -266,14 +266,14 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     Layout.bottomMargin: 3
                     visible: persistentSettings.fiatPriceEnabled
                     fontSize: 14
                     text: appWindow.fiatApiCurrencySymbol();
                 }
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: amountTitleXMR
                     Layout.bottomMargin: 3
                     Layout.preferredWidth: 90
@@ -281,25 +281,25 @@ Rectangle {
                     text: persistentSettings.fiatPriceEnabled ? "" : qsTr("Amount") + translationManager.emptyString
                 }
 
-                MoneroComponents.Input {
+                ScalaComponents.Input {
                     id: amountToReceiveXMR
                     Layout.preferredWidth: 165
                     Layout.maximumWidth: 165
                     topPadding: 5
                     leftPadding: 5
-                    font.family: MoneroComponents.Style.fontMonoRegular.name
+                    font.family: ScalaComponents.Style.fontMonoRegular.name
                     font.pixelSize: 14
                     font.bold: false
                     horizontalAlignment: TextInput.AlignLeft
                     verticalAlignment: TextInput.AlignVCenter
                     selectByMouse: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     placeholderText: "0.000000000000"
 
                     background: Rectangle {
-                        color: MoneroComponents.Style.blackTheme ? "transparent" : "white"
+                        color: ScalaComponents.Style.blackTheme ? "transparent" : "white"
                         radius: 3
-                        border.color: parent.activeFocus ? MoneroComponents.Style.inputBorderColorActive : MoneroComponents.Style.inputBorderColorInActive
+                        border.color: parent.activeFocus ? ScalaComponents.Style.inputBorderColorActive : ScalaComponents.Style.inputBorderColorInActive
                         border.width: 1
                     }
                     onTextEdited: {
@@ -326,13 +326,13 @@ Rectangle {
                     }
                 }
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     Layout.bottomMargin: 3
                     fontSize: 14
                     text: "XMR"
                 }
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: txDescription
                     Layout.bottomMargin: 3
                     Layout.preferredWidth: 90
@@ -342,7 +342,7 @@ Rectangle {
                     tooltipIconVisible: true
                 }
 
-                MoneroComponents.Input {
+                ScalaComponents.Input {
                     id: txDescriptionInput
                     Layout.preferredWidth: 165
                     Layout.maximumWidth: 165
@@ -354,24 +354,24 @@ Rectangle {
                     horizontalAlignment: TextInput.AlignLeft
                     verticalAlignment: TextInput.AlignVCenter
                     selectByMouse: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     placeholderText: qsTr("Visible to the sender") + translationManager.emptyString
 
                     background: Rectangle {
-                        color: MoneroComponents.Style.blackTheme ? "transparent" : "white"
+                        color: ScalaComponents.Style.blackTheme ? "transparent" : "white"
                         radius: 3
-                        border.color: parent.activeFocus ? MoneroComponents.Style.inputBorderColorActive : MoneroComponents.Style.inputBorderColorInActive
+                        border.color: parent.activeFocus ? ScalaComponents.Style.inputBorderColorActive : ScalaComponents.Style.inputBorderColorInActive
                         border.width: 1
                     }
                 }
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     Layout.bottomMargin: 3
                     fontSize: 14
                     text: ""
                 }
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     id: receiverNameLabel
                     Layout.bottomMargin: 3
                     Layout.preferredWidth: 90
@@ -381,7 +381,7 @@ Rectangle {
                     tooltipIconVisible: true
                 }
 
-                MoneroComponents.Input {
+                ScalaComponents.Input {
                     id: receiverNameInput
                     Layout.preferredWidth: 165
                     Layout.maximumWidth: 165
@@ -392,26 +392,26 @@ Rectangle {
                     horizontalAlignment: TextInput.AlignLeft
                     verticalAlignment: TextInput.AlignVCenter
                     selectByMouse: true
-                    color: MoneroComponents.Style.defaultFontColor
+                    color: ScalaComponents.Style.defaultFontColor
                     placeholderText: qsTr("Visible to the sender") + translationManager.emptyString
                     maximumLength: 100
 
                     background: Rectangle {
-                        color: MoneroComponents.Style.blackTheme ? "transparent" : "white"
+                        color: ScalaComponents.Style.blackTheme ? "transparent" : "white"
                         radius: 3
-                        border.color: parent.activeFocus ? MoneroComponents.Style.inputBorderColorActive : MoneroComponents.Style.inputBorderColorInActive
+                        border.color: parent.activeFocus ? ScalaComponents.Style.inputBorderColorActive : ScalaComponents.Style.inputBorderColorInActive
                         border.width: 1
                     }
                 }
 
-                MoneroComponents.Label {
+                ScalaComponents.Label {
                     Layout.bottomMargin: 3
                     fontSize: 14
                     text: ""
                 }
             }
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 id: selectedaddressIndex
                 Layout.alignment: Qt.AlignHCenter
                 Layout.preferredWidth: 220
@@ -421,14 +421,14 @@ Rectangle {
                 horizontalAlignment: Text.AlignHCenter
                 text: qsTr("Address #") + subaddressListView.currentIndex + translationManager.emptyString
                 wrapMode: Text.WordWrap
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: ScalaComponents.Style.fontRegular.name
                 font.pixelSize: 17
                 textFormat: Text.RichText
-                color: MoneroComponents.Style.defaultFontColor
+                color: ScalaComponents.Style.defaultFontColor
                 themeTransition: false
             }
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 id: selectedAddressDrescription
                 Layout.alignment: Qt.AlignHCenter
                 Layout.preferredWidth: 220
@@ -438,10 +438,10 @@ Rectangle {
                 horizontalAlignment: Text.AlignHCenter
                 text: "(" + qsTr("no label") + ")" + translationManager.emptyString
                 wrapMode: Text.WordWrap
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: ScalaComponents.Style.fontRegular.name
                 font.pixelSize: 17
                 textFormat: Text.RichText
-                color: selectedAddressDrescriptionMouseArea.containsMouse ? MoneroComponents.Style.orange : MoneroComponents.Style.dimmedFontColor
+                color: selectedAddressDrescriptionMouseArea.containsMouse ? ScalaComponents.Style.orange : ScalaComponents.Style.dimmedFontColor
                 themeTransition: false
                 tooltip: subaddressListView.currentIndex > 0 ? qsTr("Edit address label") : "" + translationManager.emptyString
                 MouseArea {
@@ -458,7 +458,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 id: selectedAddress
                 Layout.alignment: Qt.AlignHCenter
                 Layout.maximumWidth: 300
@@ -468,9 +468,9 @@ Rectangle {
                 horizontalAlignment: TextInput.AlignHCenter
                 wrapMode: Text.Wrap
                 textFormat: Text.RichText
-                color: selectedAddressMouseArea.containsMouse ? MoneroComponents.Style.orange : MoneroComponents.Style.defaultFontColor
+                color: selectedAddressMouseArea.containsMouse ? ScalaComponents.Style.orange : ScalaComponents.Style.defaultFontColor
                 font.pixelSize: 15
-                font.family: MoneroComponents.Style.fontRegular.name
+                font.family: ScalaComponents.Style.fontRegular.name
                 themeTransition: false
                 tooltip: qsTr("Copy address to clipboard") + translationManager.emptyString
                 MouseArea {
@@ -487,7 +487,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.StandardButton {
+            ScalaComponents.StandardButton {
                 Layout.preferredWidth: 220
                 Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: 18
@@ -511,14 +511,14 @@ Rectangle {
             RowLayout {
                 spacing: 0
 
-                MoneroComponents.LabelSubheader {
+                ScalaComponents.LabelSubheader {
                     Layout.fillWidth: true
                     fontSize: 24
                     textFormat: Text.RichText
                     text: qsTr("Addresses") + translationManager.emptyString
                 }
 
-                MoneroComponents.StandardButton {
+                ScalaComponents.StandardButton {
                     id: createAddressButton
                     small: true
                     text: qsTr("Create new address") + translationManager.emptyString
@@ -540,12 +540,12 @@ Rectangle {
                         anchors.left: createAddressButton.left
                         anchors.right: createAddressButton.right
                         height: 2
-                        color: MoneroComponents.Style.appWindowBorderColor
+                        color: ScalaComponents.Style.appWindowBorderColor
 
-                        MoneroEffects.ColorTransition {
+                        ScalaEffects.ColorTransition {
                             targetObj: parent
-                            blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                            whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                            blackColor: ScalaComponents.Style._b_appWindowBorderColor
+                            whiteColor: ScalaComponents.Style._w_appWindowBorderColor
                         }
                     }
                 }
@@ -573,7 +573,7 @@ Rectangle {
                         height: subaddressListRow.subaddressListItemHeight
                         width: parent ? parent.width : undefined
                         Layout.fillWidth: true
-                        color: itemMouseArea.containsMouse || index === appWindow.current_subaddress_table_index ? MoneroComponents.Style.titleBarButtonHoverColor : "transparent"
+                        color: itemMouseArea.containsMouse || index === appWindow.current_subaddress_table_index ? ScalaComponents.Style.titleBarButtonHoverColor : "transparent"
 
                         Rectangle {
                             visible: index === appWindow.current_subaddress_table_index
@@ -581,7 +581,7 @@ Rectangle {
                             anchors.top: parent.top
                             anchors.bottom: parent.bottom
                             property int currentAccountIndex: currentWallet ? currentWallet.currentSubaddressAccount : 0
-                            color: MoneroComponents.Style.accountColors[currentAccountIndex % MoneroComponents.Style.accountColors.length]
+                            color: ScalaComponents.Style.accountColors[currentAccountIndex % ScalaComponents.Style.accountColors.length]
                             width: 2
                         }
 
@@ -590,13 +590,13 @@ Rectangle {
                             anchors.left: parent.left
                             anchors.top: parent.top
                             height: 1
-                            color: MoneroComponents.Style.appWindowBorderColor
+                            color: ScalaComponents.Style.appWindowBorderColor
                             visible: index !== 0
 
-                            MoneroEffects.ColorTransition {
+                            ScalaEffects.ColorTransition {
                                 targetObj: parent
-                                blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                                whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                                blackColor: ScalaComponents.Style._b_appWindowBorderColor
+                                whiteColor: ScalaComponents.Style._w_appWindowBorderColor
                             }
                         }
 
@@ -606,9 +606,9 @@ Rectangle {
                             anchors.rightMargin: 90
                             color: "transparent"
 
-                            MoneroComponents.Label {
+                            ScalaComponents.Label {
                                 id: idLabel
-                                color: index === appWindow.current_subaddress_table_index ? MoneroComponents.Style.defaultFontColor : "#757575"
+                                color: index === appWindow.current_subaddress_table_index ? ScalaComponents.Style.defaultFontColor : "#757575"
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: parent.left
                                 anchors.leftMargin: 6
@@ -617,9 +617,9 @@ Rectangle {
                                 themeTransition: false
                             }
 
-                            MoneroComponents.Label {
+                            ScalaComponents.Label {
                                 id: nameLabel
-                                color: index === appWindow.current_subaddress_table_index ? MoneroComponents.Style.defaultFontColor : MoneroComponents.Style.dimmedFontColor
+                                color: index === appWindow.current_subaddress_table_index ? ScalaComponents.Style.defaultFontColor : ScalaComponents.Style.dimmedFontColor
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: idLabel.right
                                 anchors.leftMargin: 6
@@ -630,14 +630,14 @@ Rectangle {
                                 themeTransition: false
                             }
 
-                            MoneroComponents.Label {
+                            ScalaComponents.Label {
                                 id: addressLabel
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 anchors.verticalCenter: parent.verticalCenter
                                 anchors.left: parent.right
                                 anchors.leftMargin: -addressLabel.width - 5
                                 fontSize: 16
-                                fontFamily: MoneroComponents.Style.fontMonoRegular.name;
+                                fontFamily: ScalaComponents.Style.fontMonoRegular.name;
                                 text: TxUtils.addressTruncatePretty(address, mainLayout.width < 520 ? 1 : (mainLayout.width < 650 ? 2 : 3))
                                 themeTransition: false
                             }
@@ -658,10 +658,10 @@ Rectangle {
                             height: 21
                             spacing: 10
 
-                            MoneroComponents.IconButton {
+                            ScalaComponents.IconButton {
                                 fontAwesomeFallbackIcon: FontAwesome.searchPlus
                                 fontAwesomeFallbackSize: 22
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 fontAwesomeFallbackOpacity: 0.5
                                 Layout.preferredWidth: 23
                                 Layout.preferredHeight: 21
@@ -670,12 +670,12 @@ Rectangle {
                                 onClicked: doSearchInHistory(address)
                             }
 
-                            MoneroComponents.IconButton {
+                            ScalaComponents.IconButton {
                                 id: renameButton
                                 image: "qrc:///images/edit.svg"
                                 fontAwesomeFallbackIcon: FontAwesome.edit
                                 fontAwesomeFallbackSize: 22
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 opacity: isOpenGL ? 0.5 : 1
                                 fontAwesomeFallbackOpacity: 0.5
                                 Layout.preferredWidth: 23
@@ -688,12 +688,12 @@ Rectangle {
                                 }
                             }
 
-                            MoneroComponents.IconButton {
+                            ScalaComponents.IconButton {
                                 id: copyButton
                                 image: "qrc:///images/copy.svg"
                                 fontAwesomeFallbackIcon: FontAwesome.clipboard
                                 fontAwesomeFallbackSize: 22
-                                color: MoneroComponents.Style.defaultFontColor
+                                color: ScalaComponents.Style.defaultFontColor
                                 opacity: isOpenGL ? 0.5 : 1
                                 fontAwesomeFallbackOpacity: 0.5
                                 Layout.preferredWidth: 16
@@ -730,14 +730,14 @@ Rectangle {
             }
 
             Rectangle {
-                color: MoneroComponents.Style.appWindowBorderColor
+                color: ScalaComponents.Style.appWindowBorderColor
                 Layout.fillWidth: true
                 height: 1
 
-                MoneroEffects.ColorTransition {
+                ScalaEffects.ColorTransition {
                     targetObj: parent
-                    blackColor: MoneroComponents.Style._b_appWindowBorderColor
-                    whiteColor: MoneroComponents.Style._w_appWindowBorderColor
+                    blackColor: ScalaComponents.Style._b_appWindowBorderColor
+                    whiteColor: ScalaComponents.Style._w_appWindowBorderColor
                 }
             }
         }

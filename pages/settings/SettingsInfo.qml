@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -34,7 +34,7 @@ import QtQuick.Dialogs 1.2
 import "../../js/Wizard.js" as Wizard
 import "../../js/Utils.js" as Utils
 import "../../version.js" as Version
-import "../../components" as MoneroComponents
+import "../../components" as ScalaComponents
 
 
 Rectangle {
@@ -67,14 +67,14 @@ Rectangle {
             columns: 2
             columnSpacing: 0
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 font.pixelSize: 14
                 text: qsTr("GUI version: ") + translationManager.emptyString
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 font.pixelSize: 14
-                color: MoneroComponents.Style.dimmedFontColor
+                color: ScalaComponents.Style.dimmedFontColor
                 text: Version.GUI_VERSION + " (Qt " + qtRuntimeVersion + ")" + translationManager.emptyString
             }
 
@@ -83,8 +83,8 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -92,20 +92,20 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
-            MoneroComponents.TextBlock {
-                id: guiMoneroVersion
+            ScalaComponents.TextBlock {
+                id: guiScalaVersion
                 font.pixelSize: 14
-                text: qsTr("Embedded Monero version: ") + translationManager.emptyString
+                text: qsTr("Embedded Scala version: ") + translationManager.emptyString
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 font.pixelSize: 14
-                color: MoneroComponents.Style.dimmedFontColor
-                text: moneroVersion
+                color: ScalaComponents.Style.dimmedFontColor
+                text: scalaVersion
             }
 
             Rectangle {
@@ -113,8 +113,8 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -122,20 +122,20 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 Layout.fillWidth: true
                 font.pixelSize: 14
                 text: qsTr("Wallet path: ") + translationManager.emptyString
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 id: walletLocation
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dimmedFontColor
+                color: ScalaComponents.Style.dimmedFontColor
                 font.pixelSize: 14
                 property string walletPath: (isIOS ?  appWindow.accountsDir : "") + persistentSettings.wallet_path
                 text: "\
@@ -158,8 +158,8 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -167,22 +167,22 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 id: restoreHeight
                 font.pixelSize: 14
                 textFormat: Text.RichText
                 text: (typeof currentWallet == "undefined") ? "" : qsTr("Wallet restore height: ") + translationManager.emptyString
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 id: restoreHeightText
                 Layout.fillWidth: true
                 textFormat: Text.RichText
-                color: MoneroComponents.Style.dimmedFontColor
+                color: ScalaComponents.Style.dimmedFontColor
                 font.pixelSize: 14
                 property var style: "<style type='text/css'>a {cursor:pointer;text-decoration: none; color: #FF6C3C}</style>"
                 text: (currentWallet ? currentWallet.walletCreationHeight : "") + style + " <a href='#'> (%1)</a>".arg(qsTr("Change")) + translationManager.emptyString
@@ -241,8 +241,8 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -250,19 +250,19 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 Layout.fillWidth: true
                 font.pixelSize: 14
                 text: qsTr("Wallet log path: ") + translationManager.emptyString
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dimmedFontColor
+                color: ScalaComponents.Style.dimmedFontColor
                 font.pixelSize: 14
                 text: "\
                     <style type='text/css'>\
@@ -284,8 +284,8 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -293,19 +293,19 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 Layout.fillWidth: true
                 font.pixelSize: 14
                 text: qsTr("Wallet mode: ") + translationManager.emptyString
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dimmedFontColor
+                color: ScalaComponents.Style.dimmedFontColor
                 font.pixelSize: 14
                 text: walletModeString
             }
@@ -315,8 +315,8 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -324,19 +324,19 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 Layout.fillWidth: true
                 font.pixelSize: 14
                 text: qsTr("Graphics mode: ") + translationManager.emptyString
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dimmedFontColor
+                color: ScalaComponents.Style.dimmedFontColor
                 font.pixelSize: 14
                 text: isOpenGL ? "OpenGL" : "Low graphics mode"
             }
@@ -347,8 +347,8 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -357,21 +357,21 @@ Rectangle {
                 Layout.topMargin: 2
                 Layout.bottomMargin: 2
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dividerColor
-                opacity: MoneroComponents.Style.dividerOpacity
+                color: ScalaComponents.Style.dividerColor
+                opacity: ScalaComponents.Style.dividerOpacity
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 visible: isTails
                 Layout.fillWidth: true
                 font.pixelSize: 14
                 text: qsTr("Tails: ") + translationManager.emptyString
             }
 
-            MoneroComponents.TextBlock {
+            ScalaComponents.TextBlock {
                 visible: isTails
                 Layout.fillWidth: true
-                color: MoneroComponents.Style.dimmedFontColor
+                color: ScalaComponents.Style.dimmedFontColor
                 font.pixelSize: 14
                 text: tailsUsePersistence ? qsTr("persistent") + translationManager.emptyString : qsTr("persistence disabled") + translationManager.emptyString;
             }
@@ -380,13 +380,13 @@ Rectangle {
         RowLayout {
             spacing: 20;
 
-            MoneroComponents.StandardButton {
+            ScalaComponents.StandardButton {
                 small: true
                 text: qsTr("Copy to clipboard") + translationManager.emptyString
                 onClicked: {
                     var data = "";
                     data += "GUI version: " + Version.GUI_VERSION + " (Qt " + qtRuntimeVersion + ")";
-                    data += "\nEmbedded Monero version: " + moneroVersion;
+                    data += "\nEmbedded Scala version: " + scalaVersion;
                     data += "\nWallet path: " + walletLocation.walletPath;
 
                     data += "\nWallet restore height: ";
@@ -405,11 +405,11 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.StandardButton {
+            ScalaComponents.StandardButton {
                 small: true
-                text: qsTr("Donate to Monero") + translationManager.emptyString
+                text: qsTr("Donate to Scala") + translationManager.emptyString
                 onClicked: {
-                    middlePanel.sendTo("888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANsAnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H", "", qsTr("Donation to Monero Core Team") + translationManager.emptyString);
+                    middlePanel.sendTo("888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANsAnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H", "", qsTr("Donation to Scala Core Team") + translationManager.emptyString);
                 }
             }
         }

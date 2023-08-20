@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -31,7 +31,7 @@ import QtQuick.Layouts 1.1
 
 import FontAwesome 1.0
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 Item {
     id: button
@@ -39,7 +39,7 @@ Item {
     property bool primary: true
     property string rightIcon: ""
     property string rightIconInactive: ""
-    property color textColor: primary ? MoneroComponents.Style.buttonTextColor : MoneroComponents.Style.buttonSecondaryTextColor;
+    property color textColor: primary ? ScalaComponents.Style.buttonTextColor : ScalaComponents.Style.buttonSecondaryTextColor;
     property bool small: false
     property alias text: label.text
     property alias fontBold: label.font.bold
@@ -80,8 +80,8 @@ Item {
                 PropertyChanges {
                     target: buttonRect
                     color: primary
-                        ? MoneroComponents.Style.buttonBackgroundColorHover
-                        : MoneroComponents.Style.buttonSecondaryBackgroundColorHover
+                        ? ScalaComponents.Style.buttonBackgroundColorHover
+                        : ScalaComponents.Style.buttonSecondaryBackgroundColorHover
                 }
             },
             State {
@@ -90,8 +90,8 @@ Item {
                 PropertyChanges {
                     target: buttonRect
                     color: primary
-                        ? MoneroComponents.Style.buttonBackgroundColor
-                        : MoneroComponents.Style.buttonSecondaryBackgroundColor
+                        ? ScalaComponents.Style.buttonBackgroundColor
+                        : ScalaComponents.Style.buttonSecondaryBackgroundColor
                 }
             },
             State {
@@ -101,8 +101,8 @@ Item {
                     target: buttonRect
                     opacity: 0.5
                     color: primary
-                        ? MoneroComponents.Style.buttonBackgroundColor
-                        : MoneroComponents.Style.buttonSecondaryBackgroundColor
+                        ? ScalaComponents.Style.buttonBackgroundColor
+                        : ScalaComponents.Style.buttonSecondaryBackgroundColor
                 }
                 PropertyChanges {
                     target: label
@@ -123,16 +123,16 @@ Item {
         spacing: 11
         anchors.centerIn: parent
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             id: label
-            font.family: MoneroComponents.Style.fontBold.name
+            font.family: ScalaComponents.Style.fontBold.name
             font.bold: button.primary ? true : false
             font.pixelSize: button.fontSize
             color: !buttonArea.pressed ? button.textColor : "transparent"
             visible: text !== ""
             themeTransition: false
 
-            MoneroComponents.TextPlain {
+            ScalaComponents.TextPlain {
                 anchors.centerIn: parent
                 color: button.textColor
                 font.bold: label.font.bold
@@ -161,7 +161,7 @@ Item {
 
         Text {
             Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-            color: MoneroComponents.Style.defaultFontColor
+            color: ScalaComponents.Style.defaultFontColor
             font.family: FontAwesome.fontFamilySolid
             font.pixelSize: button.small ? 16 : 20
             font.styleName: "Solid"
@@ -170,7 +170,7 @@ Item {
         }
     }
 
-    MoneroComponents.Tooltip {
+    ScalaComponents.Tooltip {
         id: tooltip
         anchors.fill: parent
     }

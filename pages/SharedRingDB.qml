@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Monero Project
+// Copyright (c) 2018, The Scala Project
 //
 // All rights reserved.
 //
@@ -32,8 +32,8 @@ import QtQuick.Controls.Styles 1.4
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.2
 
-import "../components" as MoneroComponents
-import moneroComponents.Clipboard 1.0
+import "../components" as ScalaComponents
+import scalaComponents.Clipboard 1.0
 
 Rectangle {
     property alias panelHeight: mainLayout.height
@@ -84,53 +84,53 @@ Rectangle {
             standardButtons: StandardButton.Ok
         }
 
-        MoneroComponents.Label {
+        ScalaComponents.Label {
             id: signTitleLabel
             fontSize: 24
             text: qsTr("Shared RingDB") + translationManager.emptyString
         }
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             text: qsTr("This page allows you to interact with the shared ring database. " +
-                       "This database is meant for use by Monero wallets as well as wallets from Monero clones which reuse the Monero keys.") + translationManager.emptyString
+                       "This database is meant for use by Scala wallets as well as wallets from Scala clones which reuse the Scala keys.") + translationManager.emptyString
             wrapMode: Text.Wrap
             Layout.fillWidth: true
-            font.family: MoneroComponents.Style.fontRegular.name
+            font.family: ScalaComponents.Style.fontRegular.name
             font.pixelSize: 14
-            color: MoneroComponents.Style.defaultFontColor
+            color: ScalaComponents.Style.defaultFontColor
         }
 
-        MoneroComponents.LabelSubheader {
+        ScalaComponents.LabelSubheader {
             Layout.fillWidth: true
             Layout.topMargin: 24
             textFormat: Text.RichText
             text: qsTr("Rings") + translationManager.emptyString
             tooltip: qsTr(
-                    "In order to avoid nullifying the protection afforded by Monero's ring signatures, an output should not " +
+                    "In order to avoid nullifying the protection afforded by Scala's ring signatures, an output should not " +
                     "be spent with different rings on different blockchains. While this is normally not a concern, it can become one " +
-                    "when a key-reusing Monero clone allows you to spend existing outputs. In this case, you need to ensure this " +
+                    "when a key-reusing Scala clone allows you to spend existing outputs. In this case, you need to ensure this " +
                     "existing outputs uses the same ring on both chains.<br>" +
-                    "This will be done automatically by Monero and any key-reusing software which is not trying to actively strip " +
+                    "This will be done automatically by Scala and any key-reusing software which is not trying to actively strip " +
                     "you of your privacy.<br>" +
-                    "If you are using a key-reusing Monero clone too, and this clone does not include this protection, you can still " +
+                    "If you are using a key-reusing Scala clone too, and this clone does not include this protection, you can still " +
                     "ensure your transactions are protected by spending on the clone first, then manually adding the ring on this page, " +
-                    "which allows you to then spend your Monero safely.<br>" +
-                    "If you do not use a key-reusing Monero clone without these safety features, then you do not need to do anything " +
+                    "which allows you to then spend your Scala safely.<br>" +
+                    "If you do not use a key-reusing Scala clone without these safety features, then you do not need to do anything " +
                     "as it is all automated.<br>"
                 ) + translationManager.emptyString
         }
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             textFormat: Text.RichText
-            font.family: MoneroComponents.Style.fontRegular.name
+            font.family: ScalaComponents.Style.fontRegular.name
             font.pixelSize: 14
-            text: qsTr("This records rings used by outputs spent on Monero on a key reusing chain, so that the same ring may be reused to avoid privacy issues.") + translationManager.emptyString
+            text: qsTr("This records rings used by outputs spent on Scala on a key reusing chain, so that the same ring may be reused to avoid privacy issues.") + translationManager.emptyString
             wrapMode: Text.Wrap
             Layout.fillWidth: true;
-            color: MoneroComponents.Style.defaultFontColor
+            color: ScalaComponents.Style.defaultFontColor
         }
 
-        MoneroComponents.LineEdit {
+        ScalaComponents.LineEdit {
             id: keyImageLine
             Layout.fillWidth: true
             fontSize: 16
@@ -149,7 +149,7 @@ Rectangle {
 
             ColumnLayout {
                 RowLayout {
-                    MoneroComponents.LineEdit {
+                    ScalaComponents.LineEdit {
                         id: getRingLine
                         Layout.fillWidth: true
                         fontSize: 16
@@ -164,7 +164,7 @@ Rectangle {
                     Layout.fillWidth: true
                     Layout.topMargin: 18
 
-                    MoneroComponents.StandardButton {
+                    ScalaComponents.StandardButton {
                         id: getRingButton
                         text: qsTr("Get Ring") + translationManager.emptyString
                         small: true
@@ -184,7 +184,7 @@ Rectangle {
 
             ColumnLayout {
                 RowLayout {
-                    MoneroComponents.LineEdit {
+                    ScalaComponents.LineEdit {
                         id: setRingLine
                         Layout.fillWidth: true
                         fontSize: 16
@@ -200,7 +200,7 @@ Rectangle {
                     Layout.fillWidth: true
                     Layout.topMargin: 18
 
-                    MoneroComponents.StandardButton {
+                    ScalaComponents.StandardButton {
                         id: setRingButton
                         text: qsTr("Set Ring") + translationManager.emptyString
                         small: true
@@ -218,7 +218,7 @@ Rectangle {
             columnSpacing: 20
             columns: 2
 
-            MoneroComponents.CheckBox {
+            ScalaComponents.CheckBox {
                 id: segregatePreForkOutputs
                 checked: persistentSettings.segregatePreForkOutputs
                 text: qsTr("I intend to spend on key-reusing fork(s)") + translationManager.emptyString
@@ -230,7 +230,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.CheckBox {
+            ScalaComponents.CheckBox {
                 id: keyReuseMitigation2
                 checked: persistentSettings.keyReuseMitigation2
                 text: qsTr("I might want to spend on key-reusing fork(s)") + translationManager.emptyString
@@ -242,7 +242,7 @@ Rectangle {
                 }
             }
 
-            MoneroComponents.CheckBox {
+            ScalaComponents.CheckBox {
                 id: setRingRelative
                 checked: true
                 text: qsTr("Relative") + translationManager.emptyString
@@ -256,7 +256,7 @@ Rectangle {
             columns: 2
             columnSpacing: 32
 
-            MoneroComponents.LineEdit {
+            ScalaComponents.LineEdit {
                 id: segregationHeightLine
                 property bool edited: false
                 Layout.fillWidth: true

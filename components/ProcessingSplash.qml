@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Monero Project
+// Copyright (c) 2014-2018, The Scala Project
 //
 // All rights reserved.
 //
@@ -32,14 +32,14 @@ import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Layouts 1.1
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 Rectangle {
     id: root
-    color: MoneroComponents.Style.blackTheme ? "black" : "white"
+    color: ScalaComponents.Style.blackTheme ? "black" : "white"
     visible: false
     radius: 10
-    border.color: MoneroComponents.Style.blackTheme ? Qt.rgba(255, 255, 255, 0.25) : Qt.rgba(0, 0, 0, 0.25)
+    border.color: ScalaComponents.Style.blackTheme ? Qt.rgba(255, 255, 255, 0.25) : Qt.rgba(0, 0, 0, 0.25)
     border.width: 1
     z: 11
     property alias messageText: messageTitle.text
@@ -74,7 +74,7 @@ Rectangle {
                 width: 60
                 height: 60
                 anchors.centerIn: parent
-                source: "qrc:///images/monero-vector.svg"
+                source: "qrc:///images/scala-vector.svg"
                 mipmap: true
             }
 
@@ -98,7 +98,7 @@ Rectangle {
         }
 
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             id: messageTitle
             text: qsTr("Please wait...") + translationManager.emptyString
             font.pixelSize: 24
@@ -106,7 +106,7 @@ Rectangle {
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
             Layout.fillWidth: true
             themeTransition: false
-            color: MoneroComponents.Style.defaultFontColor
+            color: ScalaComponents.Style.defaultFontColor
         }
     }
 }

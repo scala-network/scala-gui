@@ -1,4 +1,4 @@
-// Copyright (c) 2020, The Monero Project
+// Copyright (c) 2020, The Scala Project
 //
 // All rights reserved.
 //
@@ -31,7 +31,7 @@ import QtQuick.Layouts 1.3
 
 import FontAwesome 1.0
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 Item {
     implicitHeight: layout.height
@@ -42,16 +42,16 @@ Item {
         opacity: mouseArea.containsMouse ? 1 : 0.85
         spacing: 10
 
-        MoneroComponents.Label {
+        ScalaComponents.Label {
             Layout.bottomMargin: 5
-            fontColor: MoneroComponents.Style.defaultFontColor
+            fontColor: ScalaComponents.Style.defaultFontColor
             fontFamily: FontAwesome.fontFamilySolid
             fontSize: 26
             styleName: "Solid"
             text: FontAwesome.language
         }
 
-        MoneroComponents.TextPlain {
+        ScalaComponents.TextPlain {
             font.pixelSize: 14
             text: persistentSettings.language
         }

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 //
 // All rights reserved.
 //
@@ -83,7 +83,7 @@ QString getAccountName(){
     if (accountName.isEmpty())
         accountName = qgetenv("USERNAME"); // Windows
     if (accountName.isEmpty())
-        accountName = "My monero Account";
+        accountName = "My scala Account";
     return accountName;
 }
 
@@ -91,21 +91,21 @@ QString getAccountName(){
 QString xdgMime(){
     return QString(
         "[Desktop Entry]\n"
-        "Name=Monero GUI\n"
-        "GenericName=Monero-GUI\n"
-        "X-GNOME-FullName=Monero-GUI\n"
-        "Comment=Monero GUI\n"
-        "Keywords=Monero;\n"
+        "Name=Scala GUI\n"
+        "GenericName=Scala-GUI\n"
+        "X-GNOME-FullName=Scala-GUI\n"
+        "Comment=Scala GUI\n"
+        "Keywords=Scala;\n"
         "Exec=%1 %u\n"
         "Terminal=false\n"
         "Type=Application\n"
-        "Icon=monero\n"
+        "Icon=scala\n"
         "Categories=Network;GNOME;Qt;\n"
-        "MimeType=x-scheme-handler/monero;x-scheme-handler/moneroseed\n"
+        "MimeType=x-scheme-handler/scala;x-scheme-handler/scalaseed\n"
         "StartupNotify=true\n"
         "X-GNOME-Bugzilla-Bugzilla=GNOME\n"
         "X-GNOME-UsesNotifications=true\n"
-        "StartupWMClass=monero-wallet-gui\n"
+        "StartupWMClass=scala-wallet-gui\n"
     ).arg(QCoreApplication::applicationFilePath());
 }
 
@@ -117,7 +117,7 @@ void registerXdgMime(){
     // - Tails written to persistent dotfiles
     QString mime = xdgMime();
     QString appPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
-    QString filePath = QString("%1/monero-gui.desktop").arg(appPath);
+    QString filePath = QString("%1/scala-gui.desktop").arg(appPath);
 
     if (TailsOS::detect())
     {

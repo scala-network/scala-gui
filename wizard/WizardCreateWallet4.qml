@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2019, The Monero Project
+// Copyright (c) 2014-2019, The Scala Project
 // 
 // All rights reserved.
 // 
@@ -30,7 +30,7 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.0
 
-import "../components" as MoneroComponents
+import "../components" as ScalaComponents
 
 Rectangle {
     id: wizardCreateWallet4
@@ -57,7 +57,7 @@ Rectangle {
 
             WizardHeader {
                 title: qsTr("Daemon settings") + translationManager.emptyString
-                subtitle: qsTr("To be able to communicate with the Monero network your wallet needs to be connected to a Monero node. For best privacy it's recommended to run your own node.") + translationManager.emptyString
+                subtitle: qsTr("To be able to communicate with the Scala network your wallet needs to be connected to a Scala node. For best privacy it's recommended to run your own node.") + translationManager.emptyString
             }
 
             WizardDaemonSettings {

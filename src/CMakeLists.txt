@@ -66,37 +66,37 @@ if(APPLE)
     list(APPEND RESOURCES ${ICON})
 endif()
 
-set(monero_wallet_gui_sources
+set(scala_wallet_gui_sources
     ${SOURCE_FILES}
     ${RESOURCES}
 )
 
 if(NOT ANDROID)
-    add_executable(monero-wallet-gui ${EXECUTABLE_FLAG} ${monero_wallet_gui_sources})
+    add_executable(scala-wallet-gui ${EXECUTABLE_FLAG} ${scala_wallet_gui_sources})
 else()
-    add_library(monero-wallet-gui SHARED ${monero_wallet_gui_sources})
-    set_target_properties(monero-wallet-gui PROPERTIES COMPILE_DEFINITIONS "ANDROID")
+    add_library(scala-wallet-gui SHARED ${scala_wallet_gui_sources})
+    set_target_properties(scala-wallet-gui PROPERTIES COMPILE_DEFINITIONS "ANDROID")
 endif()
 
-set_target_properties(monero-wallet-gui PROPERTIES
+set_target_properties(scala-wallet-gui PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
     MACOSX_BUNDLE TRUE
     MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/share/Info.plist"
 )
 
 # OpenGL
-target_include_directories(monero-wallet-gui PUBLIC ${OPENGL_INCLUDE_DIR})
+target_include_directories(scala-wallet-gui PUBLIC ${OPENGL_INCLUDE_DIR})
 message(STATUS "OpenGL: include dir at ${OPENGL_INCLUDE_DIR}")
 message(STATUS "OpenGL: libraries at ${OPENGL_LIBRARIES}")
 
-target_include_directories(monero-wallet-gui PUBLIC ${Qt5Gui_PRIVATE_INCLUDE_DIRS})
+target_include_directories(scala-wallet-gui PUBLIC ${Qt5Gui_PRIVATE_INCLUDE_DIRS})
 
-target_include_directories(monero-wallet-gui PUBLIC
-	${CMAKE_SOURCE_DIR}/monero/include
-    ${CMAKE_SOURCE_DIR}/monero/src
-    ${CMAKE_SOURCE_DIR}/monero/external/easylogging++
-    ${CMAKE_SOURCE_DIR}/monero/contrib/epee/include
-    ${CMAKE_SOURCE_DIR}/monero/external/qrcodegen
+target_include_directories(scala-wallet-gui PUBLIC
+	${CMAKE_SOURCE_DIR}/scala/include
+    ${CMAKE_SOURCE_DIR}/scala/src
+    ${CMAKE_SOURCE_DIR}/scala/external/easylogging++
+    ${CMAKE_SOURCE_DIR}/scala/contrib/epee/include
+    ${CMAKE_SOURCE_DIR}/scala/external/qrcodegen
 	${CMAKE_CURRENT_SOURCE_DIR}
 	${CMAKE_CURRENT_SOURCE_DIR}/daemon
     ${CMAKE_CURRENT_SOURCE_DIR}/p2pool
@@ -107,7 +107,7 @@ target_include_directories(monero-wallet-gui PUBLIC
     ${X11_INCLUDE_DIR}
 )
 
-target_compile_definitions(monero-wallet-gui
+target_compile_definitions(scala-wallet-gui
 	PUBLIC
 	${Qt5Widgets_DEFINITIONS}
     ${Qt5Qml_DEFINITIONS}
@@ -118,12 +118,12 @@ if(APPLE)
         execute_process(COMMAND brew --prefix icu4c OUTPUT_VARIABLE ICU_ROOT OUTPUT_STRIP_TRAILING_WHITESPACE)
     endif()
     find_package(ICU REQUIRED COMPONENTS data i18n uc)
-    target_link_directories(monero-wallet-gui PRIVATE ${ICU_ROOT}/lib)
+    target_link_directories(scala-wallet-gui PRIVATE ${ICU_ROOT}/lib)
 endif()
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
 
-target_link_libraries(monero-wallet-gui
+target_link_libraries(scala-wallet-gui
     epee
     common
     net
@@ -139,13 +139,13 @@ target_link_libraries(monero-wallet-gui
 )
 
 if(X11_FOUND)
-    target_link_libraries(monero-wallet-gui ${X11_LIBRARIES})
+    target_link_libraries(scala-wallet-gui ${X11_LIBRARIES})
 endif()
 
 if(WITH_SCANNER)
-    target_link_libraries(monero-wallet-gui qrscanner)
+    target_link_libraries(scala-wallet-gui qrscanner)
     if(LINUX AND NOT ANDROID)
-        target_link_libraries(monero-wallet-gui
+        target_link_libraries(scala-wallet-gui
             jpeg
             v4l2
             v4lconvert
@@ -154,10 +154,10 @@ if(WITH_SCANNER)
     endif()
 endif()
 
-add_custom_command(TARGET monero-wallet-gui POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:daemon> $<TARGET_FILE_DIR:monero-wallet-gui>)
+add_custom_command(TARGET scala-wallet-gui POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:daemon> $<TARGET_FILE_DIR:scala-wallet-gui>)
 
 include(Deploy)
 
-install(TARGETS monero-wallet-gui
+install(TARGETS scala-wallet-gui
     DESTINATION bin
 )
