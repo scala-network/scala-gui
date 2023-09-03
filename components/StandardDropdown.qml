@@ -193,7 +193,7 @@ ColumnLayout {
                             font.family: ScalaComponents.Style.fontRegular.name
                             font.bold: false
                             font.pixelSize: fontItemSize
-                            color: itemArea.containsMouse || index === columnid.currentIndex || itemArea.containsMouse ? "#FA6800" : "#FFFFFF"
+                            color: itemArea.containsMouse || index === columnid.currentIndex || itemArea.containsMouse ? "#4875FD" : "#FFFFFF"
                             text: qsTr(column1) + translationManager.emptyString
                         }
 

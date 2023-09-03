@@ -205,7 +205,7 @@ Rectangle {
                     if (root.transactionAmount == "(all)" && currentWallet.isHwBacked() === true) {
                         return qsTr("All unlocked balance") +  translationManager.emptyString;
                     } else {
-                        return root.transactionAmount + " XMR " +  translationManager.emptyString;
+                        return root.transactionAmount + " XLA " +  translationManager.emptyString;
                     }
                 }
             }

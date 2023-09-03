@@ -185,7 +185,7 @@ Rectangle {
                         if(msg.toLowerCase().indexOf('error') >= 0){
                             color = ScalaComponents.Style.errorColor;
                         } else if (msg.toLowerCase().indexOf('warning') >= 0){
-                            color = "#fa6800"
+                            color = "#4875FD"
                         }
 
                         // format multi-lines
