@@ -329,7 +329,7 @@ Rectangle {
                 ScalaComponents.Label {
                     Layout.bottomMargin: 3
                     fontSize: 14
-                    text: "XMR"
+                    text: "XLA"
                 }
 
                 ScalaComponents.Label {

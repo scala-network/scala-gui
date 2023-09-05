@@ -307,7 +307,7 @@ Rectangle {
                                 anchors.leftMargin: -balanceNumberLabel.width
                                 fontSize: 16
                                 fontFamily: ScalaComponents.Style.fontMonoRegular.name;
-                                text: balance + " XMR"
+                                text: balance + " XLA"
                                 elide: Text.ElideRight
                                 textWidth: 180
                                 themeTransition: false
@@ -396,8 +396,8 @@ Rectangle {
             subaddressAccountListView.model = appWindow.currentWallet.subaddressAccountModel;
             appWindow.currentWallet.subaddress.refresh(appWindow.currentWallet.currentSubaddressAccount)
 
-            balanceAll.text = walletManager.displayAmount(appWindow.currentWallet.balanceAll()) + " XMR"
-            unlockedBalanceAll.text = walletManager.displayAmount(appWindow.currentWallet.unlockedBalanceAll()) + " XMR"
+            balanceAll.text = walletManager.displayAmount(appWindow.currentWallet.balanceAll()) + " XLA"
+            unlockedBalanceAll.text = walletManager.displayAmount(appWindow.currentWallet.unlockedBalanceAll()) + " XLA"
         }
     }
 

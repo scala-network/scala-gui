@@ -323,11 +323,11 @@ Rectangle {
                     .arg(qsTr("Address")) + translationManager.emptyString
                 placeholderText: {
                     if(persistentSettings.nettype == NetworkType.MAINNET){
-                        return "4.. / 8.. / scala:.. / OpenAlias";
+                        return "S..";
                     } else if (persistentSettings.nettype == NetworkType.STAGENET){
-                        return "5.. / 7.. / scala:..";
+                        return "S..";
                     } else if(persistentSettings.nettype == NetworkType.TESTNET){
-                        return "9.. / B.. / scala:..";
+                        return "S..";
                     }
                 }
                 wrapMode: Text.WrapAnywhere

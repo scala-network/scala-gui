@@ -409,7 +409,7 @@ Rectangle {
                 small: true
                 text: qsTr("Donate to Scala") + translationManager.emptyString
                 onClicked: {
-                    middlePanel.sendTo("888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANsAnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H", "", qsTr("Donation to Scala Core Team") + translationManager.emptyString);
+                    middlePanel.sendTo("SvkzckfVpUSWuSG4VS4WCL9KMTh39krgk6SLwVGLkZufh83ET8JjZ3yidaoURyHgLFDhFZEPPY12cHqYySVoV2x62XvMtJii5", "", qsTr("Donation to Scala Core Team") + translationManager.emptyString);
                 }
             }
         }

@@ -99,30 +99,30 @@ Rectangle {
                 opacity: ScalaComponents.Style.dividerOpacity
             }
 
-            WizardMenuItem {
-                headerText: {
-                    var nettype = persistentSettings.nettype;
-                    return qsTr("Create a new wallet from hardware") + (nettype === 2 ? " (" + qsTr("stagenet") + ")"
-                                                                        : nettype === 1 ? " (" + qsTr("testnet") + ")"
-                                                                                        : "") + translationManager.emptyString
-                }
-                bodyText: qsTr("Connect your hardware wallet to create a new Scala wallet.") + translationManager.emptyString
-                imageIcon: "qrc:///images/restore-wallet-from-hardware.png"
+            // WizardMenuItem {
+            //     headerText: {
+            //         var nettype = persistentSettings.nettype;
+            //         return qsTr("Create a new wallet from hardware") + (nettype === 2 ? " (" + qsTr("stagenet") + ")"
+            //                                                             : nettype === 1 ? " (" + qsTr("testnet") + ")"
+            //                                                                             : "") + translationManager.emptyString
+            //     }
+            //     bodyText: qsTr("Connect your hardware wallet to create a new Scala wallet.") + translationManager.emptyString
+            //     imageIcon: "qrc:///images/restore-wallet-from-hardware.png"
+            //
+            //     onMenuClicked: {
+            //         wizardController.restart();
+            //         wizardStateView.state = "wizardCreateDevice1"
+            //     }
+            // }
 
-                onMenuClicked: {
-                    wizardController.restart();
-                    wizardStateView.state = "wizardCreateDevice1"
-                }
-            }
-
-            Rectangle {
-                Layout.preferredHeight: 1
-                Layout.topMargin: 3
-                Layout.bottomMargin: 3
-                Layout.fillWidth: true
-                color: ScalaComponents.Style.dividerColor
-                opacity: ScalaComponents.Style.dividerOpacity
-            }
+            // Rectangle {
+            //     Layout.preferredHeight: 1
+            //     Layout.topMargin: 3
+            //     Layout.bottomMargin: 3
+            //     Layout.fillWidth: true
+            //     color: ScalaComponents.Style.dividerColor
+            //     opacity: ScalaComponents.Style.dividerOpacity
+            // }
 
             WizardMenuItem {
                 headerText: qsTr("Open a wallet from file") + translationManager.emptyString
