@@ -166,7 +166,7 @@ Rectangle {
           visible: leftPanel.minutesToUnlock !== ""
 
           ScalaComponents.WarningBox {
-              text: qsTr("Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.").arg(leftPanel.balanceUnlockedString).arg(leftPanel.minutesToUnlock)
+              text: qsTr("Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.").arg(leftPanel.balanceUnlockedString).arg(leftPanel.minutesToUnlock)
           }
       }
 
@@ -751,7 +751,7 @@ Rectangle {
                         if (!sendButton.enabled || estimatedFee == null) {
                             return ""
                         }
-                        return "~%1 XMR%2 %3".arg(estimatedFee)
+                        return "~%1 XLA%2 %3".arg(estimatedFee)
                             .arg(estimatedFeeFiat)
                             .arg(qsTr("fee") + translationManager.emptyString);
                     }
@@ -982,7 +982,7 @@ Rectangle {
                 if (appWindow.viewOnly && !pageRoot.checkInformation()) {
                     errorMessage = "<p class='orange'>" + qsTr("* To create a transaction file, please enter address and amount above") + "</p>";
                 }
-                var header = qsTr("Spend XMR from a cold (offline) wallet") + translationManager.emptyString;
+                var header = qsTr("Spend XLA from a cold (offline) wallet") + translationManager.emptyString;
                 return "<style type='text/css'>.header{ font-size: 13px; } p{line-height:20px; margin-top:0px; margin-bottom:0px; " +
                        ";} p.orange{color:#ff9323;}</style>" +
                        "<div class='header'>" + header + "</div>" +

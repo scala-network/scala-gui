@@ -2696,8 +2696,8 @@ You can change the password in the wallet settings.</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="169"/>
-        <source>Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>可用餘額: %1 XMR。請稍等約 %2 分鐘讓你的總餘額恢復可用。</translation>
+        <source>Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>可用餘額: %1 XLA。請稍等約 %2 分鐘讓你的總餘額恢復可用。</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="333"/>
@@ -2829,8 +2829,8 @@ You can change the password in the wallet settings.</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="985"/>
-        <source>Spend XMR from a cold (offline) wallet</source>
-        <translation>從冷 (離線) 錢包發送 XMR</translation>
+        <source>Spend XLA from a cold (offline) wallet</source>
+        <translation>從冷 (離線) 錢包發送 XLA</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="983"/>
@@ -3190,7 +3190,7 @@ For reserve proofs you don&apos;t need to specify tx id or address.</source>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="109"/>
-        <source>Paste amount of XMR (reserve proof only)</source>
+        <source>Paste amount of XLA (reserve proof only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

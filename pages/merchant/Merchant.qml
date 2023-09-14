@@ -497,7 +497,7 @@ Item {
                     }
 
                     ScalaComponents.TextPlain {
-                        // @TODO: When we have XMR/USD rate avi. in the future.
+                        // @TODO: When we have XLA/USD rate avi. in the future.
                         visible: false
                         font.pixelSize: 14
                         font.bold: false

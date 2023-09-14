@@ -2694,8 +2694,8 @@ You can change the password in the wallet settings.</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="169"/>
-        <source>Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>செலவிடத்தக்கக் காசுகள்: %1 XMR. தயவு செய்து காத்திருக்கவும். இன்னும் ~%2 நிமிடங்களில் உங்கள் இருப்பு செலவிடத்தக்கதாகி விடும்.</translation>
+        <source>Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>செலவிடத்தக்கக் காசுகள்: %1 XLA. தயவு செய்து காத்திருக்கவும். இன்னும் ~%2 நிமிடங்களில் உங்கள் இருப்பு செலவிடத்தக்கதாகி விடும்.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="333"/>
@@ -2878,8 +2878,8 @@ Confirmation message:
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="985"/>
-        <source>Spend XMR from a cold (offline) wallet</source>
-        <translation>XMR காசுகளைக் குளிர் (முடக்கலை) பணப்பையிலிருந்து செலவழிக்கவும்</translation>
+        <source>Spend XLA from a cold (offline) wallet</source>
+        <translation>XLA காசுகளைக் குளிர் (முடக்கலை) பணப்பையிலிருந்து செலவழிக்கவும்</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="983"/>
@@ -3181,7 +3181,7 @@ For reserve proofs you don&apos;t need to specify tx id or address.</source>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="109"/>
-        <source>Paste amount of XMR (reserve proof only)</source>
+        <source>Paste amount of XLA (reserve proof only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -2693,8 +2693,8 @@ A jelszó a tárca beállításaiban megváltoztatható.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="169"/>
-        <source>Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Elkölthető összeg: %1 XMR. Az egész egyenleg elkölthető ~%2 perc mulva.</translation>
+        <source>Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Elkölthető összeg: %1 XLA. Az egész egyenleg elkölthető ~%2 perc mulva.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="333"/>
@@ -2877,7 +2877,7 @@ Confirmation message:
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="985"/>
-        <source>Spend XMR from a cold (offline) wallet</source>
+        <source>Spend XLA from a cold (offline) wallet</source>
         <translation>Scala költése hideg (offline) tárcából</translation>
     </message>
     <message>
@@ -3187,7 +3187,7 @@ For reserve proofs you don&apos;t need to specify tx id or address.</source>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="109"/>
-        <source>Paste amount of XMR (reserve proof only)</source>
+        <source>Paste amount of XLA (reserve proof only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

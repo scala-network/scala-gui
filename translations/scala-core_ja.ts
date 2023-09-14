@@ -2753,8 +2753,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="169"/>
-        <source>Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>支出可能な資金: %1 XMR. 全ての残高が利用可能になるまで~%2分ほどお待ちください。</translation>
+        <source>Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>支出可能な資金: %1 XLA. 全ての残高が利用可能になるまで~%2分ほどお待ちください。</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="333"/>
@@ -2899,8 +2899,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="985"/>
-        <source>Spend XMR from a cold (offline) wallet</source>
-        <translation>XMRをコールド(オフライン)ウォレットから消費する</translation>
+        <source>Spend XLA from a cold (offline) wallet</source>
+        <translation>XLAをコールド(オフライン)ウォレットから消費する</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="983"/>
@@ -3187,7 +3187,7 @@ For reserve proofs you don&apos;t need to specify tx id or address.</source>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="109"/>
-        <source>Paste amount of XMR (reserve proof only)</source>
+        <source>Paste amount of XLA (reserve proof only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4309,12 +4309,12 @@ If you don&apos;t have the option to run your own node, there&apos;s an option t
     <message>
         <location filename="../main.qml" line="1052"/>
         <source>This address received %1 scala, but the transaction is not yet mined</source>
-        <translation>このアドレスは%1XMRを受け取りましたが、取引はまだ承認されていません</translation>
+        <translation>このアドレスは%1XLAを受け取りましたが、取引はまだ承認されていません</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1055"/>
         <source>This address received %1 scala, with %2 confirmation(s).</source>
-        <translation>このアドレスは%1XMRを受け取り、その取引は%2回承認されました。</translation>
+        <translation>このアドレスは%1XLAを受け取り、その取引は%2回承認されました。</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1059"/>

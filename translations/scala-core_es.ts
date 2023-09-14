@@ -2791,8 +2791,8 @@ Confirmation message:
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="169"/>
-        <source>Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Fondos gastables: %1 XMR, Por favor esperar ~%2 minutos para que todo tu balance se vuelva gastable.</translation>
+        <source>Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Fondos gastables: %1 XLA, Por favor esperar ~%2 minutos para que todo tu balance se vuelva gastable.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="690"/>
@@ -2893,8 +2893,8 @@ Confirmation message:
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="985"/>
-        <source>Spend XMR from a cold (offline) wallet</source>
-        <translation>Gastar XMR desde una billetera fría (fuera de línea)</translation>
+        <source>Spend XLA from a cold (offline) wallet</source>
+        <translation>Gastar XLA desde una billetera fría (fuera de línea)</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="983"/>
@@ -3186,7 +3186,7 @@ For reserve proofs you don&apos;t need to specify tx id or address.</source>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="109"/>
-        <source>Paste amount of XMR (reserve proof only)</source>
+        <source>Paste amount of XLA (reserve proof only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

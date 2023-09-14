@@ -2759,8 +2759,8 @@ Uaktualnij go lub podłącz się do innego demona</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="169"/>
-        <source>Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Środki do wydania: %1 XMR. Poczekaj ok. %2 minut, aż całe saldo będzie dostępne do wydania.</translation>
+        <source>Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Środki do wydania: %1 XLA. Poczekaj ok. %2 minut, aż całe saldo będzie dostępne do wydania.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="690"/>
@@ -2851,8 +2851,8 @@ Uaktualnij go lub podłącz się do innego demona</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="985"/>
-        <source>Spend XMR from a cold (offline) wallet</source>
-        <translation>Wyślij XMR z portfela offline</translation>
+        <source>Spend XLA from a cold (offline) wallet</source>
+        <translation>Wyślij XLA z portfela offline</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="983"/>
@@ -3197,7 +3197,7 @@ For reserve proofs you don&apos;t need to specify tx id or address.</source>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="109"/>
-        <source>Paste amount of XMR (reserve proof only)</source>
+        <source>Paste amount of XLA (reserve proof only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

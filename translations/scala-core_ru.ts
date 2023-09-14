@@ -2807,8 +2807,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="169"/>
-        <source>Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Отправляемая сумма: %1 XMR. Пожалуйста, подождите ~%2 минут чтобы весь ваш баланс стал доступен для отправки.</translation>
+        <source>Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Отправляемая сумма: %1 XLA. Пожалуйста, подождите ~%2 минут чтобы весь ваш баланс стал доступен для отправки.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="690"/>
@@ -2914,8 +2914,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="985"/>
-        <source>Spend XMR from a cold (offline) wallet</source>
-        <translation>Потратить XMR из холодного (оффлайн) кошелька</translation>
+        <source>Spend XLA from a cold (offline) wallet</source>
+        <translation>Потратить XLA из холодного (оффлайн) кошелька</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="983"/>
@@ -3200,8 +3200,8 @@ For reserve proofs you don&apos;t need to specify tx id or address.</source>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="109"/>
-        <source>Paste amount of XMR (reserve proof only)</source>
-        <translation>Сумма XMR (только для зарезервированных доказательств)</translation>
+        <source>Paste amount of XLA (reserve proof only)</source>
+        <translation>Сумма XLA (только для зарезервированных доказательств)</translation>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="138"/>
@@ -4413,7 +4413,7 @@ If you don&apos;t have the option to run your own node, there&apos;s an option t
     <message>
         <location filename="../main.qml" line="1055"/>
         <source>This address received %1 scala, with %2 confirmation(s).</source>
-        <translation>Этот адрес получил %1 XMR, с %2 подтверждениями.</translation>
+        <translation>Этот адрес получил %1 XLA, с %2 подтверждениями.</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1066"/>
@@ -4505,7 +4505,7 @@ If you don&apos;t have the option to run your own node, there&apos;s an option t
     <message>
         <location filename="../main.qml" line="1052"/>
         <source>This address received %1 scala, but the transaction is not yet mined</source>
-        <translation>Этот адрес получил %1 XMR, но транзакция все еще не подтверждена майнерами</translation>
+        <translation>Этот адрес получил %1 XLA, но транзакция все еще не подтверждена майнерами</translation>
     </message>
     <message>
         <location filename="../main.qml" line="836"/>

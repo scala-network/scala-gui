@@ -64,7 +64,7 @@ Rectangle {
     function generateQRCodeString() {
         if (pageReceive.state == "PaymentRequest") {
             return walletManager.make_uri(appWindow.current_address,
-                walletManager.amountFromString(amountToReceiveXMR.text),
+                walletManager.amountFromString(amountToReceiveXLA.text),
                 txDescriptionInput.text, receiverNameInput.text);
         } else {
             return walletManager.make_uri(appWindow.current_address);
@@ -256,9 +256,9 @@ Rectangle {
                             }
                         }
                         if (amountToReceiveFiat.text == "") {
-                            amountToReceiveXMR.text = "";
+                            amountToReceiveXLA.text = "";
                         } else {
-                            amountToReceiveXMR.text = fiatApiConvertToXMR(amountToReceiveFiat.text);
+                            amountToReceiveXLA.text = fiatApiConvertToXLA(amountToReceiveFiat.text);
                         }
                     }
                     validator: RegExpValidator {
@@ -274,7 +274,7 @@ Rectangle {
                 }
 
                 ScalaComponents.Label {
-                    id: amountTitleXMR
+                    id: amountTitleXLA
                     Layout.bottomMargin: 3
                     Layout.preferredWidth: 90
                     fontSize: 14
@@ -282,7 +282,7 @@ Rectangle {
                 }
 
                 ScalaComponents.Input {
-                    id: amountToReceiveXMR
+                    id: amountToReceiveXLA
                     Layout.preferredWidth: 165
                     Layout.maximumWidth: 165
                     topPadding: 5
@@ -315,10 +315,10 @@ Rectangle {
                                 cursorPosition = 1;
                             }
                         }
-                        if (amountToReceiveXMR.text == "") {
+                        if (amountToReceiveXLA.text == "") {
                             amountToReceiveFiat.text = "";
                         } else {
-                            amountToReceiveFiat.text = fiatApiConvertToFiat(amountToReceiveXMR.text);
+                            amountToReceiveFiat.text = fiatApiConvertToFiat(amountToReceiveXLA.text);
                         }
                     }
                     validator: RegExpValidator {
@@ -783,7 +783,7 @@ Rectangle {
 
     function clearFields() {
         amountToReceiveFiat.text = "";
-        amountToReceiveXMR.text = "";
+        amountToReceiveXLA.text = "";
         txDescriptionInput.text = "";
         receiverNameInput.text = "";
     }

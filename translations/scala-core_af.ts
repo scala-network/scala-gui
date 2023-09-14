@@ -2694,8 +2694,8 @@ Die wagwoord kan verander word by die beursie instellings.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="169"/>
-        <source>Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Spandeerbare fondse: %1 XMR. Wag asb ~%2 minute vir volle balans om beskikbaar te word.</translation>
+        <source>Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Spandeerbare fondse: %1 XLA. Wag asb ~%2 minute vir volle balans om beskikbaar te word.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="333"/>
@@ -2878,8 +2878,8 @@ Confirmation message:
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="985"/>
-        <source>Spend XMR from a cold (offline) wallet</source>
-        <translation>Spandeer XMR vanaf &apos;n vanlynbeursie</translation>
+        <source>Spend XLA from a cold (offline) wallet</source>
+        <translation>Spandeer XLA vanaf &apos;n vanlynbeursie</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="983"/>
@@ -3181,7 +3181,7 @@ For reserve proofs you don&apos;t need to specify tx id or address.</source>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="109"/>
-        <source>Paste amount of XMR (reserve proof only)</source>
+        <source>Paste amount of XLA (reserve proof only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

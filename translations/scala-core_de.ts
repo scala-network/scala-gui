@@ -2829,8 +2829,8 @@ Du kannst das Passwort dann in den Wallet-Einstellungen ändern.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="985"/>
-        <source>Spend XMR from a cold (offline) wallet</source>
-        <translation>XMR von einer Cold-Wallet (offline) ausgeben</translation>
+        <source>Spend XLA from a cold (offline) wallet</source>
+        <translation>XLA von einer Cold-Wallet (offline) ausgeben</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="983"/>
@@ -2922,8 +2922,8 @@ Confirmation message:
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="169"/>
-        <source>Spendable funds: %1 XMR. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Verfügbares Guthaben: %1 XMR. Bitte warte ~%2 Minuten, bis dein gesamtes Guthaben verfügbar ist.</translation>
+        <source>Spendable funds: %1 XLA. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Verfügbares Guthaben: %1 XLA. Bitte warte ~%2 Minuten, bis dein gesamtes Guthaben verfügbar ist.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="333"/>
@@ -3198,7 +3198,7 @@ For reserve proofs you don&apos;t need to specify tx id or address.</source>
     </message>
     <message>
         <location filename="../pages/TxKey.qml" line="109"/>
-        <source>Paste amount of XMR (reserve proof only)</source>
+        <source>Paste amount of XLA (reserve proof only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
